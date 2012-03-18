@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* Portfolio CSS Document */
+
+/* WEBphysiology Portfolio Styling
+-------------------------------------------------------------- */
+
+/**************************************************************************************************************************************
+ 
+ NOTE:   #portfolios   has been deprecated in v1.2.7 and replaced with class   .webphysiology_portfolio
+ 
+ 2011-12-23 : 1.4.0 updated .portfolio_page_content to .webphysiology_portfolio_page_content and remove nav .top and .bottom class defs
+ 2011-08-18 : added webphysport_nav_top and webphysport_nav_botom classes to, in the future, deprecate top and bottom
+ 2011-07-26 : added CSS to handle positioning the Portfolio description below the meta data
+ 2011-03-08 : changed navigation styling to use borders and not images
+ 
+ **************************************************************************************************************************************/
+ 
+
+.webphysiology_portfolio .grid {
+	float: none;
+	margin: 10px 0;
+	overflow: hidden;
+}
+.webphysiology_portfolio_page_content {
+	margin-bottom: 10px;
+}
+.webphysiology_portfolio h1, .webphysiology_portfolio h2 {
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+.webphysiology_portfolio h1 {
+	font-size: 2em;
+}
+.webphysiology_portfolio ul.grid {
+	margin: 0 0;
+	padding: 0 0;
+	overflow: hidden;
+	clear: both;
+}
+.webphysiology_portfolio .grid li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.webphysiology_portfolio .portfolio_entry h2 {
+	margin-top: 2px;
+	margin-bottom: 10px;
+	padding-bottom: 0;
+	font-size: 1.6em;
+}
+.webphysiology_portfolio .grid .portfolio_entry h2 {
+	font-size: 1.1em;
+}
+.webphysiology_portfolio .portfolio_entry {
+	clear: both;
+	overflow: hidden;
+	margin: 0 0 10px 0;
+	margin: 0;
+	padding: 10px 10px;
+}
+.webphysiology_portfolio .portfolio_page_img {
+	float: left;
+}
+.webphysiology_portfolio .portfolio_details {
+	float: right;
+	margin-right: 10px;
+	line-height: 1.5em;
+}
+.webphysiology_portfolio .grid .portfolio_details {
+	width: auto;
+}
+.webphysiology_portfolio .grid .portfolio_page_img {
+	text-align: center;
+	margin-bottom: 0;
+}
+.webphysiology_portfolio .portfolio_page_img img {
+	background-color: #000;
+	border: solid 3px #fff;
+	height: auto;
+	margin: 0;
+	padding: 2px 2px;
+}
+.webphysiology_portfolio .portfolio_description {
+	margin-bottom: 10px;
+}
+.webphysiology_portfolio .portfolio_description.after_meta_data {
+	margin-top: 10px;
+	clear: both;
+}
+.webphysiology_portfolio .portfolio_description.after_meta_data p {
+	padding-top: 10px;
+	margin-bottom: 0 !important;
+}
+.webphysiology_portfolio .portfolio_meta .key {
+	float: left;
+	font-weight: bold;
+	clear: both;
+}
+.webphysiology_portfolio .portfolio_meta .value {
+	float: right;
+}
+.webphysiology_portfolio .portfolio_nav {
+	float: right;
+	width: 100%;
+	font-size: 93%;
+	line-height: normal;
+}
+.webphysiology_portfolio .portfolio_nav ul {
+	float: right;
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+.webphysiology_portfolio .portfolio_nav.webphysport_nav_top ul {
+	margin-bottom: 10px;
+}
+.webphysiology_portfolio .portfolio_nav.webphysport_nav_bottom ul {
+	margin-top: 10px;
+}
+.webphysiology_portfolio .portfolio_nav ul li {
+	float: left;
+	list-style: none;
+	background: #eeeeee;
+	margin: 0;
+	padding: 0;
+	margin-left: 5px;
+	border: 1px solid #004813;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.webphysiology_portfolio .portfolio_nav ul li.selected, .webphysiology_portfolio .portfolio_nav ul li:hover {
+	background: #FFC;
+	border: 1px solid #004813;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.webphysiology_portfolio .portfolio_nav ul li a {
+	display: block;
+	padding: 2px 4px 1px 4px;
+	text-decoration: none;
+	line-height: 1.2em;
+}
+.webphysiology_portfolio .portfolio_credit {
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+.webphysiology_portfolio .portfolio_credit em, .webphysiology_portfolio .portfolio_credit em a {
+	font-style: italic;
+	opacity: .85;
+}
+.webphysiology_portfolio .portfolio_credit em {
+	font-size: 0.8em;
+}
+.webphysiology_portfolio .portfolio_credit a {
+	font-size: 0.95em;
+	text-decoration: none;
+}

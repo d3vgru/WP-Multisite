@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* CSS Document */
+/* as of v1.4.0 */
+
+#container.webphysiology_portfolio_container {
+	width: auto;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_title {
+	margin-bottom: 30px;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_page_img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_details {
+	float: left;
+	margin-left: 10px;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_meta {
+	overflow: hidden;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_meta .key {
+	float: left;
+	font-weight: bold;
+	clear: both;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_meta .value {
+	float: left;
+	padding-left: 10px;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_description {
+	margin-top: 10px;
+	overflow: hidden;
+}
+#webphysiology_portfolio.single_portfolio_page .portfolio_description.pdesc_top {
+	margin-top: 0;
+	margin-bottom: 10px;
+}

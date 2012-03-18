@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/* Portfolio Admin area CSS Document */
+/* updated 1.4.0 */
+
+#poststuff .inside, #poststuff .inside p {
+	font-size: 1em !important;
+}
+.portfolio-admin .postbox-container {
+	width: 100%;
+}
+.company_logo {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.company_logo h2 {
+	padding-top: 18px;
+}
+a.webphys_logo {
+	background: url(../images/WEBphysiology-icon.png) no-repeat;
+	height: 60px;
+	width: 60px;
+	margin: 7px 15px 5px 2px;
+	float: left;
+}
+#social_network {
+	position: absolute;
+	right: 180px;
+	margin: -1px 0 0 0;
+	padding: 0;
+	z-index: 999;
+}
+#newsletter_subscribe {
+	position: absolute;
+	right: 190px;
+	margin: -45px 0 0 0;
+/*	top: 80px; */
+	padding: 0;
+	z-index: 999;
+}
+#facebook_like {
+	position: absolute;
+	right: 310px;
+	margin: 33px 0 0 0;
+/*	top: 158px; */
+	padding: 0;
+	z-index: 999;
+}
+#donate_smiley {
+	position: absolute;
+	right: 70px;
+	margin: -27px 0 0 0;
+/*	top: 95px; */
+	padding: 0;
+	z-index: 999;
+}
+#social_network ul {
+	list-style-type: none;
+	margin-top: 0;
+}
+#social_network li {
+	float: left;
+	padding: 0 3px;
+}
+.postbox .inside {
+	margin: 5px 5px 5px 20px;
+}
+.postbox .inside h4 {
+	margin: 1.33em 1.33em .6em 0;
+	padding-bottom: .5em;
+	border-bottom: 2px solid #cccccc;
+}
+.postbox .inside label {
+	margin: 10px 0 10px 10px;
+}
+.postbox .inside input {
+	margin: 10px 0 10px 10px;
+}
+#upload_image_button {
+	margin: 0 0 0 10px;
+}
+.wrap .updated, .wrap .error {
+	margin-top: 25px !important;
+}
+.msg_hidden {
+	display: none;
+}
+.msg_visible {
+	display: inline;
+}
+.widefat {
+	width: 95% !important;
+}
+.shortbottom {
+	margin-bottom: 3px !important;
+}
+.tallbottom {
+	margin-bottom: 15px !important;
+}
+.attribute_instructions {
+	margin-left: 20px;
+	font-size: 0.85em;
+}
+#portolio-conf .portfolio_button {
+	float: left;
+	padding: 0 0 0 10px;
+}
+#portolio-conf .portfolio_button.top {
+	position: absolute;
+	right: 45px;
+	z-index: 999;
+	margin-top: 3px;
+	padding: 0;
+}
+input.button-primary, button.button-primary, a.button-primary, .button {
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.postbox .inside .button {
+	padding: 6px 8px 3px 8px;
+}
+#pluginsettings {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.portfolio_donate {
+	float: left;
+	margin: 3px 0 0 20px;
+}
+.portfolio_admin_style {
+	float: left;
+}
+#color-selection-helper {
+	float: left;
+	margin: 20px 5px 20px 20px;
+	padding: 10px 10px;
+	border: 2px solid #ddd;
+}
+#color-selection-helper p {
+	text-align: center;
+	color: #aaa;
+	background: #eee;
+	font-size: 1.25em;
+	font-weight: bold;
+	margin: -10px -10px 8px -10px;
+	padding: 3px 3px;
+	background: #eee;
+}
+#colorselector {
+	text-align: center;
+	margin-bottom: 2px;
+	margin-left: 28px;
+}
+.half_input {
+	width: 50%;
+}
+.display_and_label {
+	width: 600px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.display_attrib {
+	float: left;
+	width: 220px;
+	margin: 0;
+	padding: 0;
+}
+.label_attrib input[type="text"] {
+	margin: 5px 0 5px 10px;
+}
+.label_attrib {
+	float: right;
+	width: 360px;
+	margin: 0;
+	padding: 0;
+}
+input.webphysiology_portfolio_small_input {
+	width: 70px;
+}
+#portolio-conf input[type="checkbox"], #portolio-conf input[type="radio"] {
+	margin-bottom: 1px;
+}
+#option_alerts {
+	float: left;
+	width: 30%;
+}
+#option_comments {
+	float: left;
+	width: 65%;
+	border-left: solid 1px #cccccc;
+	padding-left: 35px;
+}
+#option_comments h2 {
+	padding: 0;
+	margin: -5px 0 0 0;
+}
+#port_option_donate {
+	position: absolute;
+	right: 35px;
+	margin: -2px 0 0 0;
+	padding: 0;
+	height: 40px;
+	z-index: 999;
+}
+#show-clear-response, #show-chmod-response {
+	position: absolute;
+	left: 240px;
+	margin: -34px 0 0 0;
+	padding: 5px 5px;
+	text-align: center;
+	width: 300px;
+	background-color: #FF9;
+}
+.ajax_status {
+	margin: 0;
+}
+.ShowAjaxContent {
+	display: block;
+}
+.HideAjaxContent {
+	display: none;
+}

@@ -1,0 +1,323 @@
+# Translation of the WordPress plugin   by .
+# Copyright (C) 2010
+# This file is distributed under the same license as the  package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/nrelate-related-content\n"
+"POT-Creation-Date: 2010-11-04 23:05+0000\n"
+"PO-Revision-Date: 2011-11-09 15:36+0200\n"
+"Last-Translator: Ertuğrul SAĞLAM <rooteto@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/dashboard.php:23
+msgid "Dashboard"
+msgstr "Başlangıç"
+
+#: admin/dashboard.php:23
+msgid "nrelate"
+msgstr "nrelate"
+
+#: admin/nrelate-admin-settings.php:16
+msgid "Advertising"
+msgstr "Reklam"
+
+#: admin/nrelate-admin-settings.php:17
+msgid "Please Enter your ad ID"
+msgstr "Lütfen Reklam kimliğinizi (ID) girin."
+
+#: admin/nrelate-admin-settings.php:17
+msgid "Get Your ID"
+msgstr "Kimliğiniz ID"
+
+#: admin/nrelate-admin-settings.php:20
+msgid "Communication"
+msgstr "İletişim"
+
+#: admin/nrelate-admin-settings.php:21
+msgid "Check here to send nrelate the admin email address (under \"General Settings\").<br/>We promise not to overwhelm you with email."
+msgstr "Bu yüzden E-posta adresinizi (\"Genel Ayarlar\").<br/> Adı altında bize göndermek için alttaki kutuyu işaretleyin."
+
+#: admin/nrelate-admin-settings.php:37
+msgid "<p>Become a part of the nrelate advertising network and earn some extra money on your blog.</p>"
+msgstr "<p>Nrelate reklam ağının bir parçası olun ve blogunuzdan gelir elde edin.</p>"
+
+#: admin/nrelate-admin-settings.php:59
+msgid "<p>nrelate may need to communicate with you when we release new features or have a problem accessing your website.</p>"
+msgstr "<p>nrelate web sitesine erişim sorunu, yeni özellikler veya sizinle iletişim kurmak gerekebilir.</p>"
+
+#: admin/nrelate-admin-settings.php:78
+msgid "General Settings:"
+msgstr "Genel Ayarlar:"
+
+#: admin/nrelate-admin-settings.php:89
+#: related_settings/nrelate-related-settings.php:397
+#: related_settings/nrelate-related-settings.php:404
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: admin/nrelate-main-menu.php:63
+msgid "nrelate Dashboard"
+msgstr "nrelate Başlangıç"
+
+#: admin/nrelate-main-menu.php:76
+msgid "Configure Installed Plugins:"
+msgstr "Yüklenen eklentileri yapılandırın:"
+
+#: admin/nrelate-main-menu.php:79
+#: related_settings/related-menu.php:19
+msgid "Related Content"
+msgstr "Benzer içerik"
+
+#: admin/nrelate-main-menu.php:93
+msgid "About nrelate:"
+msgstr "nrelate Hakkında:"
+
+#: admin/nrelate-main-menu.php:95
+msgid "Visit us"
+msgstr "Ziyaret Edin"
+
+#: admin/nrelate-main-menu.php:96
+msgid "Ask us"
+msgstr "Bize sorun"
+
+#: admin/nrelate-main-menu.php:97
+msgid "Follow us"
+msgstr "Takip et"
+
+#: admin/nrelate-main-menu.php:110
+msgid "Messages:"
+msgstr "Mesajlar:"
+
+#: admin/nrelate-main-menu.php:138
+msgid "From our Blog:"
+msgstr "Blog:"
+
+#: nrelate-related.php:104
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: nrelate-related.php:121
+msgid "Plugin Settings"
+msgstr "Eklenti Ayarları"
+
+#: nrelate-related.php:122
+msgid "Support Forum"
+msgstr "Destek Forumu"
+
+#: related-widget.php:14
+msgid "Show related content on your single post pages."
+msgstr "Tazı sayfalarında ilgili içerikleri göster."
+
+#: related-widget.php:16
+msgid "nrelate Related Content"
+msgstr "nrelate Benzer içerik"
+
+#: related-widget.php:41
+msgid "Related Posts:"
+msgstr "Benzer Yazılar:"
+
+#: related-widget.php:46
+msgid "This widget will only appear on single post pages."
+msgstr "Bu Widget sadece yazı sayfalarında görünür."
+
+#: related-widget.php:49
+msgid "Adjust your settings here >"
+msgstr "nrelate Ayarlarınız >"
+
+#: related_settings/nrelate-related-settings.php:15
+msgid "Main Settings"
+msgstr "Ana Ayarlar"
+
+#: related_settings/nrelate-related-settings.php:16
+msgid "Would you like to display thumbnails with text, or text only"
+msgstr "Görünüm: Küçük resim veya metin "
+
+#: related_settings/nrelate-related-settings.php:17
+msgid "<div id=\"imagesizepreview_header\">Please choose a thumbnail size </div>"
+msgstr "<div id=\"imagesizepreview_header\">Lütfen küçük resim boyutu seçin </div>"
+
+#: related_settings/nrelate-related-settings.php:18
+msgid "<div id=\"imagepreview_header\">Please provide a link to your default image: (This will show up when a related post does not have a picture in it)<br/><i>For best results image should be as large (or larger) than the thumbnail size you chose above.</i></div>"
+msgstr "<div id=\"imagepreview_header\">Varsayılan görüntü için bir bağlantı veriniz: (Herhangi bir içerik bulunamazsa bu bağlantıdaki resimler görünecek.)<br/><i>En iyi sonuçlar için seçtiğiniz resim boyutunda veya daha büyüğünü seçin.</i></div>"
+
+#: related_settings/nrelate-related-settings.php:19
+msgid "<div id=\"imagecustomfield_header\">If you use a <b>Custom Field</b> for your images, enter it here.</div>"
+msgstr "<div id=\"imagecustomfield_header\">Görüntüler için <b>Özel Alanlar</b> kullanıyorsanız, nrelate'ye gösterin.</div>"
+
+#: related_settings/nrelate-related-settings.php:20
+msgid "Please enter a title for the related content box"
+msgstr "Lütfen benzer içerikler için bir başlık girin"
+
+#: related_settings/nrelate-related-settings.php:21
+msgid "<b>Maximum</b> number of related posts to display from this site"
+msgstr "Maksimum kaç tane istiyorsanız seçiniz"
+
+#: related_settings/nrelate-related-settings.php:22
+msgid "How relevant do you want the results to be?<br/><i>Based on the amount/type of content on your website, higher relevancy settings may return little or no posts.</i>"
+msgstr "Sonuçlar ne kadar kesin olsun?<br/><i>WebSitenizin türüne göre çok alakalı, çok az veya alakasız benzer içerikler görüntülenir.</i>"
+
+#: related_settings/nrelate-related-settings.php:23
+msgid "Maximum number of characters per line?"
+msgstr "Satır başına Maksimum kaç karakter eklensin?"
+
+#: related_settings/nrelate-related-settings.php:24
+msgid "How deep into your archive would you like to go for related posts?"
+msgstr "Arşiv olarak ne kadar derinliğe inilsin?"
+
+#: related_settings/nrelate-related-settings.php:27
+msgid "Partner Settings"
+msgstr "Ortak Ayarlar"
+
+#: related_settings/nrelate-related-settings.php:28
+msgid "Would you like to display related content from sites on your blogroll?"
+msgstr "Blog bağlantılarınızdaki sitelerin ilgili içeriği görüntülemek ister misiniz?"
+
+#: related_settings/nrelate-related-settings.php:29
+msgid "<b>Maximum</b> number of related posts to display from this site's blogroll"
+msgstr "<b>Maksimum</b> kaç ilgili içerik görüntülensin?"
+
+#: related_settings/nrelate-related-settings.php:32
+msgid "Layout Settings"
+msgstr "Düzen Ayarları"
+
+#: related_settings/nrelate-related-settings.php:33
+msgid "Top of post <em>(Automatic)</em>"
+msgstr "En iyi içerik <em>(Otomatik)</em>"
+
+#: related_settings/nrelate-related-settings.php:34
+msgid "Bottom of post <em>(Automatic)</em>"
+msgstr "Alt içerik <em>(Otomatik)</em>"
+
+#: related_settings/nrelate-related-settings.php:35
+msgid "Widget area or Sidebar <em>(Automatic)</em>"
+msgstr "Bileşenler veya Kenar Çubuğu <em>(Otomatik)</em>"
+
+#: related_settings/nrelate-related-settings.php:36
+msgid "Add to Theme <em>(Manual)</em>"
+msgstr "Tema Ekle <em>(Manuel)</em>"
+
+#: related_settings/nrelate-related-settings.php:37
+msgid "Would you like to support nrelate by displaying our logo?"
+msgstr "nrelate Logosunu görüntüleyerek destek olmak istermisiniz?"
+
+#: related_settings/nrelate-related-settings.php:40
+msgid "Advertising Settings"
+msgstr "Reklam Ayarları"
+
+#: related_settings/nrelate-related-settings.php:41
+msgid "Would you like to display ads?"
+msgstr "Reklamları görüntülemek istermisiniz?"
+
+#: related_settings/nrelate-related-settings.php:45
+msgid "Reset Settings to Default"
+msgstr "Varsayılan Ayarları Sıfırla"
+
+#: related_settings/nrelate-related-settings.php:46
+msgid "Would you like to restore to defaults upon reactivation?"
+msgstr "Varsayılan ayarları geri yüklemek istermisiniz?"
+
+#: related_settings/nrelate-related-settings.php:62
+msgid "<p>Main controls for your related content.</p>"
+msgstr "<p>Benzer içerikler için özellikleri ayarlarma alanı</p>"
+
+#: related_settings/nrelate-related-settings.php:83
+msgid "Low: least relevant"
+msgstr "Düşük: En ilgili"
+
+#: related_settings/nrelate-related-settings.php:83
+msgid "Med: more relevant"
+msgstr "Orta: Daha uygun"
+
+#: related_settings/nrelate-related-settings.php:83
+msgid "High: most relevant"
+msgstr "Yüksek: En uygun"
+
+#: related_settings/nrelate-related-settings.php:110
+msgid "Hour(s)"
+msgstr "Saatler"
+
+#: related_settings/nrelate-related-settings.php:110
+msgid "Day(s)"
+msgstr "Günler"
+
+#: related_settings/nrelate-related-settings.php:110
+msgid "Week(s)"
+msgstr "Haftalar"
+
+#: related_settings/nrelate-related-settings.php:110
+msgid "Month(s)"
+msgstr "Aylar"
+
+#: related_settings/nrelate-related-settings.php:110
+msgid "Year(s)"
+msgstr "Yıllar"
+
+#: related_settings/nrelate-related-settings.php:134
+msgid "<p>Related content can be brought in from your blogroll.</p>"
+msgstr "<p>nrelated sayesinde bağlantılardeki websitelerinizinde benzer içeriklerini görüntüleyebilirsiniz.</p>"
+
+#: related_settings/nrelate-related-settings.php:146
+msgid "Yes"
+msgstr "Evet"
+
+#: related_settings/nrelate-related-settings.php:148
+msgid "No"
+msgstr "Hayır"
+
+#: related_settings/nrelate-related-settings.php:178
+msgid "<p>Where do you want your related content to display?</p>"
+msgstr "<p>Benzer içerikleri nerede görmek istiyorsun?</p>"
+
+#: related_settings/nrelate-related-settings.php:198
+msgid "To use our widget, visit <a href=\"widgets.php\">your widget page.</a></b>"
+msgstr "nrelated Bileşenlerini kullanmak için <a href=\"widgets.php\">Bileşenler sayfasını ziyaret edin.</a></b>"
+
+#: related_settings/nrelate-related-settings.php:203
+msgid "Add this code anywhere in your theme to show related content.<br>A good place is either Single.php or Sidebar.php:"
+msgstr "Benzer içerikleri temanızda istediğiniz yerde göstermek için bu kodu ekleyin. <br>İyi bir yada single.php veya sidebar.php:"
+
+#: related_settings/nrelate-related-settings.php:216
+msgid "Thumbnails"
+msgstr "Ufak resim"
+
+#: related_settings/nrelate-related-settings.php:216
+msgid "Text"
+msgstr "Metin"
+
+#: related_settings/nrelate-related-settings.php:274
+msgid "No default image chosen, until you provide your default image, nrelate will use free images from <a href='http://img.nrelate.com/rcw_wp/"
+msgstr "Varsayılan görüntü sağlayıncaya kadar görüntünüz yok ise, nrelate sizin için kendi seçmiş olduğu ücretsiz resimleri kullanabilirsiniz. <a href='http://img.nrelate.com/rcw_wp/"
+
+#: related_settings/nrelate-related-settings.php:294
+msgid "Enter the link to your default image (include http://): <br>"
+msgstr "Varsayılan görüntü linkini girin (dahil http://): <br>"
+
+#: related_settings/nrelate-related-settings.php:312
+msgid "<p>nrelate can display ads under your related posts and you can earn money. Make sure you have signed up an \"Ad ID\", and entered it on the <a href=\"admin.php?page=nrelate-main\">nrelate Dashboard page</a>.</p>"
+msgstr "<p>nrelate ilgili mesajlar altında reklam görüntüleyebilir ve para kazanabilirsiniz. Reklam kimliği için kaydoldun \"Ad ID\" ve nrelate Gösterge Tablosu sayfasına girdiğiniz emin olun. <a href=\"admin.php?page=nrelate-main\">nrelate Başlangıç sayfası</a>.</p>"
+
+#: related_settings/nrelate-related-settings.php:328
+msgid "<p>To reset the plugin to defaults, check the box below, deactivate the plugin, and then reactivate it.</p>"
+msgstr "<p>Eklentisi varsayılan ayarlarına sıfırlamak için, aşağıdaki kutuya onay verin ve kaydedin birde eklentiyi devre dışı bırakıp sonra tekrar aktifleştirin.</p>"
+
+#: related_settings/nrelate-related-settings.php:381
+msgid ""
+"<h2>Related Content</h2>\n"
+"\t\tThe related content plugin allows you to display related posts on your single posts pages.\n"
+"\t\tClick <a href=\""
+msgstr ""
+"<h2>Benzer içerik</h2>\n"
+"\t\tEklenti WebSitenizdeki içeriklerin içinde benzer içerikler oluşturmaya yarar..\n"
+"\t\tClick <a href=\""
+
+#: related_settings/nrelate-related-settings.php:399
+#: related_settings/nrelate-related-settings.php:402
+msgid "Preview"
+msgstr "Ön izleme"
+

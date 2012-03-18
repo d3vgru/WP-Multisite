@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/******************************************************************************************************
+ 
+ 2011-03-08 : removed most of the navigation elements as they are now handled by simple border
+              styling and not elements
+ 
+ NOTE:   #portfolios   has been deprecated in v1.2.7 and replaced with class   .webphysiology_portfolio
+ 
+ ******************************************************************************************************/
+
+.webphysiology_portfolio .portfolio_nav ul li a {
+	padding: 1px 4px 2px 5px;
+}
+.webphysiology_portfolio #portfolio_credit {
+	/* The following is ignored by standards-based browsers */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  /* IE8 */
+	filter: alpha(opacity=80); /* IE 5-7  */
+}

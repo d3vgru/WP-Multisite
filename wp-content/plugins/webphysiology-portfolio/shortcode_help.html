@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WEBphysiology Portfolio Shortcode Options</title>
+<meta name="description" content="The WEBphysiology Portfolio WordPress Plugin allows for an expanded list or grid formatted gallery of images with description and other meta data. It's professionally designed and free under GPL licensing." />
+
+<style type="text/css">
+<!--
+html {
+	font-size: 100.01%;
+}
+body {
+	background: none;
+	margin: 20px 20px;
+	color: #222222;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 75%;
+	line-height: 1.8em;
+}
+h2 {
+	color: #1F69C3;
+	font-size: 2em;
+	font-weight: bold;
+	margin-top: 1.25em;
+	margin-bottom: 0.75em;
+}
+p {
+	margin: 0 0 1.5em;
+	font-size: 1.2em;
+}
+h3 {
+	color: #666666;
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 1em;
+}
+pre {
+	background-color: #FFFFB3;
+	border: 1px solid #FA6312;
+	margin: 0 1.5em 0 1.25em;
+	padding: 1em;
+}
+pre, code {
+	font: 1em/1.5 'andale mono','lucida console',monospace;
+}
+pre {
+	white-space: pre;
+}
+-->
+</style>
+</head>
+
+<body>
+<a href="http://refr.us/wpport"><img src="http://pagepeeker.com/thumbs.php?size=t&url=refr.us/wpport" border="0"></a><br />
+<img src="http://pagepeeker.com/thumbs.php?size=s&url=refr.us/wpport" border="0"><br />
+<img src="http://pagepeeker.com/thumbs.php?size=m&url=refr.us/wpport" border="0"><br />
+<img src="http://pagepeeker.com/thumbs.php?size=l&url=refr.us/wpport" border="0"><br />
+<img src="http://pagepeeker.com/thumbs.php?size=x&url=refr.us/wpport" border="0"><br />
+<h2 style="color:#1F69C3;font-weight:bold;">WEBphysiology Portfolio Page Shortcode Options</h2>
+
+<p>The WEBphysiology Portfolio is implemented utilizing a &#91;shortcode&#93;.  There are a couple of options that may be specified with the shortcode to further control the display of the Portfolio on a given page.</p>
+<p>The following are the allowed set of &#91;webphysiology_portfolio&#93; shortcode parameters:</p>
+<p><span style="font-weight:bold;color:#1F69C3;">portfolio_type</span> : This string parameter will filter the portfolio items being displayed based upon the assigned Portfolio Type.  Multiple Portfolio Types may be referenced, just separate them with commas.  Preceding a Portfolio Type with a dash will signify to exclude any Portfolios with that type assigned.  (default <em>empty</em>)</p>
+<p><span style="font-weight:bold;color:#1F69C3;">id</span> : This string parameter allows for the ability to encapsulate the Portfolios returned by the shortcode within a &lt;div&gt; of the specified id.  (default <em>empty</em>)</p>
+
+<p><span style="font-weight:bold;color:#1F69C3;">max_nav_spread</span> : This numeric parameter determines the maximum number of actual numbers that are displayed within the page navigation buttons. (default <em>5</em>)</p>
+<p><span style="font-weight:bold;color:#1F69C3;">thickbox</span> : This boolean (true/false) parameter allows for the ability to override the Portfolio Options setting specifying the image click behavior. Setting the value to &#8220;true&#8221; will result in displaying any Portfolios, for this instance of the shortcode, within a thickbox where appropriate.  Setting it to &#8220;false&#8221; has the opposite effect.  (defaults to current Portfolio Options setting)</p>
+<p><span style="font-weight:bold;color:#1F69C3;">per_page</span> : This numeric parameter allows for the ability to override the Portfolio Options setting specifying the number of Portfolios to display on a given page.  This can be handy if you use more than one Portfolio shortcode on a given page and want to have both instances records overlap onto the same number of subsequent pages.  (defaults to current Portfolio Options setting)</p>
+
+<p><span style="font-weight:bold;color:#1F69C3;">credit</span> : This boolean (true/false) parameter allows for the ability to override the Portfolio Options setting specifying whether to display the plugin credit.  This can be especially handy if you use the Portfolio shortcode more than once on a given page. Setting the value to &#8220;false&#8221; will result in not displaying the credit for that instance of the shortcode.  Setting it to &#8220;true&#8221; will display the credit.  (defaults to current Portfolio Options setting)</p>
+<h3>Example Use of the &#91;webphysiology_portfolio&#93; Shortcode</h3>
+<p>The following covers just a few of the variety of ways to specify the Portfolio shortcode:</p>
+<p><pre><code>&#91;webphysiology_portfolio&#93;</code></pre><br />Specifying just the Portfolio shortcode will result in all entered Portfolios being displayed.</p>
+<p><pre><code>&#91;webphysiology_portfolio portfolio_type=red&#93;</code></pre><br />Specifying a single Portfolio Type parameter will result in a Portfolio listing that only contains Portfolios that have the specified Portfolio Type assigned.  <strong>Important Note</strong> - make certain to specify the proper Portfolio Type slug value as WordPress may have altered what you had entered as the slug if it had already been used (e.g., as a Post Tag).  For example, you may have entered "red" as your slug but WordPress may have appended a number, resulting in the slug actually being set to "red-1".</p>
+<p><pre><code>&#91;webphysiology_portfolio portfolio_type=red,white,blue&#93;</code></pre><br />Specifying more than one Portfolio Type will result in a Portfolio listing that contains Portfolios that have the specified Portfolio Types assigned.</p>
+<p><pre><code>&#91;webphysiology_portfolio portfolio_type=-red&#93;</code></pre><br />Specifying a single Portfolio Type parameter with a dash before it will result in a Portfolio listing containing all Portfolios except for those with the specified Portfolio Type.</p>
+<p><pre><code>&#91;webphysiology_portfolio portfolio_type=red,-white,blue,-yellow&#93;</code></pre><br />You may mix and match any number of Portfolio Types to include or exclude.  Those beginning with a dash will be excluded while all those without would be included.  In this example, Portfolios with a type of red and blue would be included where white and yellow would be excluded.</p>
+<p><pre><code>&#91;webphysiology_portfolio max_nav_spread=3&#93;</code></pre><br />Specifying the <em>max_nav_spread</em> will affect the display of the navigation control.  This control will exist anytime the number of Portfolios extends beyond the number that are displayed per page.  The <em>max_nav_spread</em> option controls the width of this control.  For example, if one were to specify 3, then the control, at it's widest, would consist of 7 control buttons; first, previous, 1, 2, 3, next, last.  The default behavior is an argument of 5.</p>
+<p><pre><code>&#91;webphysiology_portfolio&#93;enclosed text&#91;/portfolio&#93;</code></pre><br />The Portfolio &#91;shortcode&#93; allows for the ability to enclose text between open/close shortcode tags.  The result will be that the text enclosed between the opening and closing shortcode tags will be displayed above the Portfolio Listing.  One also could simply place text before or after the &#91;webphysiology_portfolio&#93; shortcode. <strong>NOTE:</strong> If you include text between shortcode tags, you must do it for all &#91;webphysiology_portfolio&#93; shortcodes used on a given page.</p>
+<p><strong>Note:</strong> You may include more than one Portfolio shortcode on a given page.  This may be handy if you want to break up your portfolio based upon a given type but not split them onto separate pages.  For example, perhaps you are using the plugin to manage folks on a video production crew and you assign them a "Portfolio" type based upon their role.  You then could display your Portfolio entries on one page by role as follows:</p>
+<p><pre><code>&lt;h2&gt;Director&lt;/h2&gt;
+&#91;webphysiology_portfolio portfolio_type=director&#93;
+
+&lt;h2&gt;Screenwriters&lt;/h2&gt;
+&#91;webphysiology_portfolio portfolio_type=screenwriter&#93;
+
+&lt;h2&gt;Cameramen&lt;/h2&gt;
+&#91;webphysiology_portfolio portfolio_type=cameraman&#93;</code></pre></p><br />
+<p>The one major thing to understand here, however, is that Portfolio navigation may break the look as the number of entries per page that you specify in the Portfolio options is tied directly to the use of a given shortcode.  So, if you specify three items per page and you have one director, two screenwriters and five camermen, the results will be that page one lists all of the directors and screenwriters and the first three cameramen.  Navigating to page two will show a &#8220;no records found error&#8221; for the directors and screenwriters and list the remaining two cameramen.</p>
+
+<p class="anchor-line"><a name="portfolio"></a></p>
+
+</body>
+</html>

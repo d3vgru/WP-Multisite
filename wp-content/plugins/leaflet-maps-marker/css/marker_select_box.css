@@ -1,0 +1,74 @@
+#msb_insertMarkerSC{
+	float: right;
+	margin-top: 13px;
+}
+#msb_header_description{
+	color:#666666;
+}
+#msb_serchContainer{
+	padding-left: 40px;
+	margin: 5px 0;
+}
+#msb_listContainer{
+	height: 321px;
+	width:100%;
+	overflow-y: scroll;
+	background: #fff ;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+#msb_listContainer div{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+input.button-primary, button.button-primary, a.button-primary {
+	background: url("/wp-admin/images/button-grad.png") repeat-x scroll left top #21759B;
+	border-color: #298CBA;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-sizing: content-box;
+	border-radius: 11px 11px 11px 11px;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
+	font-size: 12px !important;
+	line-height: 13px;
+	padding: 3px 8px;
+	text-decoration: none;
+	float:right;
+}
+#msb_listContainer .list_item{
+	border-top: none;
+}
+#msb_listHint{
+    font-style: italic;
+    color:#555;
+	padding:2px;
+}
+.list_item{
+    font-size: 11px;
+	padding:2px;
+}
+.list_item .name{
+
+}
+.list_item .date{
+    float: right;
+}
+.list_item.active{
+    background: #ebebeb ;
+}
+#msb_cancel{
+    color: red;
+    font-size: 12px;
+}
+#msb_attribution{
+    color: #666666;
+    font-size: 11px;
+}
+#msb_attribution a {
+    color: #666666;
+    font-size: 11px;
+}

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* Portfolio All Admin area CSS Document */
+
+.webphys_portfolio_message {
+	margin: 25px 45px 25px 15px;
+	padding: 0 10px 0 20px;
+	width: auto;
+	background-color: #FFEBE8;
+	border: 1px solid #CC0000;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.webphys_portfolio_message p {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+.webphys_portfolio_message a {
+	background: none;
+	margin: 0;
+	padding: 0;
+	float: none;
+	width: auto;
+	height: auto;
+}

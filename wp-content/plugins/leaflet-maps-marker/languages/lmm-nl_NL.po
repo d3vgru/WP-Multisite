@@ -1,0 +1,3674 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MapsMarker.com\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-02 17:22+0100\n"
+"PO-Revision-Date: 2012-03-02 17:40+0100\n"
+"Last-Translator: Marijke Metz <marijke@mergenmetz.nl>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__;esc_attr_e;esc_attr__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../class-leaflet-options.php:47
+msgid "Default Field"
+msgstr "Standaardveld"
+
+#: ../class-leaflet-options.php:48
+msgid "This is a default description."
+msgstr "Dit is een standaard beschrijving"
+
+#: ../class-leaflet-options.php:80
+#: ../leaflet-admin-header.php:8
+#: ../leaflet-maps-marker.php:664
+#: ../leaflet-maps-marker.php:744
+#: ../leaflet-maps-marker.php:1049
+#: ../leaflet-marker.php:726
+#: ../leaflet-marker.php:730
+#: ../leaflet-marker.php:734
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../class-leaflet-options.php:84
+#, php-format
+msgid "You just successfully installed the \"Leaflet Maps Marker\" plugin. You can now optionally change the default settings below or <a href=\"%1$sadmin.php?page=leafletmapsmarker_marker\">add your first marker</a>.<br/>For tutorials and help, please check the <a href=\"%1$sadmin.php?page=leafletmapsmarker_help\">Help &amp; Credits page</a>!"
+msgstr "U heeft zojuist de \"Leaflet Maps Marker\" plugin met succes geïnstalleerd . U kunt eventueel de standaard instellingen wijzigen <a href=\"%1$sadmin.php?page=leafletmapsmarker_marker\"> of voeg uw eerste marker toe.</a>.<br/>Voor tutorials en help, kunt u de <a href=\"%1$sadmin.php?page=leafletmapsmarker_help\">Help &amp; Credits pagina</a>raadplegen!"
+
+#: ../class-leaflet-options.php:88
+msgid "Warning: the custom map icon directory at <code>/wp-contents/uploads/leaflet-maps-marker-icons</code> could not be created due to file permission settings on your webserver. Leaflet Maps Marker will work as designed, but only with one map icon available.<br/>You can add the included map icons manually by following the steps at <a href=\"http://www.mapsmarker.com/incomplete-installation\" target=\"_blank\">http://www.mapsmarker.com/incomplete-installation</a>"
+msgstr "Waarschuwing: de aangepaste kaart-pictogram directory op <code>/wp-contents/uploads/leaflet-maps-marker-icons</code> kon niet worden gemaakt vanwege bestandsrechten instellingen op uw webserver. Leaflet Maps Marker zal werken zoals het hoort, maar alleen met slechts één pictogram. <br/> U kunt de meegeleverde kaart pictogrammen handmatig toevoegen door de volgende stappen op <a href=\"http://www.mapsmarker.com/incomplete-installation\" target=\"_blank\">http://www.mapsmarker.com/incomplete-installation</a>"
+
+#: ../class-leaflet-options.php:93
+msgid "Plugin options updated."
+msgstr "Plugin opties worden bijgewerkt."
+
+#: ../class-leaflet-options.php:107
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: ../class-leaflet-options.php:178
+#: ../class-leaflet-options.php:370
+msgid "Default basemap for new markers/layers"
+msgstr "Standaard basiskaart voor nieuwe markers/lagen"
+
+#: ../class-leaflet-options.php:179
+#: ../class-leaflet-options.php:409
+msgid "Names for default basemaps"
+msgstr "Namen voor standaard basiskaarten"
+
+#: ../class-leaflet-options.php:180
+#: ../class-leaflet-options.php:524
+msgid "Available basemaps in control box"
+msgstr "Beschikbare basiskaarten in de controlbox"
+
+#: ../class-leaflet-options.php:181
+#: ../class-leaflet-options.php:639
+#: ../class-leaflet-options.php:653
+msgid "OGD Vienna Selector"
+msgstr "OGD Wenen selectie"
+
+#: ../class-leaflet-options.php:182
+msgid "Cloudmade 1 settings"
+msgstr "Cloudmade 1 - Instellingen"
+
+#: ../class-leaflet-options.php:183
+#: ../class-leaflet-options.php:724
+msgid "Cloudmade 2 settings"
+msgstr "Cloudmade 2 - Instellingen"
+
+#: ../class-leaflet-options.php:184
+#: ../class-leaflet-options.php:770
+msgid "Cloudmade 3 settings"
+msgstr "Cloudmade 3 - Instellingen"
+
+#: ../class-leaflet-options.php:185
+#: ../class-leaflet-options.php:816
+msgid "Custom basemap 1 settings"
+msgstr "Aangepaste basiskaart 1 - instellingen"
+
+#: ../class-leaflet-options.php:186
+#: ../class-leaflet-options.php:886
+msgid "Custom basemap 2 settings"
+msgstr "Aangepaste basiskaart 2 - instellingen"
+
+#: ../class-leaflet-options.php:187
+#: ../class-leaflet-options.php:956
+msgid "Custom basemap 3 settings"
+msgstr "Aangepaste basiskaart 3 - instellingen"
+
+#: ../class-leaflet-options.php:194
+#: ../class-leaflet-options.php:1034
+msgid "Available overlays for new markers/layers"
+msgstr "Beschikbare overlays voor nieuwe markers/lagen"
+
+#: ../class-leaflet-options.php:195
+#: ../class-leaflet-options.php:1087
+msgid "Custom overlay settings"
+msgstr "Aangepaste overlay - instellingen"
+
+#: ../class-leaflet-options.php:196
+#: ../class-leaflet-options.php:1166
+msgid "Custom overlay 2 settings"
+msgstr "Aangepaste overlay 2 - instellingen"
+
+#: ../class-leaflet-options.php:197
+#: ../class-leaflet-options.php:1245
+msgid "Custom overlay 3 settings"
+msgstr "Aangepaste overlay 3 - instellingen"
+
+#: ../class-leaflet-options.php:198
+#: ../class-leaflet-options.php:1323
+msgid "Custom overlay 4 settings"
+msgstr "Aangepaste overlay 4 - instellingen"
+
+#: ../class-leaflet-options.php:205
+msgid "WMS stands for <a href=\"http://www.opengeospatial.org/standards/wms\" target=\"_blank\">Web Map Service</a> and is a standard protocol for serving georeferenced map images over the Internet that are generated by a map server using data from a GIS database.<br/>With Leaflet Maps Marker you can configure up to 10 WMS layers which can be enabled for each map. As default, 10 WMS layers from <a href=\"http://data.wien.gv.at\" target=\"_blank\">OGD Vienna</a> and from the <a href=\"http://www.eea.europa.eu/code/gis\" target=\"_blank\">European Environment Agency</a> have been predefined for you.<br/>A selection of further possible WMS layers can be found at <a href=\"http://www.mapsmarker.com/wms\" target=\"_blank\">http://www.mapsmarker.com/wms</a>"
+msgstr "WMS staat voor <a href=\"http://www.opengeospatial.org/standards/wms\" target=\"_blank\"> Web Map Service </a> en is een standaard protocol voor het aanbieden van georeferenced kaart images over het internet. Deze worden gegenereerd door een mapserver met behulp van gegevens van een GIS-database. <br/> Met  Leaflet Maps Marker kunt u maximaal 10 WMS-lagen configureren die voor elke kaart kunnen worden ingeschakeld . Standaard zijn er 10 WMS lagen van <a href=\"http://data.wien.gv.at\" target=\"_blank\">OGD Wenen</a> en van de <a href=\"http://www.eea.europa.eu/code/gis\" target=\"_blank\">European Environment Agency</a> gedefinieerd. <br/> Een selectie van verdere mogelijke WMS-lagen kunt u vinden op <a href=\"http://www.mapsmarker.com/wms\" target=\"_blank\"> http://www.mapsmarker.com/wms </a>"
+
+#: ../class-leaflet-options.php:206
+#: ../class-leaflet-options.php:1410
+msgid "Available WMS layers for new markers/layers"
+msgstr "Beschikbaar WMS lagen voor nieuwe markers / lagen"
+
+#: ../class-leaflet-options.php:207
+#: ../class-leaflet-options.php:1508
+msgid "WMS layer 1 settings"
+msgstr "WMS laag 1 - instellingen"
+
+#: ../class-leaflet-options.php:208
+#: ../class-leaflet-options.php:1706
+msgid "WMS layer 2 settings"
+msgstr "WMS laag 2 - instellingen"
+
+#: ../class-leaflet-options.php:209
+#: ../class-leaflet-options.php:1903
+msgid "WMS layer 3 settings"
+msgstr "WMS laag 3- instellingen"
+
+#: ../class-leaflet-options.php:210
+#: ../class-leaflet-options.php:2100
+msgid "WMS layer 4 settings"
+msgstr "WMS laag 4 - instellingen"
+
+#: ../class-leaflet-options.php:211
+#: ../class-leaflet-options.php:2297
+msgid "WMS layer 5 settings"
+msgstr "WMS laag 5 - instellingen"
+
+#: ../class-leaflet-options.php:212
+#: ../class-leaflet-options.php:2494
+msgid "WMS layer 6 settings"
+msgstr "WMS laag 6 - instellingen"
+
+#: ../class-leaflet-options.php:213
+#: ../class-leaflet-options.php:2691
+msgid "WMS layer 7 settings"
+msgstr "WMS laag 7 - instellingen"
+
+#: ../class-leaflet-options.php:214
+#: ../class-leaflet-options.php:2888
+msgid "WMS layer 8 settings"
+msgstr "WMS laag 8 - instellingen"
+
+#: ../class-leaflet-options.php:215
+#: ../class-leaflet-options.php:3085
+msgid "WMS layer 9 settings"
+msgstr "WMS laag 9 - instellingen"
+
+#: ../class-leaflet-options.php:216
+#: ../class-leaflet-options.php:3282
+msgid "WMS layer 10 settings"
+msgstr "WMS laag 10 - instellingen"
+
+#: ../class-leaflet-options.php:234
+#: ../class-leaflet-options.php:3689
+msgid "Default values for new markers"
+msgstr "Standaard waarden voor nieuwe markers"
+
+#: ../class-leaflet-options.php:235
+#: ../class-leaflet-options.php:3993
+msgid "Default values for markers added directly"
+msgstr "Standaard waarden voor direct toegevoegde markers"
+
+#: ../class-leaflet-options.php:242
+#: ../class-leaflet-options.php:4549
+#: ../class-leaflet-options.php:4563
+msgid "Google Places bounds"
+msgstr "Google Places grenzen"
+
+#: ../class-leaflet-options.php:243
+#: ../class-leaflet-options.php:4616
+#: ../class-leaflet-options.php:4630
+msgid "Google Places search prefix"
+msgstr "Google Places zoek prefix"
+
+#: ../class-leaflet-options.php:250
+#: ../class-leaflet-options.php:260
+#: ../class-leaflet-options.php:4664
+#: ../class-leaflet-options.php:5076
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+#: ../class-leaflet-options.php:261
+#: ../class-leaflet-options.php:1631
+#: ../class-leaflet-options.php:1829
+#: ../class-leaflet-options.php:2026
+#: ../class-leaflet-options.php:2223
+#: ../class-leaflet-options.php:2420
+#: ../class-leaflet-options.php:2617
+#: ../class-leaflet-options.php:2814
+#: ../class-leaflet-options.php:3011
+#: ../class-leaflet-options.php:3208
+#: ../class-leaflet-options.php:3405
+#: ../class-leaflet-options.php:5184
+msgid "KML settings"
+msgstr "KML instellingen"
+
+#: ../class-leaflet-options.php:262
+#: ../class-leaflet-options.php:5215
+msgid "CRS (Coordinate Reference System)"
+msgstr "CRS (Coordinate Reference System)"
+
+#: ../class-leaflet-options.php:263
+#: ../class-leaflet-options.php:5246
+msgid "Available columns for marker listing page"
+msgstr "Beschikbare kolommen voor marker lijst pagina"
+
+#: ../class-leaflet-options.php:264
+#: ../class-leaflet-options.php:5448
+msgid "Available columns for layer listing page"
+msgstr "Beschikbare kolommen voor lagen lijst pagina"
+
+#: ../class-leaflet-options.php:377
+msgid "Please select the basemap which should be pre-selected as default for new markers and layers. Can be changed afterwards on each marker/layer."
+msgstr "Selecteer de basiskaart die als standaard voor nieuwe markers en lagen moet dienen. Kan achteraf gewijzigd worden op elke marker / laag."
+
+#: ../class-leaflet-options.php:383
+#: ../class-leaflet-options.php:4007
+msgid "Default basemap"
+msgstr "Standaard basiskaart"
+
+#: ../class-leaflet-options.php:388
+#: ../class-leaflet-options.php:4012
+msgid "OpenStreetMap (Mapnik, max zoom 18)"
+msgstr "OpenStreetMap (Mapnik, max zoom 18)"
+
+#: ../class-leaflet-options.php:389
+#: ../class-leaflet-options.php:4013
+msgid "OpenStreetMap (Osmarender, max zoom 17)"
+msgstr "OpenStreetMap (Osmarender, max zoom 17)"
+
+#: ../class-leaflet-options.php:390
+#: ../class-leaflet-options.php:4014
+msgid "MapQuest (OSM, max zoom 18)"
+msgstr "MapQuest (OSM, max zoom 18)"
+
+#: ../class-leaflet-options.php:391
+#: ../class-leaflet-options.php:4015
+msgid "MapQuest (Aerial, max zoom 12 globally, 12+ in the United States)"
+msgstr "MapQuest (Aerial, max zoom 12 wereldwijd, 12+ in de VS)"
+
+#: ../class-leaflet-options.php:392
+#: ../class-leaflet-options.php:4016
+msgid "OGD Vienna basemap (max zoom 19)"
+msgstr "OGD Wenen basiskaart  (max zoom 19)"
+
+#: ../class-leaflet-options.php:393
+#: ../class-leaflet-options.php:4017
+msgid "OGD Vienna satellite (max zoom 19)"
+msgstr "OGD Wenen sateliet (max zoom 19)"
+
+#: ../class-leaflet-options.php:397
+#: ../class-leaflet-options.php:612
+#: ../class-leaflet-options.php:4021
+msgid "Custom basemap"
+msgstr "Standaard basiskaart"
+
+#: ../class-leaflet-options.php:398
+#: ../class-leaflet-options.php:620
+#: ../class-leaflet-options.php:4022
+msgid "Custom basemap 2"
+msgstr "Standaard basiskaart 2"
+
+#: ../class-leaflet-options.php:399
+#: ../class-leaflet-options.php:628
+#: ../class-leaflet-options.php:4023
+msgid "Custom basemap 3"
+msgstr "Standaard basiskaart 3"
+
+#: ../class-leaflet-options.php:417
+msgid "Optionally you can also change the name of the predefined basemaps in the controlbox."
+msgstr "Eventueel kunt u ook de naam van de vooraf gedefinieerde basiskaarten in de controlbox wijzigen."
+
+#: ../class-leaflet-options.php:494
+msgid "Custom Basemap"
+msgstr "Aangepaste basiskaart"
+
+#: ../class-leaflet-options.php:502
+msgid "Custom Basemap 2"
+msgstr "Aangepaste basiskaart 2"
+
+#: ../class-leaflet-options.php:510
+msgid "Custom Basemap 3"
+msgstr "Aangepaste basiskaart 3"
+
+#: ../class-leaflet-options.php:532
+msgid "Please select the basemaps which should be available in the control box."
+msgstr "Selecteer de basiskaarten, die beschikbaar moeten zijn in de controlbox."
+
+#: ../class-leaflet-options.php:538
+msgid "Basemaps available in control box"
+msgstr "Beschikbare basiskaarten in de controlbox"
+
+#: ../class-leaflet-options.php:539
+msgid "OpenStreetMap (Mapnik)"
+msgstr "OpenStreetMap (Mapnik) "
+
+#: ../class-leaflet-options.php:547
+msgid "OpenStreetMap (Osmarender)"
+msgstr "OpenStreetMap (Osmarender) "
+
+#: ../class-leaflet-options.php:555
+msgid "MapQuest (OSM)"
+msgstr "MapQuest (OSM) "
+
+#: ../class-leaflet-options.php:563
+msgid "MapQuest (Aerial)"
+msgstr "MapQuest (Aerial)"
+
+#: ../class-leaflet-options.php:572
+msgid "OGD Vienna basemap"
+msgstr "OGD Wenen basiskaart"
+
+#: ../class-leaflet-options.php:580
+msgid "OGD Vienna satellite"
+msgstr "OGD Wenen sateliet"
+
+#: ../class-leaflet-options.php:647
+msgid "If coordinates within boundaries of Vienna/Austria are selected for a marker or layer, the basemap automatically switches to OGD Vienna basemap and the overlay OGD Vienna addresses gets checked."
+msgstr "Als de coördinaten binnen de grenzen van Wenen / Oostenrijk worden geselecteerd voor een marker of laag, dan schakelt de basiskaart automatisch over naar OGD Wenen basiskaart en de overlay OGD Wenen adressen wordt aangevinkt."
+
+#: ../class-leaflet-options.php:658
+msgid "enabled (use OGD Vienna basemap)"
+msgstr "ingeschakeld (gebruik OGD Wenen basiskaart)"
+
+#: ../class-leaflet-options.php:659
+msgid "enabled (use OGD Vienna satellite)"
+msgstr "ingeschakeld (gebruik OGD Wenen sateliet)"
+
+#: ../class-leaflet-options.php:660
+msgid "disabled (use default basemap)"
+msgstr "uitgeschakeld (gebruik standaard basiskaart)"
+
+#: ../class-leaflet-options.php:667
+msgid "enable OGD Vienna addresses overlay"
+msgstr "OGD Wenen adressen-overlay inschakelen"
+
+#: ../class-leaflet-options.php:678
+msgid "Cloudmade settings"
+msgstr "Cloudmade instellingen"
+
+#: ../class-leaflet-options.php:686
+#: ../class-leaflet-options.php:732
+#: ../class-leaflet-options.php:778
+msgid "Tutorial for Cloudmade configuration:"
+msgstr "Tutorial voor de Cloudmade configuratie:"
+
+#: ../class-leaflet-options.php:691
+#: ../class-leaflet-options.php:737
+#: ../class-leaflet-options.php:783
+msgid "API key"
+msgstr "API key"
+
+#: ../class-leaflet-options.php:708
+#: ../class-leaflet-options.php:754
+#: ../class-leaflet-options.php:800
+msgid "Double resolution"
+msgstr "Dubbele resolutie"
+
+#: ../class-leaflet-options.php:709
+#: ../class-leaflet-options.php:755
+#: ../class-leaflet-options.php:801
+msgid "This will improve map look for iPhone 4, Motorola Milestone, etc."
+msgstr "Verbeterd het kaartbeeld op de iPhone 4, Motorola Milestone etc."
+
+#: ../class-leaflet-options.php:713
+#: ../class-leaflet-options.php:759
+#: ../class-leaflet-options.php:805
+#: ../class-leaflet-options.php:4569
+#: ../class-leaflet-options.php:4636
+#: ../class-leaflet-options.php:5141
+#: ../class-leaflet-options.php:5153
+#: ../class-leaflet-options.php:5165
+msgid "enabled"
+msgstr "ingeschakeld"
+
+#: ../class-leaflet-options.php:714
+#: ../class-leaflet-options.php:760
+#: ../class-leaflet-options.php:806
+#: ../class-leaflet-options.php:4568
+#: ../class-leaflet-options.php:4635
+#: ../class-leaflet-options.php:5142
+#: ../class-leaflet-options.php:5154
+#: ../class-leaflet-options.php:5166
+msgid "disabled"
+msgstr "uitgeschakeld"
+
+#: ../class-leaflet-options.php:824
+#: ../class-leaflet-options.php:894
+#: ../class-leaflet-options.php:964
+msgid "Please enter settings for custom basemap"
+msgstr "Geef a.u.b. de instellingen voor aangepaste basiskaart"
+
+#: ../class-leaflet-options.php:829
+#: ../class-leaflet-options.php:899
+#: ../class-leaflet-options.php:969
+#: ../class-leaflet-options.php:1109
+#: ../class-leaflet-options.php:1188
+#: ../class-leaflet-options.php:1266
+#: ../class-leaflet-options.php:1345
+msgid "Tiles URL"
+msgstr "Tiles URL"
+
+#: ../class-leaflet-options.php:830
+#: ../class-leaflet-options.php:838
+#: ../class-leaflet-options.php:874
+#: ../class-leaflet-options.php:900
+#: ../class-leaflet-options.php:908
+#: ../class-leaflet-options.php:944
+#: ../class-leaflet-options.php:970
+#: ../class-leaflet-options.php:978
+#: ../class-leaflet-options.php:1014
+#: ../class-leaflet-options.php:1110
+#: ../class-leaflet-options.php:1154
+#: ../class-leaflet-options.php:1189
+#: ../class-leaflet-options.php:1233
+#: ../class-leaflet-options.php:1267
+#: ../class-leaflet-options.php:1311
+#: ../class-leaflet-options.php:1346
+#: ../class-leaflet-options.php:1390
+#: ../class-leaflet-options.php:1622
+#: ../class-leaflet-options.php:1820
+#: ../class-leaflet-options.php:2017
+#: ../class-leaflet-options.php:2214
+#: ../class-leaflet-options.php:2411
+#: ../class-leaflet-options.php:2608
+#: ../class-leaflet-options.php:2805
+#: ../class-leaflet-options.php:3002
+#: ../class-leaflet-options.php:3199
+#: ../class-leaflet-options.php:3396
+msgid "For example"
+msgstr "Bijvoorbeeld"
+
+#: ../class-leaflet-options.php:837
+#: ../class-leaflet-options.php:907
+#: ../class-leaflet-options.php:977
+#: ../class-leaflet-options.php:1117
+#: ../class-leaflet-options.php:1196
+#: ../class-leaflet-options.php:1274
+#: ../class-leaflet-options.php:1353
+#: ../class-leaflet-options.php:1582
+#: ../class-leaflet-options.php:1780
+#: ../class-leaflet-options.php:1969
+#: ../class-leaflet-options.php:2174
+#: ../class-leaflet-options.php:2371
+#: ../class-leaflet-options.php:2568
+#: ../class-leaflet-options.php:2765
+#: ../class-leaflet-options.php:2962
+#: ../class-leaflet-options.php:3159
+#: ../class-leaflet-options.php:3356
+msgid "Attribution"
+msgstr "Bronvermelding"
+
+#: ../class-leaflet-options.php:845
+#: ../class-leaflet-options.php:915
+#: ../class-leaflet-options.php:985
+#: ../class-leaflet-options.php:1125
+#: ../class-leaflet-options.php:1204
+#: ../class-leaflet-options.php:1282
+#: ../class-leaflet-options.php:1361
+msgid "Minimum zoom level"
+msgstr "Minimum zoomniveau"
+
+#: ../class-leaflet-options.php:846
+#: ../class-leaflet-options.php:854
+#: ../class-leaflet-options.php:916
+#: ../class-leaflet-options.php:924
+#: ../class-leaflet-options.php:986
+#: ../class-leaflet-options.php:994
+#: ../class-leaflet-options.php:1126
+#: ../class-leaflet-options.php:1134
+#: ../class-leaflet-options.php:1205
+#: ../class-leaflet-options.php:1213
+#: ../class-leaflet-options.php:1283
+#: ../class-leaflet-options.php:1291
+#: ../class-leaflet-options.php:1362
+#: ../class-leaflet-options.php:1370
+msgid "Note: maximum zoom level may vary on your basemap"
+msgstr "Let op: het maximale zoomniveau is afhankelijk van uw basiskaart"
+
+#: ../class-leaflet-options.php:853
+#: ../class-leaflet-options.php:923
+#: ../class-leaflet-options.php:993
+#: ../class-leaflet-options.php:1133
+#: ../class-leaflet-options.php:1212
+#: ../class-leaflet-options.php:1290
+#: ../class-leaflet-options.php:1369
+msgid "Maximum zoom level"
+msgstr "Maximale zoomniveau"
+
+#: ../class-leaflet-options.php:862
+#: ../class-leaflet-options.php:932
+#: ../class-leaflet-options.php:1002
+#: ../class-leaflet-options.php:1142
+#: ../class-leaflet-options.php:1221
+#: ../class-leaflet-options.php:1299
+#: ../class-leaflet-options.php:1378
+#: ../class-leaflet-options.php:1610
+#: ../class-leaflet-options.php:1808
+#: ../class-leaflet-options.php:2005
+#: ../class-leaflet-options.php:2202
+#: ../class-leaflet-options.php:2399
+#: ../class-leaflet-options.php:2596
+#: ../class-leaflet-options.php:2793
+#: ../class-leaflet-options.php:2990
+#: ../class-leaflet-options.php:3187
+#: ../class-leaflet-options.php:3384
+msgid "Support for subdomains?"
+msgstr "Ondersteuning voor subdomeinen?"
+
+#: ../class-leaflet-options.php:863
+#: ../class-leaflet-options.php:933
+#: ../class-leaflet-options.php:1003
+#: ../class-leaflet-options.php:1143
+#: ../class-leaflet-options.php:1222
+#: ../class-leaflet-options.php:1300
+#: ../class-leaflet-options.php:1379
+#, fuzzy
+msgid "Will replace {s} from tiles url if available"
+msgstr "Zal {s} in de tiles URL vervangen indien beschikbaar."
+
+#: ../class-leaflet-options.php:867
+#: ../class-leaflet-options.php:937
+#: ../class-leaflet-options.php:1007
+#: ../class-leaflet-options.php:1147
+#: ../class-leaflet-options.php:1226
+#: ../class-leaflet-options.php:1304
+#: ../class-leaflet-options.php:1383
+#: ../class-leaflet-options.php:1616
+#: ../class-leaflet-options.php:1814
+#: ../class-leaflet-options.php:2011
+#: ../class-leaflet-options.php:2208
+#: ../class-leaflet-options.php:2405
+#: ../class-leaflet-options.php:2602
+#: ../class-leaflet-options.php:2799
+#: ../class-leaflet-options.php:2996
+#: ../class-leaflet-options.php:3193
+#: ../class-leaflet-options.php:3390
+msgid "Yes (please enter subdomains in next form field)"
+msgstr "Ja (plaats de subdomeinen in het volgende formulierveld)"
+
+#: ../class-leaflet-options.php:868
+#: ../class-leaflet-options.php:938
+#: ../class-leaflet-options.php:1008
+#: ../class-leaflet-options.php:1148
+#: ../class-leaflet-options.php:1227
+#: ../class-leaflet-options.php:1305
+#: ../class-leaflet-options.php:1384
+#: ../class-leaflet-options.php:1596
+#: ../class-leaflet-options.php:1615
+#: ../class-leaflet-options.php:1794
+#: ../class-leaflet-options.php:1813
+#: ../class-leaflet-options.php:1983
+#: ../class-leaflet-options.php:2010
+#: ../class-leaflet-options.php:2188
+#: ../class-leaflet-options.php:2207
+#: ../class-leaflet-options.php:2385
+#: ../class-leaflet-options.php:2404
+#: ../class-leaflet-options.php:2582
+#: ../class-leaflet-options.php:2601
+#: ../class-leaflet-options.php:2779
+#: ../class-leaflet-options.php:2798
+#: ../class-leaflet-options.php:2976
+#: ../class-leaflet-options.php:2995
+#: ../class-leaflet-options.php:3173
+#: ../class-leaflet-options.php:3192
+#: ../class-leaflet-options.php:3370
+#: ../class-leaflet-options.php:3389
+msgid "No"
+msgstr "Nee"
+
+#: ../class-leaflet-options.php:873
+#: ../class-leaflet-options.php:943
+#: ../class-leaflet-options.php:1013
+#: ../class-leaflet-options.php:1153
+#: ../class-leaflet-options.php:1232
+#: ../class-leaflet-options.php:1310
+#: ../class-leaflet-options.php:1389
+#: ../class-leaflet-options.php:1621
+#: ../class-leaflet-options.php:1819
+#: ../class-leaflet-options.php:2016
+#: ../class-leaflet-options.php:2213
+#: ../class-leaflet-options.php:2410
+#: ../class-leaflet-options.php:2607
+#: ../class-leaflet-options.php:2804
+#: ../class-leaflet-options.php:3001
+#: ../class-leaflet-options.php:3198
+#: ../class-leaflet-options.php:3395
+msgid "Subdomain names"
+msgstr "Subdomein namen"
+
+#: ../class-leaflet-options.php:1042
+msgid "Please select the overlays which should be available in the control box."
+msgstr "Selecteer a.u.b. de overlays die beschikbaar moeten zijn in de controlbox."
+
+#: ../class-leaflet-options.php:1048
+msgid "Available overlays in control box"
+msgstr "Beschikbare overlays in de controlbox"
+
+#: ../class-leaflet-options.php:1049
+#: ../class-leaflet-options.php:3790
+#: ../class-leaflet-options.php:4080
+#: ../class-leaflet-options.php:4287
+msgid "Custom overlay"
+msgstr "Aangepaste overlay"
+
+#: ../class-leaflet-options.php:1057
+#: ../class-leaflet-options.php:3798
+#: ../class-leaflet-options.php:4088
+#: ../class-leaflet-options.php:4295
+msgid "Custom overlay 2"
+msgstr "Aangepaste overlay 2"
+
+#: ../class-leaflet-options.php:1066
+#: ../class-leaflet-options.php:3807
+#: ../class-leaflet-options.php:4097
+#: ../class-leaflet-options.php:4303
+msgid "Custom overlay 3"
+msgstr "Aangepaste overlay 3"
+
+#: ../class-leaflet-options.php:1075
+#: ../class-leaflet-options.php:3815
+#: ../class-leaflet-options.php:4106
+#: ../class-leaflet-options.php:4311
+msgid "Custom overlay 4"
+msgstr "Aangepaste overlay 4"
+
+#: ../class-leaflet-options.php:1095
+#: ../class-leaflet-options.php:1174
+#: ../class-leaflet-options.php:1253
+#: ../class-leaflet-options.php:1331
+msgid "Please enter settings for custom overlay"
+msgstr "Geef de instellingen voor aangepaste overlay"
+
+#: ../class-leaflet-options.php:1100
+#: ../class-leaflet-options.php:1179
+#: ../class-leaflet-options.php:1258
+#: ../class-leaflet-options.php:1336
+#: ../class-leaflet-options.php:1522
+#: ../class-leaflet-options.php:1720
+#: ../class-leaflet-options.php:1917
+#: ../class-leaflet-options.php:2114
+#: ../class-leaflet-options.php:2311
+#: ../class-leaflet-options.php:2508
+#: ../class-leaflet-options.php:2705
+#: ../class-leaflet-options.php:2902
+#: ../class-leaflet-options.php:3099
+#: ../class-leaflet-options.php:3296
+#: ../leaflet-list-layers.php:36
+#: ../leaflet-list-layers.php:78
+msgid "Name"
+msgstr "Naam"
+
+#: ../class-leaflet-options.php:1101
+#: ../class-leaflet-options.php:1180
+#: ../class-leaflet-options.php:1259
+#: ../class-leaflet-options.php:1337
+msgid "Will be displayed in controlbox if selected"
+msgstr "Wordt in de controlbox getoond bij selectie"
+
+#: ../class-leaflet-options.php:1102
+msgid "OGD Vienna addresses"
+msgstr "OGD Weense adressen"
+
+#: ../class-leaflet-options.php:1418
+msgid "Please select the WMS layers which should be available when creating new markers/layers"
+msgstr "Selecteer de WMS-lagen die beschikbaar moeten zijn bij het maken van nieuwe markers / lagen"
+
+#: ../class-leaflet-options.php:1424
+msgid "Available WMS layers"
+msgstr "Beschikbare WMS lagen"
+
+#: ../class-leaflet-options.php:1530
+#: ../class-leaflet-options.php:1728
+#: ../class-leaflet-options.php:1925
+#: ../class-leaflet-options.php:2122
+#: ../class-leaflet-options.php:2319
+#: ../class-leaflet-options.php:2516
+#: ../class-leaflet-options.php:2713
+#: ../class-leaflet-options.php:2910
+#: ../class-leaflet-options.php:3107
+#: ../class-leaflet-options.php:3304
+msgid "baseURL"
+msgstr "baseURL"
+
+#: ../class-leaflet-options.php:1538
+#: ../class-leaflet-options.php:1736
+#: ../class-leaflet-options.php:1933
+#: ../class-leaflet-options.php:2130
+#: ../class-leaflet-options.php:2327
+#: ../class-leaflet-options.php:2524
+#: ../class-leaflet-options.php:2721
+#: ../class-leaflet-options.php:2918
+#: ../class-leaflet-options.php:3115
+#: ../class-leaflet-options.php:3312
+#: ../leaflet-maps-marker.php:1048
+msgid "Layers"
+msgstr "Lagen"
+
+#: ../class-leaflet-options.php:1539
+#: ../class-leaflet-options.php:1737
+#: ../class-leaflet-options.php:1934
+#: ../class-leaflet-options.php:2131
+#: ../class-leaflet-options.php:2328
+#: ../class-leaflet-options.php:2525
+#: ../class-leaflet-options.php:2722
+#: ../class-leaflet-options.php:2919
+#: ../class-leaflet-options.php:3116
+#: ../class-leaflet-options.php:3313
+msgid "(required) Comma-separated list of WMS layers to show"
+msgstr "(Verplicht) door komma's gescheiden lijst van WMS lagen die getoond moeten worden"
+
+#: ../class-leaflet-options.php:1546
+#: ../class-leaflet-options.php:1744
+#: ../class-leaflet-options.php:1941
+#: ../class-leaflet-options.php:2138
+#: ../class-leaflet-options.php:2335
+#: ../class-leaflet-options.php:2532
+#: ../class-leaflet-options.php:2729
+#: ../class-leaflet-options.php:2926
+#: ../class-leaflet-options.php:3123
+#: ../class-leaflet-options.php:3320
+msgid "Styles"
+msgstr "Stijlen"
+
+#: ../class-leaflet-options.php:1547
+#: ../class-leaflet-options.php:1745
+#: ../class-leaflet-options.php:1942
+#: ../class-leaflet-options.php:2139
+#: ../class-leaflet-options.php:2336
+#: ../class-leaflet-options.php:2533
+#: ../class-leaflet-options.php:2730
+#: ../class-leaflet-options.php:2927
+#: ../class-leaflet-options.php:3124
+#: ../class-leaflet-options.php:3321
+msgid "Comma-separated list of WMS styles"
+msgstr "Komma gescheiden lijst WMS met stijlen"
+
+#: ../class-leaflet-options.php:1554
+#: ../class-leaflet-options.php:1752
+#: ../class-leaflet-options.php:1949
+#: ../class-leaflet-options.php:2146
+#: ../class-leaflet-options.php:2343
+#: ../class-leaflet-options.php:2540
+#: ../class-leaflet-options.php:2737
+#: ../class-leaflet-options.php:2934
+#: ../class-leaflet-options.php:3131
+#: ../class-leaflet-options.php:3328
+msgid "Format"
+msgstr "Format"
+
+#: ../class-leaflet-options.php:1562
+#: ../class-leaflet-options.php:1760
+#: ../class-leaflet-options.php:1957
+#: ../class-leaflet-options.php:2154
+#: ../class-leaflet-options.php:2351
+#: ../class-leaflet-options.php:2548
+#: ../class-leaflet-options.php:2745
+#: ../class-leaflet-options.php:2942
+#: ../class-leaflet-options.php:3139
+#: ../class-leaflet-options.php:3336
+msgid "Transparent"
+msgstr "Transparent"
+
+#: ../class-leaflet-options.php:1563
+#: ../class-leaflet-options.php:1761
+#: ../class-leaflet-options.php:1958
+#: ../class-leaflet-options.php:2155
+#: ../class-leaflet-options.php:2352
+#: ../class-leaflet-options.php:2549
+#: ../class-leaflet-options.php:2746
+#: ../class-leaflet-options.php:2943
+#: ../class-leaflet-options.php:3140
+#: ../class-leaflet-options.php:3337
+msgid "If yes, the WMS service will return images with transparency"
+msgstr "Bij ja zal de WMS service transparante afbeeldingen leveren"
+
+#: ../class-leaflet-options.php:1574
+#: ../class-leaflet-options.php:1772
+#: ../class-leaflet-options.php:1997
+#: ../class-leaflet-options.php:2166
+#: ../class-leaflet-options.php:2363
+#: ../class-leaflet-options.php:2560
+#: ../class-leaflet-options.php:2757
+#: ../class-leaflet-options.php:2954
+#: ../class-leaflet-options.php:3151
+#: ../class-leaflet-options.php:3348
+msgid "Version"
+msgstr "Versie"
+
+#: ../class-leaflet-options.php:1575
+#: ../class-leaflet-options.php:1773
+#: ../class-leaflet-options.php:1998
+#: ../class-leaflet-options.php:2167
+#: ../class-leaflet-options.php:2364
+#: ../class-leaflet-options.php:2561
+#: ../class-leaflet-options.php:2758
+#: ../class-leaflet-options.php:2955
+#: ../class-leaflet-options.php:3152
+#: ../class-leaflet-options.php:3349
+msgid "Version of the WMS service to use"
+msgstr "Versie van de gebruikte WMS service"
+
+#: ../class-leaflet-options.php:1590
+#: ../class-leaflet-options.php:1788
+#: ../class-leaflet-options.php:1977
+#: ../class-leaflet-options.php:2182
+#: ../class-leaflet-options.php:2379
+#: ../class-leaflet-options.php:2576
+#: ../class-leaflet-options.php:2773
+#: ../class-leaflet-options.php:2970
+#: ../class-leaflet-options.php:3167
+#: ../class-leaflet-options.php:3364
+msgid "Display legend?"
+msgstr "Legenda tonen?"
+
+#: ../class-leaflet-options.php:1595
+#: ../class-leaflet-options.php:1793
+#: ../class-leaflet-options.php:1982
+#: ../class-leaflet-options.php:2187
+#: ../class-leaflet-options.php:2384
+#: ../class-leaflet-options.php:2581
+#: ../class-leaflet-options.php:2778
+#: ../class-leaflet-options.php:2975
+#: ../class-leaflet-options.php:3172
+#: ../class-leaflet-options.php:3369
+#: ../leaflet-tools.php:674
+msgid "Yes"
+msgstr "Ja"
+
+#: ../class-leaflet-options.php:1602
+#: ../class-leaflet-options.php:1800
+#: ../class-leaflet-options.php:1989
+#: ../class-leaflet-options.php:2194
+#: ../class-leaflet-options.php:2391
+#: ../class-leaflet-options.php:2588
+#: ../class-leaflet-options.php:2785
+#: ../class-leaflet-options.php:2982
+#: ../class-leaflet-options.php:3179
+#: ../class-leaflet-options.php:3376
+#: ../leaflet-fullscreen.php:224
+#: ../leaflet-fullscreen.php:225
+#: ../leaflet-fullscreen.php:226
+#: ../leaflet-fullscreen.php:227
+#: ../leaflet-fullscreen.php:228
+#: ../leaflet-fullscreen.php:229
+#: ../leaflet-fullscreen.php:230
+#: ../leaflet-fullscreen.php:231
+#: ../leaflet-fullscreen.php:232
+#: ../leaflet-fullscreen.php:233
+#: ../leaflet-fullscreen.php:608
+#: ../leaflet-fullscreen.php:609
+#: ../leaflet-fullscreen.php:610
+#: ../leaflet-fullscreen.php:611
+#: ../leaflet-fullscreen.php:612
+#: ../leaflet-fullscreen.php:613
+#: ../leaflet-fullscreen.php:614
+#: ../leaflet-fullscreen.php:615
+#: ../leaflet-fullscreen.php:616
+#: ../leaflet-fullscreen.php:617
+#: ../leaflet-layer.php:750
+#: ../leaflet-layer.php:751
+#: ../leaflet-layer.php:752
+#: ../leaflet-layer.php:753
+#: ../leaflet-layer.php:754
+#: ../leaflet-layer.php:755
+#: ../leaflet-layer.php:756
+#: ../leaflet-layer.php:757
+#: ../leaflet-layer.php:758
+#: ../leaflet-layer.php:759
+#: ../leaflet-maps-marker.php:462
+#: ../leaflet-maps-marker.php:463
+#: ../leaflet-maps-marker.php:464
+#: ../leaflet-maps-marker.php:465
+#: ../leaflet-maps-marker.php:466
+#: ../leaflet-maps-marker.php:467
+#: ../leaflet-maps-marker.php:468
+#: ../leaflet-maps-marker.php:469
+#: ../leaflet-maps-marker.php:470
+#: ../leaflet-maps-marker.php:471
+#: ../leaflet-marker.php:601
+#: ../leaflet-marker.php:602
+#: ../leaflet-marker.php:603
+#: ../leaflet-marker.php:604
+#: ../leaflet-marker.php:605
+#: ../leaflet-marker.php:606
+#: ../leaflet-marker.php:607
+#: ../leaflet-marker.php:608
+#: ../leaflet-marker.php:609
+#: ../leaflet-marker.php:610
+msgid "Legend"
+msgstr "Legenda"
+
+#: ../class-leaflet-options.php:1603
+#: ../class-leaflet-options.php:1801
+#: ../class-leaflet-options.php:1990
+#: ../class-leaflet-options.php:2195
+#: ../class-leaflet-options.php:2392
+#: ../class-leaflet-options.php:2589
+#: ../class-leaflet-options.php:2786
+#: ../class-leaflet-options.php:2983
+#: ../class-leaflet-options.php:3180
+#: ../class-leaflet-options.php:3377
+#, fuzzy
+msgid "URL of image which gets show when hovering the text \"(Legend)\" next to WMS attribution text"
+msgstr "URL van de afbeelding die wordt weergegeven als men met de muis over de tekst \"(Legend)\" naast WMS bron gaat"
+
+#: ../class-leaflet-options.php:1611
+#: ../class-leaflet-options.php:1809
+#: ../class-leaflet-options.php:2006
+#: ../class-leaflet-options.php:2203
+#: ../class-leaflet-options.php:2400
+#: ../class-leaflet-options.php:2597
+#: ../class-leaflet-options.php:2794
+#: ../class-leaflet-options.php:2991
+#: ../class-leaflet-options.php:3188
+#: ../class-leaflet-options.php:3385
+msgid "Will replace {s} from base url if available"
+msgstr "Zal {s} vervangen van de de basis URL indien beschikbaar"
+
+#: ../class-leaflet-options.php:1632
+#: ../class-leaflet-options.php:1830
+#: ../class-leaflet-options.php:2027
+#: ../class-leaflet-options.php:2224
+#: ../class-leaflet-options.php:2421
+#: ../class-leaflet-options.php:2618
+#: ../class-leaflet-options.php:2815
+#: ../class-leaflet-options.php:3012
+#: ../class-leaflet-options.php:3209
+#: ../class-leaflet-options.php:3406
+#, fuzzy
+msgid "If the WMS server supports KML output of the WMS layer, the settings below will be used when a marker or layer map with this active WMS layer is exported as KML."
+msgstr "Als de WMS-server KML output ondersteunt van de WMS-laag, worden onderstaande instellingen gebruikt als een marker of  kaartlaag wordt geëxporteerd als KML."
+
+#: ../class-leaflet-options.php:1638
+#: ../class-leaflet-options.php:1836
+#: ../class-leaflet-options.php:2033
+#: ../class-leaflet-options.php:2230
+#: ../class-leaflet-options.php:2427
+#: ../class-leaflet-options.php:2624
+#: ../class-leaflet-options.php:2821
+#: ../class-leaflet-options.php:3018
+#: ../class-leaflet-options.php:3215
+#: ../class-leaflet-options.php:3412
+msgid "Does the WMS server support KML output?"
+msgstr "Ondersteunt de WMS server KML output?"
+
+#: ../class-leaflet-options.php:1643
+#: ../class-leaflet-options.php:1841
+#: ../class-leaflet-options.php:2038
+#: ../class-leaflet-options.php:2235
+#: ../class-leaflet-options.php:2432
+#: ../class-leaflet-options.php:2629
+#: ../class-leaflet-options.php:2826
+#: ../class-leaflet-options.php:3023
+#: ../class-leaflet-options.php:3220
+#: ../class-leaflet-options.php:3417
+#: ../class-leaflet-options.php:4490
+#: ../class-leaflet-options.php:4696
+#: ../class-leaflet-options.php:4747
+#: ../leaflet-layer.php:289
+#: ../leaflet-layer.php:430
+#: ../leaflet-marker.php:439
+#: ../leaflet-tools.php:651
+msgid "yes"
+msgstr "ja"
+
+#: ../class-leaflet-options.php:1644
+#: ../class-leaflet-options.php:1842
+#: ../class-leaflet-options.php:2039
+#: ../class-leaflet-options.php:2236
+#: ../class-leaflet-options.php:2433
+#: ../class-leaflet-options.php:2630
+#: ../class-leaflet-options.php:2827
+#: ../class-leaflet-options.php:3024
+#: ../class-leaflet-options.php:3221
+#: ../class-leaflet-options.php:3418
+#: ../class-leaflet-options.php:4489
+#: ../class-leaflet-options.php:4697
+#: ../class-leaflet-options.php:4748
+#: ../leaflet-layer.php:290
+#: ../leaflet-layer.php:429
+#: ../leaflet-marker.php:437
+#: ../leaflet-tools.php:653
+msgid "no"
+msgstr "nee"
+
+#: ../class-leaflet-options.php:1651
+#: ../class-leaflet-options.php:1849
+#: ../class-leaflet-options.php:2046
+#: ../class-leaflet-options.php:2243
+#: ../class-leaflet-options.php:2440
+#: ../class-leaflet-options.php:2637
+#: ../class-leaflet-options.php:2834
+#: ../class-leaflet-options.php:3031
+#: ../class-leaflet-options.php:3228
+#: ../class-leaflet-options.php:3425
+msgid "http-address of the KML-webservice of the WMS layer"
+msgstr "http-address van de  KML-webservice van de WMS laag"
+
+#: ../class-leaflet-options.php:1663
+#: ../class-leaflet-options.php:1861
+#: ../class-leaflet-options.php:2058
+#: ../class-leaflet-options.php:2255
+#: ../class-leaflet-options.php:2452
+#: ../class-leaflet-options.php:2649
+#: ../class-leaflet-options.php:2846
+#: ../class-leaflet-options.php:3043
+#: ../class-leaflet-options.php:3240
+#: ../class-leaflet-options.php:3437
+msgid "onChange (refresh when the file is loaded and whenever the Link parameters change)"
+msgstr "onChange (vernieuwen wanneer het bestand wordt geladen en wanneer de Link parameters veranderen)"
+
+#: ../class-leaflet-options.php:1664
+#: ../class-leaflet-options.php:1862
+#: ../class-leaflet-options.php:2059
+#: ../class-leaflet-options.php:2256
+#: ../class-leaflet-options.php:2453
+#: ../class-leaflet-options.php:2650
+#: ../class-leaflet-options.php:2847
+#: ../class-leaflet-options.php:3044
+#: ../class-leaflet-options.php:3241
+#: ../class-leaflet-options.php:3438
+msgid "onInterval (refresh every n seconds (specified in refreshInterval)"
+msgstr "onInterval (Vernieuwen om de n seconden (vermeld in RefreshInterval)"
+
+#: ../class-leaflet-options.php:1665
+#: ../class-leaflet-options.php:1863
+#: ../class-leaflet-options.php:2060
+#: ../class-leaflet-options.php:2257
+#: ../class-leaflet-options.php:2454
+#: ../class-leaflet-options.php:2651
+#: ../class-leaflet-options.php:2848
+#: ../class-leaflet-options.php:3045
+#: ../class-leaflet-options.php:3242
+#: ../class-leaflet-options.php:3439
+msgid "onExpire (refresh the file when the expiration time is reached)"
+msgstr "onExpire (vernieuwen wanneer de verlooptijd is bereikt)"
+
+#: ../class-leaflet-options.php:1666
+#: ../class-leaflet-options.php:1864
+#: ../class-leaflet-options.php:2061
+#: ../class-leaflet-options.php:2258
+#: ../class-leaflet-options.php:2455
+#: ../class-leaflet-options.php:2652
+#: ../class-leaflet-options.php:2849
+#: ../class-leaflet-options.php:3046
+#: ../class-leaflet-options.php:3243
+#: ../class-leaflet-options.php:3440
+msgid "onStop (after camera movement stops)"
+msgstr "onStop (als de camera stopt)"
+
+#: ../class-leaflet-options.php:1673
+#: ../class-leaflet-options.php:1871
+#: ../class-leaflet-options.php:2068
+#: ../class-leaflet-options.php:2265
+#: ../class-leaflet-options.php:2462
+#: ../class-leaflet-options.php:2659
+#: ../class-leaflet-options.php:2856
+#: ../class-leaflet-options.php:3053
+#: ../class-leaflet-options.php:3250
+#: ../class-leaflet-options.php:3447
+msgid "Indicates to refresh the file every n seconds"
+msgstr "Om de n seconden verversen"
+
+#: ../class-leaflet-options.php:1685
+#: ../class-leaflet-options.php:1883
+#: ../class-leaflet-options.php:2080
+#: ../class-leaflet-options.php:2277
+#: ../class-leaflet-options.php:2474
+#: ../class-leaflet-options.php:2671
+#: ../class-leaflet-options.php:2868
+#: ../class-leaflet-options.php:3065
+#: ../class-leaflet-options.php:3262
+#: ../class-leaflet-options.php:3459
+msgid "never (ignore changes in the view)"
+msgstr "nooit (negeer wijzigingen in de weergave)"
+
+#: ../class-leaflet-options.php:1686
+#: ../class-leaflet-options.php:1884
+#: ../class-leaflet-options.php:2081
+#: ../class-leaflet-options.php:2278
+#: ../class-leaflet-options.php:2475
+#: ../class-leaflet-options.php:2672
+#: ../class-leaflet-options.php:2869
+#: ../class-leaflet-options.php:3066
+#: ../class-leaflet-options.php:3263
+#: ../class-leaflet-options.php:3460
+msgid "onStop (refresh the file n seconds after movement stops, where n is specified in viewRefreshTime)"
+msgstr "onStop (vernieuw het bestand n seconden na het stoppen van de animatie, waarbij n is opgegeven in viewRefreshTime)"
+
+#: ../class-leaflet-options.php:1687
+#: ../class-leaflet-options.php:1885
+#: ../class-leaflet-options.php:2082
+#: ../class-leaflet-options.php:2279
+#: ../class-leaflet-options.php:2476
+#: ../class-leaflet-options.php:2673
+#: ../class-leaflet-options.php:2870
+#: ../class-leaflet-options.php:3067
+#: ../class-leaflet-options.php:3264
+#: ../class-leaflet-options.php:3461
+msgid "onRequest (refresh the file only when the user explicitly requests it)"
+msgstr "onRequest (vernieuw het bestand alleen op expliciet verzoek)"
+
+#: ../class-leaflet-options.php:1694
+#: ../class-leaflet-options.php:1892
+#: ../class-leaflet-options.php:2089
+#: ../class-leaflet-options.php:2286
+#: ../class-leaflet-options.php:2483
+#: ../class-leaflet-options.php:2680
+#: ../class-leaflet-options.php:2877
+#: ../class-leaflet-options.php:3074
+#: ../class-leaflet-options.php:3271
+#: ../class-leaflet-options.php:3468
+msgid "After camera movement stops, specifies the number of seconds to wait before refreshing the view (is used when viewRefreshMode is set to onStop)"
+msgstr "Na het stoppen van de camera, bepaalt het aantal seconden voor het vernieuwen van de weergave (wordt gebruikt wanneer viewRefreshMode is ingesteld op onStop)"
+
+#: ../class-leaflet-options.php:3697
+msgid "Will be used when creating a new marker. All values can be changed afterwards on each marker."
+msgstr "Wordt gebruikt bij het maken van een nieuwe marker. Alle waarden kunnen achteraf gewijzigd worden."
+
+#: ../class-leaflet-options.php:3702
+#: ../class-leaflet-options.php:4219
+#: ../class-leaflet-options.php:4582
+#: ../class-leaflet-options.php:4598
+msgid "Latitude"
+msgstr "Breedtegraad"
+
+#: ../class-leaflet-options.php:3703
+#: ../class-leaflet-options.php:3711
+#: ../class-leaflet-options.php:4220
+#: ../class-leaflet-options.php:4228
+#: ../class-leaflet-options.php:4583
+#: ../class-leaflet-options.php:4591
+#: ../class-leaflet-options.php:4599
+#: ../class-leaflet-options.php:4607
+msgid "Please use a dot instead of a coma as decimal delimiter!"
+msgstr "Gebruik a.u.b. een punt i.p.v. een komma als decimaal scheidingsteken!"
+
+#: ../class-leaflet-options.php:3710
+#: ../class-leaflet-options.php:4227
+#: ../class-leaflet-options.php:4590
+#: ../class-leaflet-options.php:4606
+msgid "Longitude"
+msgstr "Lengtegraad"
+
+#: ../class-leaflet-options.php:3718
+#: ../class-leaflet-options.php:5018
+#: ../class-leaflet-options.php:5269
+#: ../leaflet-layer.php:517
+#: ../leaflet-layer.php:561
+#: ../leaflet-list-markers.php:94
+#: ../leaflet-list-markers.php:142
+#: ../leaflet-marker.php:412
+#: ../leaflet-tools.php:395
+msgid "Icon"
+msgstr "Icon"
+
+#: ../class-leaflet-options.php:3719
+msgid "If you want to use another icon than the blue pin, please enter the file name of the icon in the form field - e.g. smiley_happy.png"
+msgstr "Als je een ander pictogram dan de standaard blauwe pictogram wil, vul dan de bestandsnaam van het pictogram in - bijv. smiley_happy.png"
+
+#: ../class-leaflet-options.php:3726
+#: ../class-leaflet-options.php:4028
+#: ../class-leaflet-options.php:4235
+#: ../class-leaflet-options.php:5317
+#: ../class-leaflet-options.php:5511
+#: ../leaflet-layer.php:271
+#: ../leaflet-layer.php:528
+#: ../leaflet-layer.php:572
+#: ../leaflet-list-layers.php:45
+#: ../leaflet-list-layers.php:87
+#: ../leaflet-list-markers.php:109
+#: ../leaflet-list-markers.php:157
+#: ../leaflet-marker.php:266
+#: ../leaflet-tools.php:346
+#: ../leaflet-tools.php:598
+msgid "Zoom"
+msgstr "Zoom"
+
+#: ../class-leaflet-options.php:3734
+#: ../class-leaflet-options.php:4036
+#: ../class-leaflet-options.php:4243
+msgid "Map width"
+msgstr "Kaartbreedte"
+
+#: ../class-leaflet-options.php:3743
+#: ../class-leaflet-options.php:4045
+#: ../class-leaflet-options.php:4252
+msgid "Map width unit"
+msgstr "Kaartbreedte/eenheid"
+
+#: ../class-leaflet-options.php:3754
+#: ../class-leaflet-options.php:4056
+#: ../class-leaflet-options.php:4263
+msgid "Map height"
+msgstr "Kaarthoogte"
+
+#: ../class-leaflet-options.php:3763
+msgid "Open popup by default"
+msgstr "Altijd de popup openen"
+
+#: ../class-leaflet-options.php:3775
+#: ../class-leaflet-options.php:4065
+#: ../class-leaflet-options.php:4272
+msgid "Basemap/layer controlbox on frontend"
+msgstr "Basiskaart/laag controlbox op de frontend"
+
+#: ../class-leaflet-options.php:3780
+#: ../class-leaflet-options.php:4070
+#: ../class-leaflet-options.php:4277
+#: ../class-leaflet-options.php:4824
+#: ../leaflet-layer.php:278
+#: ../leaflet-list-layers.php:143
+#: ../leaflet-list-layers.php:144
+#: ../leaflet-list-markers.php:201
+#: ../leaflet-list-markers.php:202
+#: ../leaflet-marker.php:274
+#: ../leaflet-tools.php:364
+#: ../leaflet-tools.php:616
+msgid "hidden"
+msgstr "verborgen"
+
+#: ../class-leaflet-options.php:3781
+#: ../class-leaflet-options.php:4071
+#: ../class-leaflet-options.php:4278
+#: ../leaflet-layer.php:279
+#: ../leaflet-list-layers.php:144
+#: ../leaflet-list-markers.php:202
+#: ../leaflet-marker.php:275
+#: ../leaflet-tools.php:365
+#: ../leaflet-tools.php:617
+msgid "collapsed (except on mobiles)"
+msgstr "geminimaliseerd (behalve op mobiele telefoons)"
+
+#: ../class-leaflet-options.php:3782
+#: ../class-leaflet-options.php:4072
+#: ../class-leaflet-options.php:4279
+#: ../leaflet-layer.php:280
+#: ../leaflet-list-layers.php:144
+#: ../leaflet-list-markers.php:202
+#: ../leaflet-marker.php:276
+#: ../leaflet-tools.php:366
+#: ../leaflet-tools.php:618
+msgid "expanded"
+msgstr "geopend"
+
+#: ../class-leaflet-options.php:3789
+#: ../class-leaflet-options.php:4079
+#: ../class-leaflet-options.php:4286
+#: ../leaflet-tools.php:283
+#: ../leaflet-tools.php:535
+msgid "Checked overlays in control box"
+msgstr "Aangevinkte overlays in controlbox"
+
+#: ../class-leaflet-options.php:3822
+#: ../leaflet-marker.php:279
+#: ../leaflet-tools.php:378
+msgid "Panel for displaying marker name and API URLs on top of map"
+msgstr "Panel voor het weergeven van marker naam en API-URL's boven op de kaart"
+
+#: ../class-leaflet-options.php:3827
+#: ../class-leaflet-options.php:4323
+#: ../class-leaflet-options.php:5203
+#: ../leaflet-layer.php:284
+#: ../leaflet-marker.php:281
+#: ../leaflet-tools.php:382
+#: ../leaflet-tools.php:634
+msgid "show"
+msgstr "toon"
+
+#: ../class-leaflet-options.php:3828
+#: ../class-leaflet-options.php:4324
+#: ../class-leaflet-options.php:5204
+#: ../leaflet-layer.php:285
+#: ../leaflet-marker.php:283
+#: ../leaflet-tools.php:384
+#: ../leaflet-tools.php:636
+msgid "hide"
+msgstr "verberg"
+
+#: ../class-leaflet-options.php:3835
+#: ../class-leaflet-options.php:4331
+msgid "Visible API links in panel"
+msgstr "Zichtbare API-Links op het panel"
+
+#: ../class-leaflet-options.php:3836
+#: ../leaflet-fullscreen.php:749
+#: ../leaflet-fullscreen.php:752
+#: ../leaflet-fullscreen.php:755
+#: ../leaflet-geojson.php:94
+#: ../leaflet-geojson.php:96
+#: ../leaflet-geojson.php:98
+#: ../leaflet-geojson.php:197
+#: ../leaflet-geojson.php:199
+#: ../leaflet-geojson.php:201
+#: ../leaflet-maps-marker.php:603
+#: ../leaflet-maps-marker.php:606
+#: ../leaflet-maps-marker.php:609
+#: ../leaflet-marker.php:728
+#: ../leaflet-marker.php:732
+#: ../leaflet-marker.php:736
+msgid "Directions"
+msgstr "Plan route"
+
+#: ../class-leaflet-options.php:3852
+#: ../class-leaflet-options.php:4340
+#: ../class-leaflet-options.php:5405
+#: ../class-leaflet-options.php:5591
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:240
+#: ../leaflet-layer.php:546
+#: ../leaflet-layer.php:590
+#: ../leaflet-layer.php:624
+#: ../leaflet-list-layers.php:63
+#: ../leaflet-list-layers.php:105
+#: ../leaflet-list-layers.php:155
+#: ../leaflet-list-markers.php:127
+#: ../leaflet-list-markers.php:175
+#: ../leaflet-list-markers.php:220
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "Fullscreen"
+msgstr "Volledig scherm"
+
+#: ../class-leaflet-options.php:3860
+#: ../class-leaflet-options.php:4348
+#: ../class-leaflet-options.php:5413
+#: ../class-leaflet-options.php:5599
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:240
+#: ../leaflet-layer.php:548
+#: ../leaflet-layer.php:592
+#: ../leaflet-layer.php:625
+#: ../leaflet-list-layers.php:65
+#: ../leaflet-list-layers.php:107
+#: ../leaflet-list-layers.php:156
+#: ../leaflet-list-markers.php:129
+#: ../leaflet-list-markers.php:177
+#: ../leaflet-list-markers.php:221
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "QR code"
+msgstr "QR code"
+
+#: ../class-leaflet-options.php:3890
+#: ../class-leaflet-options.php:4378
+msgid "Panel background color"
+msgstr "Panel achtergrondkleur"
+
+#: ../class-leaflet-options.php:3898
+#: ../class-leaflet-options.php:4386
+msgid "Panel text css"
+msgstr "CSS panel tekst"
+
+#: ../class-leaflet-options.php:3908
+#: ../class-leaflet-options.php:4114
+#: ../class-leaflet-options.php:4396
+msgid "Checked WMS layers"
+msgstr "Aangevinkte WMS lagen"
+
+#: ../class-leaflet-options.php:3909
+#: ../class-leaflet-options.php:4115
+#: ../class-leaflet-options.php:4397
+msgid "WMS 1"
+msgstr "WMS 1"
+
+#: ../class-leaflet-options.php:3917
+#: ../class-leaflet-options.php:4123
+#: ../class-leaflet-options.php:4405
+msgid "WMS 2"
+msgstr "WMS 2"
+
+#: ../class-leaflet-options.php:3925
+#: ../class-leaflet-options.php:4131
+#: ../class-leaflet-options.php:4413
+msgid "WMS 3"
+msgstr "WMS 3"
+
+#: ../class-leaflet-options.php:3933
+#: ../class-leaflet-options.php:4139
+#: ../class-leaflet-options.php:4421
+msgid "WMS 4"
+msgstr "WMS 4"
+
+#: ../class-leaflet-options.php:3941
+#: ../class-leaflet-options.php:4147
+#: ../class-leaflet-options.php:4429
+msgid "WMS 5"
+msgstr "WMS 5"
+
+#: ../class-leaflet-options.php:3949
+#: ../class-leaflet-options.php:4155
+#: ../class-leaflet-options.php:4437
+msgid "WMS 6"
+msgstr "WMS 6"
+
+#: ../class-leaflet-options.php:3957
+#: ../class-leaflet-options.php:4163
+#: ../class-leaflet-options.php:4445
+msgid "WMS 7"
+msgstr "WMS 7"
+
+#: ../class-leaflet-options.php:3965
+#: ../class-leaflet-options.php:4171
+#: ../class-leaflet-options.php:4453
+msgid "WMS 8"
+msgstr "WMS 8"
+
+#: ../class-leaflet-options.php:3973
+#: ../class-leaflet-options.php:4179
+#: ../class-leaflet-options.php:4461
+msgid "WMS 9"
+msgstr "WMS 9"
+
+#: ../class-leaflet-options.php:3981
+#: ../class-leaflet-options.php:4187
+#: ../class-leaflet-options.php:4469
+msgid "WMS 10"
+msgstr "WMS 10"
+
+#: ../class-leaflet-options.php:4001
+msgid "You can also add markers directly to posts or pages without having to save them to your database previously. You just have to use the shortcode with the attributes mlat and mlon (e.g. <strong>[mapsmarker mlat=\"48.216038\" mlon=\"16.378984\"]</strong>)."
+msgstr "U kunt ook direct markers toevoegen aan berichten of pagina's zonder ze vooraf te slaan in uw database. Gebruik dan de shortcode met de attributen mlat en mlon (bijv. <strong>[mapsmarker mlat=\"48.216038\" mlon=\"16.378984\"]</strong>)."
+
+#: ../class-leaflet-options.php:4001
+msgid "Defaults values for markers added directly:"
+msgstr "Standaard waarden voor markers worden direct toegevoegd:"
+
+#: ../class-leaflet-options.php:4206
+msgid "Default values for new layers"
+msgstr "Standaard waarden voor nieuwe lagen"
+
+#: ../class-leaflet-options.php:4214
+msgid "Will be used when creating a new layer. All values can be changed afterwards on each layer."
+msgstr "Wordt gebruikt bij het maken van een nieuwe laag. Alle waarden kunnen achteraf worden gewijzigd op elke laag."
+
+#: ../class-leaflet-options.php:4318
+#: ../leaflet-layer.php:283
+#: ../leaflet-tools.php:630
+msgid "Panel for displaying layer name and API URLs on top of map"
+msgstr "Panel om laagnamen en API URL's direct op de kaart te tonen"
+
+#: ../class-leaflet-options.php:4356
+msgid "not available on multi layer maps"
+msgstr "Niet"
+
+#: ../class-leaflet-options.php:4477
+msgid "List marker settings"
+msgstr "Lijst marker instellingen"
+
+#: ../class-leaflet-options.php:4484
+#: ../leaflet-layer.php:288
+#: ../leaflet-tools.php:647
+msgid "Display a list of markers under the map"
+msgstr "Toon een lijst met markers onder de kaart"
+
+#: ../class-leaflet-options.php:4485
+msgid "(not available on multi layer maps)"
+msgstr "(niet beschikbaar bij kaarten met meerdere lagen)"
+
+#: ../class-leaflet-options.php:4496
+msgid "Order list of markers by"
+msgstr "Sorteer marker lijst op"
+
+#: ../class-leaflet-options.php:4502
+msgid "marker name"
+msgstr "Markernaam"
+
+#: ../class-leaflet-options.php:4503
+msgid "created on"
+msgstr "gemaakt op"
+
+#: ../class-leaflet-options.php:4504
+msgid "updated on"
+msgstr "bijgewerkt op"
+
+#: ../class-leaflet-options.php:4510
+msgid "Sort order"
+msgstr "Sorteervolgorde"
+
+#: ../class-leaflet-options.php:4515
+msgid "ascending"
+msgstr "oplopend"
+
+#: ../class-leaflet-options.php:4516
+msgid "descending"
+msgstr "aflopend"
+
+#: ../class-leaflet-options.php:4521
+msgid "Limit"
+msgstr "Limiet"
+
+#: ../class-leaflet-options.php:4522
+msgid "maximum number of markers to display in the list"
+msgstr "maximale aantal in de lijst te tonen markers"
+
+#: ../class-leaflet-options.php:4542
+msgid "Leaflet Maps Marker uses the <a href=\"http://code.google.com/intl/de-AT/apis/maps/documentation/places/autocomplete.html\" target=\"_blank\">Google Places Autocomplete API</a> to easily find coordinates for places or addresses. This feature is enabled by default. Preview:"
+msgstr "Leaflet Maps Marker maakt gebruik van de <a href=\"http://code.google.com/intl/de-AT/apis/maps/documentation/places/autocomplete.html\" target=\"_blank\"> Google Places Autocomplete API </ a> om  coördinaten voor plaatsen of adressen te zoeken. Deze functie is standaard ingeschakeld. Preview:"
+
+#: ../class-leaflet-options.php:4557
+msgid "You can get better search results if you enable the bounds feature. This allows you to specify the area in which to primarily search for places or addresses. Please note: the results are biased towards, but not restricted to places or addresses contained within these bounds."
+msgstr "U krijgt een betere zoekresultaten als u de JavaScript bounds feature gebruikt. U kunt dan het gebied waar in de eerste plaats gezocht moet worden naar plaatsen of adressen. Let op: de resultaten beginnen met dit deelgebied, maar als er niets gevonden wordt, zal het gebied automatisch vergroot worden."
+
+#: ../class-leaflet-options.php:4577
+msgid "If enabled, please enter longitude and latitude values below for the corner points of the prefered search area. Below you find an example for Vienna/Austria:"
+msgstr "Indien ingeschakeld, vul dan hieronder lengte-en breedtegraad waarden in voor de hoekpunten van het gewenste zoekgebied. Hieronder vindt u een voorbeeld voor Wenen / Oostenrijk:"
+
+#: ../class-leaflet-options.php:4624
+msgid "You can also select a search prefix, which automatically gets added to search form when creating a new marker or layer."
+msgstr "U kunt ook een zoekopdracht prefix selecteren, die automatisch wordt toegevoegd aan het zoekformulier wanneer u een nieuwe marker of laag aanmaakt."
+
+#: ../class-leaflet-options.php:4644
+msgid "Prefix to use"
+msgstr "Zoekprefix"
+
+#: ../class-leaflet-options.php:4672
+msgid "Please select your prefered directions provider. This setting will be used for the directions link in the panel on top of marker maps and for the action panel which gets attached to the popup text on each marker if enabled."
+msgstr "Selecteer de gewenste route provider. Deze instelling zal worden gebruikt voor de routelink op de marker kaarten en op de popup bij een marker (als deze links ingeschakeld zijn)."
+
+#: ../class-leaflet-options.php:4678
+msgid "Use the following directions provider"
+msgstr "Gebruik de volgende route provider"
+
+#: ../class-leaflet-options.php:4683
+msgid "Google Maps (worldwide)"
+msgstr "Google Maps (wereldwijd)"
+
+#: ../class-leaflet-options.php:4684
+msgid "yournavigation.org (based on OpenStreetMap, worldwide)"
+msgstr "yournavigation.org (gebaseerd OpenStreetMap, wereldwijd)"
+
+#: ../class-leaflet-options.php:4685
+msgid "openrouteservice.org (based on OpenStreetMap, Europe only)"
+msgstr "openrouteservice.org (gebaseerd op OpenStreetMap, alleen Europa)"
+
+#: ../class-leaflet-options.php:4691
+msgid "Attach directions panel to popup text on each marker"
+msgstr "Voeg route panel toe aan de popup tekst van iedere marker"
+
+#: ../class-leaflet-options.php:4714
+msgid "Google Maps directions settings"
+msgstr "Google Maps Routeplanner instellingen"
+
+#: ../class-leaflet-options.php:4728
+msgid "Map type"
+msgstr "Soort kaart"
+
+#: ../class-leaflet-options.php:4733
+#: ../leaflet-fullscreen.php:155
+#: ../leaflet-fullscreen.php:156
+#: ../leaflet-fullscreen.php:157
+#: ../leaflet-fullscreen.php:158
+#: ../leaflet-fullscreen.php:159
+#: ../leaflet-fullscreen.php:160
+#: ../leaflet-fullscreen.php:161
+#: ../leaflet-fullscreen.php:162
+#: ../leaflet-fullscreen.php:163
+#: ../leaflet-fullscreen.php:164
+#: ../leaflet-fullscreen.php:539
+#: ../leaflet-fullscreen.php:540
+#: ../leaflet-fullscreen.php:541
+#: ../leaflet-fullscreen.php:542
+#: ../leaflet-fullscreen.php:543
+#: ../leaflet-fullscreen.php:544
+#: ../leaflet-fullscreen.php:545
+#: ../leaflet-fullscreen.php:546
+#: ../leaflet-fullscreen.php:547
+#: ../leaflet-fullscreen.php:548
+#: ../leaflet-layer.php:685
+#: ../leaflet-layer.php:686
+#: ../leaflet-layer.php:687
+#: ../leaflet-layer.php:688
+#: ../leaflet-layer.php:689
+#: ../leaflet-layer.php:690
+#: ../leaflet-layer.php:691
+#: ../leaflet-layer.php:692
+#: ../leaflet-layer.php:693
+#: ../leaflet-layer.php:694
+#: ../leaflet-maps-marker.php:393
+#: ../leaflet-maps-marker.php:394
+#: ../leaflet-maps-marker.php:395
+#: ../leaflet-maps-marker.php:396
+#: ../leaflet-maps-marker.php:397
+#: ../leaflet-maps-marker.php:398
+#: ../leaflet-maps-marker.php:399
+#: ../leaflet-maps-marker.php:400
+#: ../leaflet-maps-marker.php:401
+#: ../leaflet-maps-marker.php:402
+#: ../leaflet-marker.php:535
+#: ../leaflet-marker.php:536
+#: ../leaflet-marker.php:537
+#: ../leaflet-marker.php:538
+#: ../leaflet-marker.php:539
+#: ../leaflet-marker.php:540
+#: ../leaflet-marker.php:541
+#: ../leaflet-marker.php:542
+#: ../leaflet-marker.php:543
+#: ../leaflet-marker.php:544
+msgid "Map"
+msgstr "Kaart"
+
+#: ../class-leaflet-options.php:4734
+msgid "Satellite"
+msgstr "Sateliet"
+
+#: ../class-leaflet-options.php:4735
+msgid "Hybrid"
+msgstr "Hybrid"
+
+#: ../class-leaflet-options.php:4736
+msgid "Terrain"
+msgstr "Terrein"
+
+#: ../class-leaflet-options.php:4742
+msgid "Show traffic layer?"
+msgstr "toon verkeerslaag"
+
+#: ../class-leaflet-options.php:4754
+msgid "Distance units"
+msgstr "Afstand eenheden"
+
+#: ../class-leaflet-options.php:4759
+msgid "metric (km)"
+msgstr "metrisch (km)"
+
+#: ../class-leaflet-options.php:4760
+msgid "imperial (miles)"
+msgstr "angloamerikaans (mijlen)"
+
+#: ../class-leaflet-options.php:4766
+#: ../class-leaflet-options.php:4863
+msgid "Route type"
+msgstr "Route type"
+
+#: ../class-leaflet-options.php:4767
+msgid "Avoid highways"
+msgstr "Vermijd snelwegen"
+
+#: ../class-leaflet-options.php:4775
+msgid "Avoid tolls"
+msgstr "Vermijd tolwegen"
+
+#: ../class-leaflet-options.php:4783
+msgid "Public transport (works only in some areas)"
+msgstr "Openbaar vervoer (werkt alleen in sommige gebieden)"
+
+#: ../class-leaflet-options.php:4791
+msgid "Walking directions"
+msgstr "Loop route"
+
+#: ../class-leaflet-options.php:4798
+msgid "Language"
+msgstr "Taal"
+
+#: ../class-leaflet-options.php:4803
+#: ../class-leaflet-options.php:4925
+msgid "English"
+msgstr "engels"
+
+#: ../class-leaflet-options.php:4804
+#: ../class-leaflet-options.php:4926
+msgid "German"
+msgstr "Duits"
+
+#: ../class-leaflet-options.php:4805
+#: ../class-leaflet-options.php:4927
+msgid "Italian"
+msgstr "Italiaans"
+
+#: ../class-leaflet-options.php:4806
+#: ../class-leaflet-options.php:4928
+msgid "French"
+msgstr "Frans"
+
+#: ../class-leaflet-options.php:4807
+#: ../class-leaflet-options.php:4929
+msgid "Spanish"
+msgstr "Spaans"
+
+#: ../class-leaflet-options.php:4808
+msgid "Chinese (simplified)"
+msgstr "Chinees  (eenvoudig)"
+
+#: ../class-leaflet-options.php:4809
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: ../class-leaflet-options.php:4810
+msgid "Japanese"
+msgstr "Japans"
+
+#: ../class-leaflet-options.php:4811
+msgid "Catalan"
+msgstr "Catelaans"
+
+#: ../class-leaflet-options.php:4812
+msgid "Galego"
+msgstr "Galisisch"
+
+#: ../class-leaflet-options.php:4813
+msgid "Euskara"
+msgstr "Baskisch"
+
+#: ../class-leaflet-options.php:4819
+msgid "Overview map"
+msgstr "Overzichtskaart"
+
+#: ../class-leaflet-options.php:4825
+#: ../leaflet-list-layers.php:143
+#: ../leaflet-list-markers.php:201
+msgid "visible"
+msgstr "zichtbaar"
+
+#: ../class-leaflet-options.php:4836
+msgid "yournavigation.org settings"
+msgstr "yournavigations.org instellingen"
+
+#: ../class-leaflet-options.php:4850
+msgid "Type of transport"
+msgstr "Vervoersmiddel"
+
+#: ../class-leaflet-options.php:4855
+msgid "Motorcar"
+msgstr "Auto"
+
+#: ../class-leaflet-options.php:4856
+msgid "Bicycle"
+msgstr "Fiets"
+
+#: ../class-leaflet-options.php:4857
+msgid "Foot"
+msgstr "Voetganger"
+
+#: ../class-leaflet-options.php:4868
+#: ../class-leaflet-options.php:4911
+msgid "fastest route"
+msgstr "snelste route"
+
+#: ../class-leaflet-options.php:4869
+#: ../class-leaflet-options.php:4912
+msgid "shortest route"
+msgstr "kortste route"
+
+#: ../class-leaflet-options.php:4875
+msgid "Gosmore instance to calculate the route"
+msgstr "Gosmore-instance om de route te berekenen"
+
+#: ../class-leaflet-options.php:4880
+msgid "mapnik (for normal routing using car, bicycle or foot)"
+msgstr "mapnik (voor normale route per auto, fiets of voetganger)"
+
+#: ../class-leaflet-options.php:4881
+msgid "cn (for using bicycle routing using cycle route networks only)"
+msgstr "cn (voor het gebruik van de fiets route met behulp van fietsroute-netwerken)"
+
+#: ../class-leaflet-options.php:4892
+msgid "openrouteservice.org settings"
+msgstr "openrouteservice.org instellingen"
+
+#: ../class-leaflet-options.php:4906
+msgid "Route preferences"
+msgstr "Route voorkeuren"
+
+#: ../class-leaflet-options.php:4913
+msgid "route for pedestrians"
+msgstr "route voor voetgangers"
+
+#: ../class-leaflet-options.php:4914
+msgid "route for bicycles"
+msgstr "route voor fietsers"
+
+#: ../class-leaflet-options.php:4920
+msgid "Language of route instructions"
+msgstr "Taal voor de route instructies"
+
+#: ../class-leaflet-options.php:4935
+msgid "No motorways?"
+msgstr "Geen snelwegen"
+
+#: ../class-leaflet-options.php:4940
+#: ../class-leaflet-options.php:4952
+msgid "false"
+msgstr "niet waar"
+
+#: ../class-leaflet-options.php:4941
+#: ../class-leaflet-options.php:4953
+msgid "true"
+msgstr "waar"
+
+#: ../class-leaflet-options.php:4947
+msgid "No tollways?"
+msgstr "Geen tolwegen?"
+
+#: ../class-leaflet-options.php:4971
+msgid "Markers created with Leaflet Maps Marker can also be displayed via <a href=\"http://en.wikipedia.org/wiki/Augmented_reality\" target=\"_blank\">Augmented-Reality technology</a> on mobile devices. As a first steps, an API to <a href=\"http://www.wikitude.com\" target=\"_blank\">Wikitude</a> has been implemented. APIs to other Augmented-Reality-Providers (like <a href=\"http://www.layar.com\" target=\"_blank\">Layar</a> or <a href=\"http://www.junaio.de\" target=\"_blank\">Junaio</a>) will probably follow in one of the next versions. Sample screenshots:"
+msgstr "Markers zijn gemaakt met Leaflet Maps Marker kunnen ook worden weergegeven via <a href=\"http://en.wikipedia.org/wiki/Augmented_reality\" target=\"_blank\"> Augmented Reality-technologie </a> op mobiele apparaten. Als een eerste stap is een API voor <a href=\"http://www.wikitude.com\" target=\"_blank\"> Wikitude </a>  geïmplementeerd. API's naar andere Augmented Reality--Providers (zoals <a href=\"http://www.layar.com\" target=\"_blank\"> Layar </a> of <a href = \"http://www.junaio.de \"target = \" blank \"> junaio </a>) zullen waarschijnlijk volgen in een van de volgende versies. Voorbeeld screenshots:"
+
+#: ../class-leaflet-options.php:4981
+msgid "Wikitude settings"
+msgstr "Wikitude instellingen"
+
+#: ../class-leaflet-options.php:4989
+msgid "Please visit <a href=\"http://www.mapsmarker.com/wikitude\" target=\"_blank\">http://www.mapsmarker.com/wikitude</a> for instructions how to submit your marker or layer maps to Wikitude."
+msgstr "Ga naar <a href=\"http://www.mapsmarker.com/wikitude\" target=\"_blank\"> http://www.mapsmarker.com/wikitude </ a> voor instructies voor het doorgeven van uw markers of lagen aan kaarten van Wikitude."
+
+#: ../class-leaflet-options.php:4994
+msgid "Provider name"
+msgstr "Naam provider"
+
+#: ../class-leaflet-options.php:4995
+msgid "Identifies the content provider or content channel, no spaces/special characters"
+msgstr "Hiermee wordt de content provider of het content channel aangeduid, geen spaties of speciale tekens"
+
+#: ../class-leaflet-options.php:5002
+msgid "Provider URL"
+msgstr "Provider URL"
+
+#: ../class-leaflet-options.php:5003
+msgid "Link to content provider"
+msgstr "Link naar de content provider"
+
+#: ../class-leaflet-options.php:5010
+msgid "Logo"
+msgstr "Logo"
+
+#: ../class-leaflet-options.php:5011
+msgid "The logo is displayed on the left bottom corner on Wikitude when an icon is selected - 96x96 pixel, transparent PNG"
+msgstr "Het logo wordt links onderin weergegeven op Wikitude als een icon geselecteerd is  - 96x96 pixels, transparante PNG"
+
+#: ../class-leaflet-options.php:5019
+msgid "The icon is displayed in the cam view of Wikitude to indicate a marker - 32x32 pixel, transparent PNG"
+msgstr "Het pictogram wordt weergegeven in de cam view van Wikitude om een marker aan te geven - 32x32 pixels, transparante PNG"
+
+#: ../class-leaflet-options.php:5026
+msgid "E-Mail"
+msgstr "E-Mail"
+
+#: ../class-leaflet-options.php:5027
+msgid "Optional: displayed on each marker; used for sending an email directly from Wikitude"
+msgstr "Optioneel: getoond op elke marker, wordt gebruikt voor het versturen van een e-mail rechtstreeks van Wikitude"
+
+#: ../class-leaflet-options.php:5034
+msgid "Phone"
+msgstr "Telefoon"
+
+#: ../class-leaflet-options.php:5035
+msgid "Optional: example: +4312345 - when a phone number is given, Wikitude displays a \"call me\" button in the bubble; used for every marker."
+msgstr "Optioneel: bijvoorbeeld. +4312345 - als een telefoonnummer is opgegeveven laat Wikitude een \"call me\" knop in de ballon van iedere marker zien."
+
+#: ../class-leaflet-options.php:5042
+msgid "Attachment"
+msgstr "Bijlage"
+
+#: ../class-leaflet-options.php:5043
+msgid "Optional: displayed on each marker; can be a link to a resource (image, PDF file...). You could use this to issue coupons or vouchers for potential clients that found you via Wikitude."
+msgstr "Optioneel: te tonen op iedere marker, kan een link naar een bron te zijn (beeld, PDF-bestand ...). Je kan dit bijvoorbeeld gebruiken voor beloning van potentiële klanten die je gevonden hebben via Wikitude."
+
+#: ../class-leaflet-options.php:5050
+msgid "Search radius (in meter)"
+msgstr "Zoekomtrek (in meters)"
+
+#: ../class-leaflet-options.php:5051
+msgid "Retrieve POIs (Points of Interests) from database within this search radius in meters from the current location of the Wikitude user"
+msgstr "Haal POI's (Points of Interest) voor deze zoekopdracht op uit de database binnen een straal (in meters) vanaf de huidige locatie van de Wikitudegebruiker "
+
+#: ../class-leaflet-options.php:5058
+msgid "Maximum number of POIs"
+msgstr "Maximale aantal POI's"
+
+#: ../class-leaflet-options.php:5059
+msgid "Used if Wikitude does not pass the variable maxNumberofPois - 50 is the maximum recommended"
+msgstr "Gebruik als Wikitude niet slaagt voor de variabele maxNumberofPois - 50 is het aanbevolen maximale aantal"
+
+#: ../class-leaflet-options.php:5090
+msgid "User role needed for adding and editing markers/layers"
+msgstr "Gebruikersrol voor het toevoegen en bewerken van markers/lagen"
+
+#: ../class-leaflet-options.php:5091
+#: ../class-leaflet-options.php:5106
+msgid "Note: the settings page is always visible to admins only."
+msgstr "Let op: de pagina met instellingen is altijd alleen voor admins zichtbaar."
+
+#: ../class-leaflet-options.php:5095
+#: ../class-leaflet-options.php:5110
+msgid "Administrator (Capability activate_plugins)"
+msgstr "Administrator (Capability  activate_plugins)"
+
+#: ../class-leaflet-options.php:5096
+#: ../class-leaflet-options.php:5111
+msgid "Editor (Capability moderate_comments)"
+msgstr "Redacteur (Capability moderate_comments)"
+
+#: ../class-leaflet-options.php:5097
+#: ../class-leaflet-options.php:5112
+msgid "Author (Capability edit_published_posts)"
+msgstr "Schrijver  (capability edit_published_posts)"
+
+#: ../class-leaflet-options.php:5098
+#: ../class-leaflet-options.php:5113
+msgid "Contributor (Capability edit_posts)"
+msgstr "Medewerker (capability edit_posts)"
+
+#: ../class-leaflet-options.php:5099
+#: ../class-leaflet-options.php:5114
+msgid "Subscriber (Capability read)"
+msgstr "Abonnee  (capability read)"
+
+#: ../class-leaflet-options.php:5105
+msgid "User role needed for deleting markers/layers"
+msgstr "Rol van de gebruiker die nodig zijn voor het verwijderen van markers/ lagen"
+
+#: ../class-leaflet-options.php:5119
+#: ../leaflet-list-markers.php:76
+#: ../leaflet-list-markers.php:269
+msgid "Markers per page"
+msgstr "Markers per pagina"
+
+#: ../class-leaflet-options.php:5120
+msgid "How many markers should be listed on one page at the page \"list all markers\"?"
+msgstr "Hoeveel markers moeten worden vermeld op een pagina op de pagina \"een lijst van alle markers\"?"
+
+#: ../class-leaflet-options.php:5127
+#: ../class-leaflet-options.php:5389
+#: ../class-leaflet-options.php:5575
+#: ../leaflet-layer.php:542
+#: ../leaflet-layer.php:586
+#: ../leaflet-list-layers.php:59
+#: ../leaflet-list-layers.php:101
+#: ../leaflet-list-markers.php:123
+#: ../leaflet-list-markers.php:171
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../class-leaflet-options.php:5128
+msgid "Shortcode to add markers or layers into articles or pages  - Example: [mapsmarker marker=\"1\"].<br/> Attention: if you change the shortcode after having embedded shortcodes into posts/Pages, the shortcode on these specific articles/pages has to be changed also manually - otherwise these markers/layers will not be show on frontend!"
+msgstr "Shortcode of markers om lagen toe te voegen in berichten of pagina's - Voorbeeld:[mapsmarker marker=\"1\"].<br/> Let op: als u de shortcode hebt toegevoegd aan berichten of pagina's dienen deze handmatig bijgewerkt te worden - anders worden de markers/lagen niet in de frontend getoond!"
+
+#: ../class-leaflet-options.php:5136
+msgid "Add GeoRSS feed to &lt;head&gt;"
+msgstr "Voeg GeoRSS-Feed toe aan de &lt;head&gt;"
+
+#: ../class-leaflet-options.php:5137
+msgid "if enabled, a GeoRSS feed for all markers will be added to the &lt;head&gt;-section of the website, allowing users to subscribe to your markers"
+msgstr "Indien ingeschakeld, zal een GeoRSS feed voor alle markers worden toegevoegd aan de &lt;head&gt;-sectie van de website, zodat gebruikers zich kunnen abonneren op uw markers"
+
+#: ../class-leaflet-options.php:5148
+msgid "Wordpress Admin Bar integration"
+msgstr "WordPress Admin bar integratie"
+
+#: ../class-leaflet-options.php:5149
+msgid "show or hide drop down menu for Leaflet Maps Marker in Wordpress Admin Bar"
+msgstr "tonen of  verbergen van de drop-down menu voor de  Leaflet Maps Marker in de Wordpress Admin Bar"
+
+#: ../class-leaflet-options.php:5160
+msgid "Global statistics"
+msgstr "Globale statistieken"
+
+#: ../class-leaflet-options.php:5161
+msgid "Anonymous marker/layer hit counter"
+msgstr "Anonieme marker/lagen statistieken"
+
+#: ../class-leaflet-options.php:5171
+msgid "QR code image size"
+msgstr "QR code afbeeldingsgrootte"
+
+#: ../class-leaflet-options.php:5172
+msgid "Width and height in pixel of QR code image for marker/layer standalone fullscreen map links"
+msgstr "Breedte en hoogte in pixels van de QR code voor marker/laag in de volledig scherm kaart links"
+
+#: ../class-leaflet-options.php:5192
+msgid "Choose how marker names should be displayed in KML files"
+msgstr "Kies hoe de markernamen getoond moeten worden in de KML bestanden"
+
+#: ../class-leaflet-options.php:5198
+#, fuzzy
+msgid "Marker names in KML"
+msgstr "Markernaam"
+
+#: ../class-leaflet-options.php:5205
+msgid "put in front of popup-text"
+msgstr "zet voor de popup-tekst"
+
+#: ../class-leaflet-options.php:5223
+msgid "Used for created maps - do not change this if you are not sure what it means!"
+msgstr "Wordt gebruikt voor bestaande kaarten - niet veranderen als u niet zeker weet wat dit betekent!"
+
+#: ../class-leaflet-options.php:5229
+msgid "Coordinate Reference System"
+msgstr "Coordinate Reference System"
+
+#: ../class-leaflet-options.php:5234
+msgid "EPSG:3857 (Spherical Mercator), used by most of commercial map providers (CloudMade, Google, Yahoo, Bing, etc.)"
+msgstr "EPSG:3857 (Spherical Mercator), wordt meestal gebruikt door commerciele map providers (CloudMade, Google, Yahoo, Bing, etc.)"
+
+#: ../class-leaflet-options.php:5235
+msgid "EPSG:4326 (Plate Carree), very popular among GIS enthusiasts"
+msgstr "EPSG:4326 (Plate Carree), geliefd bij GIS gebruikers"
+
+#: ../class-leaflet-options.php:5236
+msgid "EPSG:4326 (Mercator), used by some map providers."
+msgstr "EPSG:4326 (Mercator), wordt door sommige map providers gebruikt"
+
+#: ../class-leaflet-options.php:5254
+msgid "Please select the columns which should be available on the page \"List all markers\""
+msgstr "Selecteer de kolommen die beschikbaar moeten zijn op de pagina \"Overzicht van alle markers\""
+
+#: ../class-leaflet-options.php:5260
+#: ../class-leaflet-options.php:5462
+msgid "Columns to show"
+msgstr "Zichtbare kolommen"
+
+#: ../class-leaflet-options.php:5277
+#: ../leaflet-layer.php:518
+#: ../leaflet-layer.php:562
+#: ../leaflet-list-markers.php:95
+#: ../leaflet-list-markers.php:143
+#: ../leaflet-marker.php:220
+msgid "Marker name"
+msgstr "Markernaam"
+
+#: ../class-leaflet-options.php:5285
+#: ../leaflet-layer.php:520
+#: ../leaflet-layer.php:564
+#: ../leaflet-list-markers.php:97
+#: ../leaflet-list-markers.php:145
+#: ../leaflet-marker.php:433
+#: ../leaflet-tools.php:442
+msgid "Popup text"
+msgstr "Popuptekst"
+
+#: ../class-leaflet-options.php:5293
+#: ../class-leaflet-options.php:5495
+#: ../leaflet-layer.php:530
+#: ../leaflet-layer.php:574
+#: ../leaflet-list-layers.php:47
+#: ../leaflet-list-layers.php:89
+#: ../leaflet-list-markers.php:111
+#: ../leaflet-list-markers.php:159
+#: ../leaflet-tools.php:260
+#: ../leaflet-tools.php:512
+msgid "Basemap"
+msgstr "Basiskaart"
+
+#: ../class-leaflet-options.php:5301
+#: ../leaflet-list-markers.php:99
+#: ../leaflet-list-markers.php:147
+#: ../leaflet-marker.php:224
+#: ../leaflet-tools.php:229
+msgid "Layer"
+msgstr "Laag"
+
+#: ../class-leaflet-options.php:5309
+#: ../leaflet-layer.php:524
+#: ../leaflet-layer.php:568
+#: ../leaflet-list-markers.php:105
+#: ../leaflet-list-markers.php:153
+#: ../leaflet-marker.php:245
+msgid "Coordinates"
+msgstr "Coördinaten"
+
+#: ../class-leaflet-options.php:5325
+#: ../leaflet-layer.php:522
+#: ../leaflet-layer.php:566
+#: ../leaflet-list-markers.php:101
+#: ../leaflet-list-markers.php:149
+#: ../leaflet-tools.php:426
+msgid "Popup status"
+msgstr "Popupstatus"
+
+#: ../class-leaflet-options.php:5333
+#: ../class-leaflet-options.php:5527
+#: ../leaflet-list-layers.php:43
+#: ../leaflet-list-layers.php:85
+#: ../leaflet-list-markers.php:103
+#: ../leaflet-list-markers.php:151
+msgid "Panel status"
+msgstr "Panelstatus"
+
+#: ../class-leaflet-options.php:5341
+#: ../class-leaflet-options.php:5519
+#: ../leaflet-layer.php:263
+#: ../leaflet-layer.php:526
+#: ../leaflet-layer.php:570
+#: ../leaflet-list-layers.php:41
+#: ../leaflet-list-layers.php:83
+#: ../leaflet-list-markers.php:107
+#: ../leaflet-list-markers.php:155
+#: ../leaflet-marker.php:257
+#: ../leaflet-tools.php:325
+#: ../leaflet-tools.php:577
+msgid "Map size"
+msgstr "Kaartgrootte"
+
+#: ../class-leaflet-options.php:5349
+#: ../class-leaflet-options.php:5535
+#: ../leaflet-layer.php:532
+#: ../leaflet-layer.php:576
+#: ../leaflet-list-layers.php:49
+#: ../leaflet-list-layers.php:91
+#: ../leaflet-list-markers.php:113
+#: ../leaflet-list-markers.php:161
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#: ../class-leaflet-options.php:5357
+#: ../class-leaflet-options.php:5543
+#: ../leaflet-layer.php:534
+#: ../leaflet-layer.php:578
+#: ../leaflet-list-layers.php:51
+#: ../leaflet-list-layers.php:93
+#: ../leaflet-list-markers.php:115
+#: ../leaflet-list-markers.php:163
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#: ../class-leaflet-options.php:5365
+#: ../class-leaflet-options.php:5551
+#: ../leaflet-layer.php:536
+#: ../leaflet-layer.php:580
+#: ../leaflet-list-layers.php:53
+#: ../leaflet-list-layers.php:95
+#: ../leaflet-list-markers.php:117
+#: ../leaflet-list-markers.php:165
+msgid "Updated by"
+msgstr "Bijgewerkt door"
+
+#: ../class-leaflet-options.php:5373
+#: ../class-leaflet-options.php:5559
+#: ../leaflet-layer.php:538
+#: ../leaflet-layer.php:582
+#: ../leaflet-list-layers.php:55
+#: ../leaflet-list-layers.php:97
+#: ../leaflet-list-markers.php:119
+#: ../leaflet-list-markers.php:167
+msgid "Updated on"
+msgstr "Bijgewerkt op"
+
+#: ../class-leaflet-options.php:5381
+#: ../class-leaflet-options.php:5567
+#: ../leaflet-layer.php:540
+#: ../leaflet-layer.php:584
+#: ../leaflet-list-layers.php:57
+#: ../leaflet-list-layers.php:99
+#: ../leaflet-list-markers.php:121
+#: ../leaflet-list-markers.php:169
+msgid "Controlbox status"
+msgstr "Controlbox status"
+
+#: ../class-leaflet-options.php:5456
+msgid "Please select the columns which should be available on the page \"List all layers\""
+msgstr "Selecteer de kolommen die beschikbaar moeten zijn op de pagina \"Overzicht van alle lagen\""
+
+#: ../class-leaflet-options.php:5471
+#: ../leaflet-list-layers.php:35
+#: ../leaflet-list-layers.php:77
+msgid "Type"
+msgstr "Typ"
+
+#: ../class-leaflet-options.php:5479
+#: ../leaflet-layer.php:246
+msgid "Layer name"
+msgstr "laagnaam"
+
+#: ../class-leaflet-options.php:5487
+msgid "Number of markers"
+msgstr "Aantal markers"
+
+#: ../class-leaflet-options.php:5503
+#: ../leaflet-layer.php:250
+#: ../leaflet-list-layers.php:39
+#: ../leaflet-list-layers.php:81
+msgid "Layer center"
+msgstr "Middelpunt laag"
+
+#: ../class-leaflet-options.php:5638
+msgid "Reset Settings"
+msgstr "Reset instellingen"
+
+#: ../class-leaflet-options.php:5642
+msgid "Check this box and click \"Save Changes\" below to reset plugin options to their defaults."
+msgstr "Vink dit vakje aan en klik op \"Wijzigingen opslaan\" hieronder om de plug-in opties terug te zetten naar de standaardwaarden."
+
+#: ../leaflet-admin-header.php:15
+#: ../leaflet-list-markers.php:68
+#: ../leaflet-maps-marker.php:659
+#: ../leaflet-maps-marker.php:711
+msgid "List all markers"
+msgstr "Toon alle markers"
+
+#: ../leaflet-admin-header.php:16
+#: ../leaflet-maps-marker.php:660
+#: ../leaflet-maps-marker.php:717
+#: ../leaflet-marker.php:204
+msgid "Add new marker"
+msgstr "Voeg nieuwe marker toe"
+
+#: ../leaflet-admin-header.php:17
+#: ../leaflet-list-layers.php:8
+#: ../leaflet-maps-marker.php:661
+#: ../leaflet-maps-marker.php:723
+msgid "List all layers"
+msgstr "Toon alle lagen"
+
+#: ../leaflet-admin-header.php:18
+#: ../leaflet-layer.php:230
+#: ../leaflet-maps-marker.php:662
+#: ../leaflet-maps-marker.php:729
+msgid "Add new layer"
+msgstr "Voeg nieuwe laag toe"
+
+#: ../leaflet-admin-header.php:19
+#: ../leaflet-maps-marker.php:663
+#: ../leaflet-maps-marker.php:738
+msgid "Tools"
+msgstr "Tools"
+
+#: ../leaflet-admin-header.php:22
+#: ../leaflet-maps-marker.php:665
+#: ../leaflet-maps-marker.php:753
+msgid "Help & Credits"
+msgstr "Help & Credits"
+
+#: ../leaflet-admin-header.php:50
+msgid "Message"
+msgstr "Bericht"
+
+#: ../leaflet-admin-header.php:53
+msgid "If you like to donate a certain amount of money to show your support, you can also use Paypal. If you don´t have a Paypal account, you can use your credit card or bank account (where available). Please click on the paypal image to proceed to the donation form."
+msgstr "Als u graag een bedrag wil doneren, dan kunt u ook gebruik maken van Paypal. Als u niet beschikt over een Paypal account hebt, kunt u met uw credit card of bankrekening betalen. Klik op de paypalafbeelding om naar het donatieformulier te gaan."
+
+#: ../leaflet-admin-header.php:56
+msgid "The easiest way to support this plugin is to buy something from Amazon by using this referrer link. Note: this doesn´t cost you anything as your purchase volume won´t be increased, but I will receive 6 per cent of your purchase volume as a referral fee."
+msgstr "De eenvoudigste manier om deze plugin te ondersteunen is door iets bij Amazon te kopen via deze referrer link. Let op: dit kost je niets extra en uw aankoophoeveelheid zal niet worden verhoogd, maar ik zal 6 procent van uw aankoopbedrag ontvangen als een verwijzingsvergoeding."
+
+#: ../leaflet-admin-header.php:57
+msgid "Another way to show your support for this plugin is to buy something from my Amazon wishlist, respectively sending me a greeting card worth from 15 to 500 $ with a personal note, which I would very much appreciate."
+msgstr "Een andere manier om uw steun te betuigen aan deze plugin is om iets te kopen van mijn Amazon wishlist, respectievelijk het sturen van een wenskaart met een waarde van 15 tot 500$ en een persoonlijke noot, die zou ik zeer op prijs stellen."
+
+#: ../leaflet-admin-header.php:63
+msgid "A message from the plugin´s author"
+msgstr "Een boodschap van de ontwikkelaar van de plugin"
+
+#: ../leaflet-admin-header.php:63
+msgid "Show website of plugin author"
+msgstr "Toon de website van de plugin ontwikkelaar"
+
+#: ../leaflet-admin-header.php:64
+msgid "It is hard to continue development and support for Leaflet Maps Marker-plugin without contributions from users like you."
+msgstr "Het is moeilijk om de ontwikkeling en support van Leaflet Maps Marker plugin vol te houden zonder uw bijdragen."
+
+#: ../leaflet-admin-header.php:64
+msgid "If you enjoy using the plugin - <strong>particularly within a commercial context</strong> - please consider making a donation."
+msgstr "Als u deze plugin waardeert - <strong> in het bijzonder in een commerciële context </strong> - kunt u een donatie overwegen."
+
+#: ../leaflet-admin-header.php:64
+msgid "Your donation help keeping the plugin free for everyone and allow me to spend more time on developing, maintaining and support."
+msgstr "Uw donatie helpt de plugin voor iedereen gratis te houden en stelt mij in staat om meer tijd te besteden aan het ontwikkeling, onderhoud en support."
+
+#: ../leaflet-admin-header.php:64
+msgid "I´d be happy to accept your donation! Thanks!"
+msgstr "Ik accepteer graag uw donatie! Bedankt!"
+
+#: ../leaflet-admin-header.php:64
+msgid "For more information on how to donate, please visit"
+msgstr "Voor meer informatie over het doneren, kunt u terecht op"
+
+#: ../leaflet-admin-header.php:64
+msgid "please rate this plugin on wordpress.org"
+msgstr "Waardeer a.u.b. deze plugin op wordpress.org"
+
+#: ../leaflet-admin-header.php:64
+msgid "Rate plugin"
+msgstr "Waardeer plugin "
+
+#: ../leaflet-exportcsv.php:29
+#: ../leaflet-layer.php:20
+#: ../leaflet-list-markers.php:18
+#: ../leaflet-marker.php:23
+#: ../leaflet-tools.php:18
+msgid "Security check failed - please call this function from the according Leaflet Maps Marker admin page!"
+msgstr "Beveiligingscontrole is mislukt - roep deze pagina aan vanaf Leaflet Maps Marker admin pagina!"
+
+#: ../leaflet-exportcsv.php:88
+msgid "Error - CSV export of all markers not allowed."
+msgstr "Fout - CSV export van alle markers is niet toegestaan."
+
+#: ../leaflet-fullscreen.php:67
+#: ../leaflet-layer.php:216
+#: ../leaflet-maps-marker.php:234
+#, php-format
+msgid "Error: a layer with the ID %1$s does not exist!"
+msgstr "Fout: een laag met het ID %1$s bestaat niet!"
+
+#: ../leaflet-fullscreen.php:69
+#: ../leaflet-fullscreen.php:444
+#: ../leaflet-maps-marker.php:243
+msgid "Go to plugin website"
+msgstr "Ga naar de plugin website"
+
+#: ../leaflet-fullscreen.php:94
+#: ../leaflet-fullscreen.php:469
+#: ../leaflet-maps-marker.php:801
+#: ../leaflet-maps-marker.php:809
+msgid "Zoom in"
+msgstr "Zoom in"
+
+#: ../leaflet-fullscreen.php:94
+#: ../leaflet-fullscreen.php:469
+#: ../leaflet-maps-marker.php:802
+#: ../leaflet-maps-marker.php:810
+msgid "Zoom out"
+msgstr "Zoom out"
+
+#: ../leaflet-fullscreen.php:102
+#: ../leaflet-fullscreen.php:477
+msgid "map"
+msgstr "kaart"
+
+#: ../leaflet-fullscreen.php:110
+#: ../leaflet-fullscreen.php:501
+#: ../leaflet-layer.php:303
+#: ../leaflet-layer.php:361
+#: ../leaflet-maps-marker.php:271
+#: ../leaflet-maps-marker.php:295
+#: ../leaflet-maps-marker.php:378
+#: ../leaflet-marker.php:330
+msgid "Export as KML for Google Earth/Google Maps"
+msgstr "Exporteer als KML voor Google Earth/Google Maps"
+
+#: ../leaflet-fullscreen.php:113
+#: ../leaflet-fullscreen.php:504
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:240
+#: ../leaflet-layer.php:306
+#: ../leaflet-layer.php:360
+#: ../leaflet-layer.php:546
+#: ../leaflet-layer.php:590
+#: ../leaflet-list-layers.php:63
+#: ../leaflet-list-layers.php:105
+#: ../leaflet-list-markers.php:127
+#: ../leaflet-list-markers.php:175
+#: ../leaflet-maps-marker.php:274
+#: ../leaflet-maps-marker.php:298
+#: ../leaflet-maps-marker.php:377
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+#: ../leaflet-marker.php:333
+msgid "Open standalone map in fullscreen mode"
+msgstr "Open standalone kaart in volledig scherm"
+
+#: ../leaflet-fullscreen.php:116
+#: ../leaflet-fullscreen.php:507
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:240
+#: ../leaflet-layer.php:306
+#: ../leaflet-layer.php:309
+#: ../leaflet-layer.php:548
+#: ../leaflet-layer.php:592
+#: ../leaflet-list-layers.php:65
+#: ../leaflet-list-layers.php:107
+#: ../leaflet-list-markers.php:129
+#: ../leaflet-list-markers.php:177
+#: ../leaflet-maps-marker.php:277
+#: ../leaflet-maps-marker.php:301
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+#: ../leaflet-marker.php:336
+msgid "Create QR code image for standalone map in fullscreen mode"
+msgstr "Maak een QR code afbeelding voor een stand-alone kaart in volledig scherm modus"
+
+#: ../leaflet-fullscreen.php:119
+#: ../leaflet-fullscreen.php:510
+#: ../leaflet-layer.php:312
+#: ../leaflet-maps-marker.php:280
+#: ../leaflet-maps-marker.php:304
+#: ../leaflet-marker.php:339
+msgid "Export as GeoJSON"
+msgstr "Exporteer als GeoJSON"
+
+#: ../leaflet-fullscreen.php:122
+#: ../leaflet-fullscreen.php:513
+#: ../leaflet-layer.php:315
+#: ../leaflet-maps-marker.php:283
+#: ../leaflet-maps-marker.php:307
+#: ../leaflet-marker.php:342
+msgid "Export as GeoRSS"
+msgstr "Exporteer als GeoRSS"
+
+#: ../leaflet-fullscreen.php:125
+#: ../leaflet-fullscreen.php:516
+#: ../leaflet-layer.php:318
+#: ../leaflet-maps-marker.php:286
+#: ../leaflet-maps-marker.php:310
+#: ../leaflet-marker.php:345
+msgid "Export as ARML for Wikitude Augmented-Reality browser"
+msgstr "Exporteer als ARML voor Wikitude Augmented-Reality browser"
+
+#: ../leaflet-fullscreen.php:153
+#: ../leaflet-fullscreen.php:537
+#: ../leaflet-layer.php:683
+#: ../leaflet-maps-marker.php:391
+#: ../leaflet-marker.php:533
+msgid "Plugin"
+msgstr "Plugin"
+
+#: ../leaflet-fullscreen.php:159
+#: ../leaflet-fullscreen.php:160
+#: ../leaflet-fullscreen.php:543
+#: ../leaflet-fullscreen.php:544
+#: ../leaflet-layer.php:689
+#: ../leaflet-layer.php:690
+#: ../leaflet-maps-marker.php:397
+#: ../leaflet-maps-marker.php:398
+#: ../leaflet-marker.php:539
+#: ../leaflet-marker.php:540
+msgid "City of Vienna"
+msgstr "de stad Wenen"
+
+#: ../leaflet-fullscreen.php:442
+#: ../leaflet-kml.php:211
+#: ../leaflet-maps-marker.php:235
+#: ../leaflet-marker.php:190
+#, php-format
+msgid "Error: a marker with the ID %1$s does not exist!"
+msgstr "Fout: een marker met het  ID %1$s bestaat niet!"
+
+#: ../leaflet-fullscreen.php:491
+#: ../leaflet-fullscreen.php:494
+#: ../leaflet-fullscreen.php:497
+#: ../leaflet-fullscreen.php:749
+#: ../leaflet-fullscreen.php:752
+#: ../leaflet-fullscreen.php:755
+#: ../leaflet-geojson.php:94
+#: ../leaflet-geojson.php:96
+#: ../leaflet-geojson.php:98
+#: ../leaflet-geojson.php:197
+#: ../leaflet-geojson.php:199
+#: ../leaflet-geojson.php:201
+#: ../leaflet-layer.php:352
+#: ../leaflet-layer.php:355
+#: ../leaflet-layer.php:358
+#: ../leaflet-maps-marker.php:261
+#: ../leaflet-maps-marker.php:264
+#: ../leaflet-maps-marker.php:267
+#: ../leaflet-maps-marker.php:369
+#: ../leaflet-maps-marker.php:372
+#: ../leaflet-maps-marker.php:375
+#: ../leaflet-maps-marker.php:603
+#: ../leaflet-maps-marker.php:606
+#: ../leaflet-maps-marker.php:609
+#: ../leaflet-marker.php:320
+#: ../leaflet-marker.php:323
+#: ../leaflet-marker.php:326
+#: ../leaflet-marker.php:728
+#: ../leaflet-marker.php:732
+#: ../leaflet-marker.php:736
+msgid "Get directions"
+msgstr "Route berekenen"
+
+#: ../leaflet-georss.php:88
+#: ../leaflet-georss.php:153
+msgid "maps"
+msgstr "kaarten"
+
+#: ../leaflet-help-credits.php:10
+msgid "Help"
+msgstr "Help"
+
+#: ../leaflet-help-credits.php:12
+#: ../leaflet-maps-marker.php:773
+msgid "Do you have questions or issues with Leaflet Maps Marker? Please use the following support channels appropriately."
+msgstr "Heeft u vragen of problemen met Leaflet Maps Marker? Maak gebruik van de aangewezen support methode."
+
+#: ../leaflet-help-credits.php:15
+#: ../leaflet-maps-marker.php:775
+msgid "FAQ"
+msgstr "FAQ"
+
+#: ../leaflet-help-credits.php:15
+msgid "(frequently asked questions)"
+msgstr "(veel gestelde vragen)"
+
+#: ../leaflet-help-credits.php:16
+#: ../leaflet-maps-marker.php:776
+msgid "Documentation"
+msgstr "Handleiding"
+
+#: ../leaflet-help-credits.php:17
+#: ../leaflet-maps-marker.php:777
+msgid "Ideas"
+msgstr "Ideeën"
+
+#: ../leaflet-help-credits.php:17
+msgid "(feature requests)"
+msgstr "(wensen voor verbetering)"
+
+#: ../leaflet-help-credits.php:18
+msgid "(free community support)"
+msgstr "(gratis community support)"
+
+#: ../leaflet-help-credits.php:19
+msgid "(paid community support)"
+msgstr "(betaalde community support)"
+
+#: ../leaflet-help-credits.php:20
+msgid "(paid professional support)"
+msgstr "(betaalde professionele support)"
+
+#: ../leaflet-help-credits.php:23
+#: ../leaflet-maps-marker.php:782
+msgid "More information on support"
+msgstr "Meer informatie over support"
+
+#: ../leaflet-help-credits.php:24
+msgid "Licence"
+msgstr "Licentie"
+
+#: ../leaflet-help-credits.php:26
+msgid "Good news, this plugin is free for everyone! Since it is released under the GPL2, you can use it free of charge on your personal or commercial blog.<br/>But if you enjoy this plugin, you can thank me and leave a small donation for the time I have spent writing and supporting this plugin.<br/>Please see <a href=\"http://www.mapsmarker.com/donations\" target=\"_blank\">http://www.mapsmarker.com/donations</a> for details."
+msgstr "Goed nieuws, deze plugin is gratis voor iedereen! Omdat het is vrijgegeven onder de GPL2, kunt u het gratis gebruiken op uw persoonlijke of commerciële blog. <br/> Maar als u deze plugin waardeert, kunt u me bedanken met een kleine donatie voor de tijd die ik heb doorgebracht met schrijven en ondersteunen van deze plugin. <br/> zie  <a href=\"http://www.mapsmarker.com/donations\" target=\"_blank\">http://www.mapsmarker.com/donations</a> voor meer informatie."
+
+#: ../leaflet-help-credits.php:28
+msgid "Licenses for used libraries, services and images"
+msgstr "Licenties voor gebruikte libraries, services en afbeeldingen"
+
+#: ../leaflet-help-credits.php:40
+msgid "Translations"
+msgstr "Vertalingen"
+
+#: ../leaflet-help-credits.php:47
+msgid "Credits & special thanks"
+msgstr "Credits & speciale dank"
+
+#: ../leaflet-kml.php:86
+#, php-format
+msgid "Warning: no markers are assigned to the layer with the ID %1$s or the layer does not exist!"
+msgstr "Waarschuwing: er zijn geen markers toegekend aan de laag met het ID %1$s of de laag bestaat niet!"
+
+#: ../leaflet-layer.php:50
+#: ../leaflet-layer.php:77
+#: ../leaflet-layer.php:511
+#: ../leaflet-layer.php:670
+#: ../leaflet-list-layers.php:169
+msgid "add new marker to this layer"
+msgstr "voeg nieuwe marker toe aan deze laag"
+
+#: ../leaflet-layer.php:51
+msgid "Layer has been successfully added"
+msgstr "Laag is met succes toegevoegd"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:239
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:214
+msgid "Shortcode and API URLs"
+msgstr "Shortcode en API URL's"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:240
+#: ../leaflet-layer.php:544
+#: ../leaflet-layer.php:588
+#: ../leaflet-list-layers.php:61
+#: ../leaflet-list-layers.php:103
+#: ../leaflet-list-markers.php:125
+#: ../leaflet-list-markers.php:173
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "Click here for more information on how to use as KML in Google Earth or Google Maps"
+msgstr "Klik hier voor meer informatie over het gebruik als KML in Google Earth of Google Maps"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:241
+#: ../leaflet-layer.php:550
+#: ../leaflet-layer.php:594
+#: ../leaflet-list-layers.php:67
+#: ../leaflet-list-layers.php:109
+#: ../leaflet-list-markers.php:131
+#: ../leaflet-list-markers.php:179
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "Click here for more information on how to integrate GeoJSON into external websites or apps"
+msgstr "Klik hier voor meer informatie over de integratie van GeoJSON in externe websites of apps"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:241
+#: ../leaflet-layer.php:552
+#: ../leaflet-layer.php:596
+#: ../leaflet-list-layers.php:69
+#: ../leaflet-list-layers.php:111
+#: ../leaflet-list-markers.php:133
+#: ../leaflet-list-markers.php:181
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "Click here for more information on how to subscribe to new markers via GeoRSS"
+msgstr "Klik hier voor meer informatie over het abonneren op GeoRSS om op de hoogte te blijven van nieuwe markers"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:241
+#: ../leaflet-layer.php:554
+#: ../leaflet-layer.php:598
+#: ../leaflet-list-layers.php:71
+#: ../leaflet-list-layers.php:113
+#: ../leaflet-list-markers.php:135
+#: ../leaflet-list-markers.php:183
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:215
+msgid "Click here for more information on how to display in Wikitude Augmented-Reality browser"
+msgstr "Klik hier voor meer informatie over het tonen in Wikitude Augmented-Reality browser"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+msgid "Please copy the shortcode above and paste it into the post or page where you want the map to appear or use one of the API URLs for embedding in external websites or apps"
+msgstr "Kopieer de shortcode en plak het in het bericht of de pagina waar u de kaart wil tonen of gebruik een van de API-URL's voor integratie in externe websites of apps"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-marker.php:236
+msgid "edit layer"
+msgstr "bewerk laag"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:104
+#: ../leaflet-layer.php:112
+#: ../leaflet-layer.php:218
+msgid "show all layers"
+msgstr "toon alle lagen"
+
+#: ../leaflet-layer.php:51
+#: ../leaflet-layer.php:91
+#: ../leaflet-layer.php:104
+#: ../leaflet-layer.php:112
+#: ../leaflet-layer.php:218
+#: ../leaflet-marker.php:237
+msgid "add new layer"
+msgstr "voeg nieuwe laag toe"
+
+#: ../leaflet-layer.php:58
+#: ../leaflet-layer.php:95
+#: ../leaflet-marker.php:55
+#: ../leaflet-marker.php:85
+msgid "Error: coordinates cannot be empty!"
+msgstr "fout: coördinaten mogen niet leeg zijn!"
+
+#: ../leaflet-layer.php:58
+#: ../leaflet-layer.php:95
+#: ../leaflet-marker.php:55
+#: ../leaflet-marker.php:85
+msgid "Go back to form"
+msgstr "Terug naar het formulier"
+
+#: ../leaflet-layer.php:91
+msgid "Layer has been successfully updated"
+msgstr "De laag is met succes bijgewerkt"
+
+#: ../leaflet-layer.php:104
+msgid "Layer and assigned markers have been successfully deleted"
+msgstr "Laag en toegekende markers zijn met succes verwijderd"
+
+#: ../leaflet-layer.php:112
+msgid "Layer has been successfully deleted (assigned markers have not been deleted)"
+msgstr "Laag is met succes verwijderd (toegekende markers zijn niet verwijderd)"
+
+#: ../leaflet-layer.php:230
+msgid "Edit layer"
+msgstr "Bewerk laag"
+
+#: ../leaflet-layer.php:234
+#: ../leaflet-marker.php:209
+msgid "Parameter"
+msgstr "Parameter"
+
+#: ../leaflet-layer.php:235
+#: ../leaflet-marker.php:210
+msgid "Value"
+msgstr "Waarde"
+
+#: ../leaflet-layer.php:241
+#: ../leaflet-marker.php:215
+msgid "Use this shortcode in posts or pages on your website or one of the API URLs for embedding in external websites or apps"
+msgstr "Gebruik deze shortcode in berichten of pagina's op uw website of een van de API URL's voor integratie in externe websites of apps"
+
+#: ../leaflet-layer.php:251
+#: ../leaflet-marker.php:246
+msgid "Please select a place or an address"
+msgstr "Kies een plaats of adres"
+
+#: ../leaflet-layer.php:251
+#: ../leaflet-layer.php:291
+#: ../leaflet-layer.php:370
+#: ../leaflet-marker.php:246
+#: ../leaflet-marker.php:353
+msgid "(Settings)"
+msgstr "(instellingen)"
+
+#: ../leaflet-layer.php:255
+#: ../leaflet-marker.php:250
+msgid "or paste coordinates here"
+msgstr "of plak de coördinaten hier"
+
+#: ../leaflet-layer.php:256
+#: ../leaflet-marker.php:251
+msgid "latitude"
+msgstr "breedtegraad"
+
+#: ../leaflet-layer.php:257
+#: ../leaflet-marker.php:252
+msgid "longitude"
+msgstr "lengtegraad"
+
+#: ../leaflet-layer.php:259
+msgid "or set layer center by clicking on the preview map"
+msgstr "of centreer de laag door te klikken op de preview kaart"
+
+#: ../leaflet-layer.php:264
+#: ../leaflet-layer.php:619
+#: ../leaflet-list-layers.php:148
+#: ../leaflet-list-markers.php:215
+#: ../leaflet-marker.php:258
+#: ../leaflet-tools.php:328
+#: ../leaflet-tools.php:580
+msgid "Width"
+msgstr "Breedte"
+
+#: ../leaflet-layer.php:268
+#: ../leaflet-layer.php:619
+#: ../leaflet-list-layers.php:148
+#: ../leaflet-list-markers.php:215
+#: ../leaflet-marker.php:263
+#: ../leaflet-tools.php:333
+#: ../leaflet-tools.php:585
+msgid "Height"
+msgstr "hoogte"
+
+#: ../leaflet-layer.php:274
+#: ../leaflet-marker.php:270
+msgid "Please change zoom level by clicking on + or - symbols or using your mouse wheel on preview map"
+msgstr "Verander het zoom niveau door op de + of - symbolen te klikken. Of gebruik uw muiswiel op de preview kaart"
+
+#: ../leaflet-layer.php:277
+#: ../leaflet-marker.php:273
+#: ../leaflet-tools.php:361
+#: ../leaflet-tools.php:613
+msgid "Basemap/overlay controlbox on frontend"
+msgstr "Basiskaart/overlay controlbox in de frontend"
+
+#: ../leaflet-layer.php:281
+#: ../leaflet-marker.php:277
+msgid "Controlbox on backend is always expanded"
+msgstr "Controlbox in de backend is altijd uitgeklapt"
+
+#: ../leaflet-layer.php:291
+msgid "Max. number of markers to display:"
+msgstr "Maximale aantal te tonen markers:"
+
+#: ../leaflet-layer.php:321
+msgid "if set, layername will be inserted here"
+msgstr "Indien ingesteld, zal de laagnaam hier ingevoegd worden"
+
+#: ../leaflet-layer.php:332
+#: ../leaflet-layer.php:336
+msgid "Markers assigned to this layer will be listed here"
+msgstr "Lijst van markers, die aan deze laag zijn toegewezen"
+
+#: ../leaflet-layer.php:362
+#: ../leaflet-layer.php:646
+#: ../leaflet-list-markers.php:239
+#: ../leaflet-marker.php:204
+msgid "Edit marker"
+msgstr "Bewerk marker"
+
+#: ../leaflet-layer.php:362
+#: ../leaflet-layer.php:646
+#: ../leaflet-list-layers.php:173
+#: ../leaflet-list-markers.php:239
+msgid "edit"
+msgstr "bewerk"
+
+#: ../leaflet-layer.php:370
+#: ../leaflet-marker.php:353
+msgid "WMS layers"
+msgstr "WMS lagen"
+
+#: ../leaflet-layer.php:428
+msgid "Multi Layer Map"
+msgstr "Multi Layer kaart"
+
+#: ../leaflet-layer.php:431
+msgid "Show markers from other layers on this map"
+msgstr "toon de markers van andere lagen op deze kaart"
+
+#: ../leaflet-layer.php:437
+msgid "Please select the layers, whose markers you would like to display on this multi layer map. Please note that the following features are not supported for multi layer maps: adding markers directly, displaying a list of markers under the map, access of all assigned markers via GeoJSON (please use GeoJSON-feeds for individual layers instead) and dynamic preview in backend (select layers instead, click save and the edit button again). Please also do not change an existing layer map with assigned markers to a multi layer map, as those assigned markers will not be displayed on the multi layer map."
+msgstr "Selecteer de lagen met de markers die u wil tonen op deze multi-layer kaart. Houd er rekening mee dat de volgende functies niet worden ondersteund voor multi layer kaarten: het direct toevoegen van markers, het tonen van een lijst van markers onder de kaart, de toegang van alle toegewezen markers via GeoJSON (gebruik daarvoor in de plaats GeoJSON-feeds voor aparte lagen) en dynamische preview in backend (in plaats daarvan: selecteer de lagen, klik op opslaan en weer op de bewerkknop). Verander een bestaande laag kaart met toegewezen markers niet in een multi-layer kaart,de toegewezen markers zullen niet worden weergegeven op het multi-layer kaart."
+
+#: ../leaflet-layer.php:439
+msgid "display all markers"
+msgstr "toon alle markers"
+
+#: ../leaflet-layer.php:439
+msgid "Display markers from selected layers only"
+msgstr "Toon alleen de markers van geselecteerde lagen"
+
+#: ../leaflet-layer.php:447
+#: ../leaflet-layer.php:506
+#: ../leaflet-list-markers.php:75
+#: ../leaflet-tools.php:193
+#: ../leaflet-tools.php:197
+#: ../leaflet-tools.php:203
+#: ../leaflet-tools.php:207
+#: ../leaflet-tools.php:231
+#: ../leaflet-tools.php:235
+msgid "marker"
+msgstr "marker"
+
+#: ../leaflet-layer.php:455
+#: ../leaflet-marker.php:499
+msgid "Audit"
+msgstr "Audit"
+
+#: ../leaflet-layer.php:457
+msgid "Layer added by"
+msgstr "Laag toegevoegd door"
+
+#: ../leaflet-layer.php:460
+#: ../leaflet-marker.php:504
+msgid "last update by"
+msgstr "laatst bewerkt door"
+
+#: ../leaflet-layer.php:467
+msgid "update layer"
+msgstr "laag opslaan"
+
+#: ../leaflet-layer.php:467
+msgid "add layer"
+msgstr "laag toevoegen"
+
+#: ../leaflet-layer.php:477
+#, php-format
+msgid "Do you really want to delete layer %1$s (ID %2$s)?"
+msgstr "Weet u zeker dat u de laag %1$s (ID %2$s) wil verwijderen?"
+
+#: ../leaflet-layer.php:478
+msgid "delete layer"
+msgstr "verwijder laag"
+
+#: ../leaflet-layer.php:487
+#, php-format
+msgid "Do you really want to delete layer %1$s (ID %2$s) and all %3$s assigned markers?"
+msgstr "Weet u zeker dat u de laag %1$s (ID %2$s) wil verwijderen en alle  %3$s toegewezen markers?"
+
+#: ../leaflet-layer.php:489
+msgid "delete layer AND assigned markers"
+msgstr "verwijder laag EN toegewezen markers"
+
+#: ../leaflet-layer.php:499
+msgid "Marker assigned to this layer"
+msgstr "Marker, die aan deze laag is toegewezen"
+
+#: ../leaflet-layer.php:501
+msgid "Marker assigned to this multi layer map"
+msgstr "Marker die aan de multi layer kaart is toegewezen"
+
+#: ../leaflet-layer.php:506
+#: ../leaflet-list-layers.php:23
+#: ../leaflet-list-layers.php:198
+#: ../leaflet-list-markers.php:74
+#: ../leaflet-list-markers.php:267
+msgid "Total"
+msgstr "Totaal"
+
+#: ../leaflet-layer.php:509
+msgid "For details on assigned markers to this multi-layer map, please open the individual layer maps."
+msgstr "Voor meer informatie over aan deze multi-layer kaart toegewezen markers , open de betreffende lagen."
+
+#: ../leaflet-layer.php:606
+#: ../leaflet-marker.php:519
+#, php-format
+msgid "Do you really want to delete marker %1$s (ID %2$s)?"
+msgstr "Weet u zeker dat u de marker%1$s (ID %2$s) wil verwijderen?"
+
+#: ../leaflet-layer.php:607
+#: ../leaflet-list-layers.php:125
+#: ../leaflet-list-markers.php:195
+msgid "delete"
+msgstr "verwijder"
+
+#: ../leaflet-layer.php:612
+msgid "No marker assigned to this layer"
+msgstr "Er zijn geen markers toegewezen aan deze laag"
+
+#: ../leaflet-layer.php:634
+#: ../leaflet-list-markers.php:200
+#: ../leaflet-tools.php:431
+msgid "open"
+msgstr "open"
+
+#: ../leaflet-layer.php:634
+#: ../leaflet-list-markers.php:200
+#: ../leaflet-tools.php:429
+msgid "closed"
+msgstr "gesloten"
+
+#: ../leaflet-layer.php:637
+#: ../leaflet-list-markers.php:207
+msgid "Edit marker "
+msgstr "Bewerk marker"
+
+#: ../leaflet-layer.php:644
+#: ../leaflet-list-markers.php:237
+msgid "standard icon"
+msgstr "standaard icon"
+
+#: ../leaflet-layer.php:1013
+#: ../leaflet-layer.php:1019
+#: ../leaflet-marker.php:852
+#: ../leaflet-marker.php:858
+msgid "Invalid format! Please only use numbers and a . instead of a , as decimal separator!"
+msgstr "Ongeldig formaat! Gebruik alleen cijfers en een . in plaats van een, als decimaal teken!"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+msgid "Add layer"
+msgstr "Laag toevoegen"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Export all markers as csv-file"
+msgstr "Exporteer alle markers als csv-bestand"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Export all markers as KML"
+msgstr "Exporteer alle markers als als KML"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Export all markers as GeoJSON"
+msgstr "Exporteer alle markers als GeoJSON"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Subscribe to markers via GeoRSS"
+msgstr "Inschrijven op markers via GeoRSS"
+
+#: ../leaflet-list-layers.php:21
+#: ../leaflet-list-layers.php:204
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Export all markers as ARML for Wikitude"
+msgstr "Exporteer alle markers als RML voor Wikitude"
+
+#: ../leaflet-list-layers.php:23
+#: ../leaflet-list-layers.php:198
+msgid "layer"
+msgstr "laag"
+
+#: ../leaflet-list-layers.php:24
+#: ../leaflet-list-layers.php:199
+#: ../leaflet-list-markers.php:77
+#: ../leaflet-list-markers.php:270
+msgid "select columns to display"
+msgstr "selecteer kolommen, die getoond moeten worden"
+
+#: ../leaflet-list-layers.php:24
+#: ../leaflet-list-layers.php:199
+#: ../leaflet-list-markers.php:77
+#: ../leaflet-list-markers.php:270
+msgid "columns"
+msgstr "kolommen"
+
+#: ../leaflet-list-layers.php:37
+#: ../leaflet-list-layers.php:79
+#: ../leaflet-maps-marker.php:1047
+msgid "Markers"
+msgstr "Markers"
+
+#: ../leaflet-list-layers.php:120
+msgid "No layer created yet"
+msgstr "Er is nog geen laag aangemaakt"
+
+#: ../leaflet-list-layers.php:125
+msgid "Do you really want to delete this layer?"
+msgstr "Wilt u werkelijk deze laag verwijderen?"
+
+#: ../leaflet-list-layers.php:142
+msgid "single layer map"
+msgstr "single layer kaart"
+
+#: ../leaflet-list-layers.php:142
+msgid "multi layer map"
+msgstr "multi-layer kaart"
+
+#: ../leaflet-list-layers.php:173
+msgid "Edit"
+msgstr "Bewerk"
+
+#: ../leaflet-list-layers.php:174
+msgid "show markers assigned to this layer"
+msgstr "toon de aan deze laag toegevoegde markers"
+
+#: ../leaflet-list-markers.php:37
+msgid "page"
+msgstr "pagina"
+
+#: ../leaflet-list-markers.php:73
+#: ../leaflet-list-markers.php:279
+msgid "Add marker"
+msgstr "Voeg marker toe"
+
+#: ../leaflet-list-markers.php:74
+#: ../leaflet-list-markers.php:267
+msgid "Search result"
+msgstr "Zoekresultaat"
+
+#: ../leaflet-list-markers.php:77
+#: ../leaflet-list-markers.php:270
+msgid "Change number in settings"
+msgstr "Verander aantal bij de instellingen"
+
+#: ../leaflet-list-markers.php:84
+#: ../leaflet-list-markers.php:276
+msgid "search"
+msgstr "zoek"
+
+#: ../leaflet-list-markers.php:86
+#: ../leaflet-list-markers.php:278
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:93
+#: ../leaflet-marker.php:192
+msgid "show all markers"
+msgstr "toon alle markers"
+
+#: ../leaflet-list-markers.php:190
+msgid "No marker created yet"
+msgstr "Er zijn nog geen markers aangemaakt"
+
+#: ../leaflet-list-markers.php:195
+msgid "Do you really want to delete this marker?"
+msgstr "Wilt u werkelijk deze marker verwijderen?"
+
+#: ../leaflet-list-markers.php:199
+#: ../leaflet-tools.php:193
+#: ../leaflet-tools.php:203
+#: ../leaflet-tools.php:231
+msgid "unassigned"
+msgstr "niet toegewezen"
+
+#: ../leaflet-list-markers.php:199
+msgid "Edit layer "
+msgstr "Bewerk laag"
+
+#: ../leaflet-list-markers.php:268
+msgid "Marker"
+msgstr "Marker"
+
+#: ../leaflet-maps-marker.php:223
+#: ../leaflet-maps-marker.php:226
+msgid "Show embedded map in full-screen mode"
+msgstr "Toon de ingevoegde kaart in volledig scherm modus"
+
+#: ../leaflet-maps-marker.php:660
+msgid "add/edit marker"
+msgstr "voeg toe/bewerk marker"
+
+#: ../leaflet-maps-marker.php:662
+msgid "add/edit layer"
+msgstr "voeg toe/bewerk laag"
+
+#: ../leaflet-maps-marker.php:706
+msgid "by"
+msgstr "door"
+
+#: ../leaflet-maps-marker.php:761
+msgid "Open plugin website"
+msgstr "Open plugin website"
+
+#: ../leaflet-maps-marker.php:775
+msgid "frequently asked questions"
+msgstr "Veelgestelde vragen"
+
+#: ../leaflet-maps-marker.php:777
+msgid "feature requests"
+msgstr "wensen voor de toekomst"
+
+#: ../leaflet-maps-marker.php:778
+msgid "free community support"
+msgstr "gratis community support"
+
+#: ../leaflet-maps-marker.php:779
+msgid "paid community support"
+msgstr "betaalde community support"
+
+#: ../leaflet-maps-marker.php:780
+msgid "paid professional support"
+msgstr "betaalde  professionele support"
+
+#: ../leaflet-maps-marker.php:791
+msgid "Help & Support"
+msgstr "Help & Support"
+
+#: ../leaflet-marker.php:16
+msgid "edit assigned layer"
+msgstr "bewerk toegewezen laag"
+
+#: ../leaflet-marker.php:48
+msgid "Marker has been successfully added"
+msgstr "Marker is met succes toegevoegd"
+
+#: ../leaflet-marker.php:48
+#: ../leaflet-marker.php:81
+msgid "edit marker"
+msgstr "bewerk marker"
+
+#: ../leaflet-marker.php:48
+msgid "add new maker"
+msgstr "voeg nieuwe marker toe"
+
+#: ../leaflet-marker.php:81
+msgid "Marker has been successfully updated"
+msgstr "Marker is met succes opgeslagen"
+
+#: ../leaflet-marker.php:81
+#: ../leaflet-marker.php:93
+#: ../leaflet-marker.php:192
+msgid "add new marker"
+msgstr "voeg nieuwe marker toe"
+
+#: ../leaflet-marker.php:93
+msgid "Marker has been successfully deleted"
+msgstr "Marker is met succes verwijderd"
+
+#: ../leaflet-marker.php:228
+msgid "Do not assign marker to a layer"
+msgstr "Wijs geen marker aan de laag toe"
+
+#: ../leaflet-marker.php:236
+msgid "or"
+msgstr "of"
+
+#: ../leaflet-marker.php:254
+msgid "or set marker coordinates by clicking on the preview map"
+msgstr "of bepaal de marker coördinaten door op de preview kaart te klikken"
+
+#: ../leaflet-marker.php:292
+msgid "Time"
+msgstr "Tijd"
+
+#: ../leaflet-marker.php:293
+#, fuzzy
+msgid "Hour"
+msgstr "of"
+
+#: ../leaflet-marker.php:294
+msgid "Minute"
+msgstr "Minuten"
+
+#: ../leaflet-marker.php:295
+#, fuzzy
+msgid "Second"
+msgstr "Icon"
+
+#: ../leaflet-marker.php:296
+#, fuzzy
+msgid "Now"
+msgstr "Nee"
+
+#: ../leaflet-marker.php:297
+msgid "Add"
+msgstr "Toevoegen"
+
+#: ../leaflet-marker.php:302
+msgid "Timestamp for KML animation"
+msgstr "Timestemp voor de KML animatie"
+
+#: ../leaflet-marker.php:302
+#, fuzzy
+msgid "Click here for more information on animations in KML/Google Earth"
+msgstr "Klik hier voor meer informatie over het gebruik als KML in Google Earth of Google Maps"
+
+#: ../leaflet-marker.php:304
+#, fuzzy
+msgid "If empty, marker creation date will be used"
+msgstr "Als er een markernaam bestaat, dan wordt deze hier ingevoegd"
+
+#: ../leaflet-marker.php:348
+msgid "if set, markername will be inserted here"
+msgstr "Als er een markernaam bestaat, dan wordt deze hier ingevoegd"
+
+#: ../leaflet-marker.php:418
+#, php-format
+msgid "If you want to use different icons, please visit the %1$s (offering more than 700 compatible icons) and upload the new icons to the directory %2$s/"
+msgstr "Als u verschillende iconen wil gebruiken, ga dan naar %1$s (met meer dan 700 geschikte iconen) en upload de nieuwe iconen naar de map %2$s/"
+
+#: ../leaflet-marker.php:419
+#, php-format
+msgid "If you want to use different icons, please visit the %1$s (offering more than 700 compatible icons) and ask your WordPress admin to upload the new icons to the directory %2$s/"
+msgstr "Als u verschillende iconen wil gebruiken, ga dan naar %1$s (met meer dan 700 geschikte iconen) en vraag uw WordPress admin de nieuwe iconen te uploaden naar de map %2$s/"
+
+#: ../leaflet-marker.php:435
+msgid "open by default?"
+msgstr "standaard openen?"
+
+#: ../leaflet-marker.php:441
+msgid "If no is selected, the popup will only be visible after clicking on the marker on marker- or layer-maps. If yes is selected, the popup is shown by default on marker-maps but not on layer-maps, where this feature is not supported"
+msgstr "Als nee is kozen, wordt de pop-up alleen zichtbaar na klikken op de marker op de marker- of laagkaarten. Als ja is gekozen, wordt de pop-up standaard weergegeven op de marker-kaarten, maar niet op laag-kaarten, waar deze functie niet wordt ondersteund"
+
+#: ../leaflet-marker.php:493
+msgid "Note: image width gets resized to 260px automatically to fit in popup"
+msgstr "Let op: afbeelding wordt automatisch verkleind tot 260px om in de popup te passen"
+
+#: ../leaflet-marker.php:501
+msgid "Marker added by"
+msgstr "Marker toegevoegd door"
+
+#: ../leaflet-marker.php:511
+msgid "update marker"
+msgstr "bijwerken marker"
+
+#: ../leaflet-marker.php:511
+msgid "add marker"
+msgstr "marker toevoegen"
+
+#: ../leaflet-marker.php:521
+msgid "delete marker"
+msgstr "verwijder marker"
+
+#: ../leaflet-tools.php:23
+#, php-format
+msgid "All markers from layer ID %1$s have been successfully assigned to layer ID %2$s"
+msgstr "Alle markers van laag ID %1$s zijn met succes verplaatst naar laag  ID %2$s"
+
+#: ../leaflet-tools.php:23
+#: ../leaflet-tools.php:30
+#: ../leaflet-tools.php:37
+#: ../leaflet-tools.php:39
+#: ../leaflet-tools.php:46
+#: ../leaflet-tools.php:56
+#: ../leaflet-tools.php:71
+#: ../leaflet-tools.php:77
+#: ../leaflet-tools.php:83
+#: ../leaflet-tools.php:89
+#: ../leaflet-tools.php:95
+#: ../leaflet-tools.php:101
+#: ../leaflet-tools.php:107
+#: ../leaflet-tools.php:113
+#: ../leaflet-tools.php:119
+#: ../leaflet-tools.php:129
+#: ../leaflet-tools.php:144
+#: ../leaflet-tools.php:150
+#: ../leaflet-tools.php:156
+#: ../leaflet-tools.php:162
+#: ../leaflet-tools.php:168
+#: ../leaflet-tools.php:174
+msgid "Back to Tools"
+msgstr "Terug naar Tools"
+
+#: ../leaflet-tools.php:30
+#, php-format
+msgid "All markers from layer ID %1$s have been successfully deleted"
+msgstr "Alle markers van laag ID %1$s zijn met succes verwijderd"
+
+#: ../leaflet-tools.php:37
+msgid "All markers from all layers have been successfully deleted"
+msgstr "Alle markers van alle lagen zijn met succes verwijderd"
+
+#: ../leaflet-tools.php:39
+msgid "Please confirm that you want to delete all markers by checking the checkbox"
+msgstr "Bevestig dat u alle markeringen wil verwijderen door het selectievakje aan te vinken"
+
+#: ../leaflet-tools.php:46
+#, php-format
+msgid "The basemap for all markers has been successfully set to %1$s"
+msgstr "De basiskeert voor alle markers is met succes toegewezen aan %1$s"
+
+#: ../leaflet-tools.php:56
+msgid "The overlays status for all markers has been successfully updated"
+msgstr "De overlay status voor alle markers zijn met succes bijgewerkt"
+
+#: ../leaflet-tools.php:71
+msgid "The WMS status for all markers has been successfully updated"
+msgstr "De WMS status van alle markers zijn met succes bijgewerkt"
+
+#: ../leaflet-tools.php:77
+#, php-format
+msgid "The map size for all markers has been successfully set to width =  %1$s %2$s and height = %3$s px"
+msgstr "De kaartgrootte voor alle markers zijn met succes ingesteld op breedte =  %1$s %2$s en hoogte = %3$s px"
+
+#: ../leaflet-tools.php:83
+#, php-format
+msgid "Zoom level for all markers has been successfully set to %1$s"
+msgstr "Zoom niveau voor alle markers is met succse gezet op %1$s "
+
+#: ../leaflet-tools.php:89
+msgid "Controlbox status for all markers has been successfully updated"
+msgstr "Controlbox status voor alle markers zijn met succes gewijzigd"
+
+#: ../leaflet-tools.php:95
+msgid "Panel status for all markers has been successfully updated"
+msgstr "Panel status voor alle markers zijn bijgewerkt"
+
+#: ../leaflet-tools.php:101
+msgid "The icon for all markers has been successfully updated"
+msgstr "Het pictogram voor alle markers zijn bijgewerkt"
+
+#: ../leaflet-tools.php:107
+msgid "The popup status for all markers has been successfully updated"
+msgstr "De popup-status voor alle markers zijn bijgewerkt"
+
+#: ../leaflet-tools.php:113
+msgid "The popup text for all markers has been successfully updated"
+msgstr "De pop-up tekst voor alle markers zijn bijgewerkt"
+
+#: ../leaflet-tools.php:119
+#, php-format
+msgid "The basemap for all layers has been successfully set to %1$s"
+msgstr "De basiskaart voor alle lagen is met succes toegewezen aan %1$s"
+
+#: ../leaflet-tools.php:129
+msgid "The overlays status for all layers has been successfully updated"
+msgstr "De overlay status voor alle lagen zijn bijgewerkt"
+
+#: ../leaflet-tools.php:144
+msgid "The WMS status for all layers has been successfully updated"
+msgstr "De WMS status voor alle lagen zijn bijgewerkt"
+
+#: ../leaflet-tools.php:150
+#, php-format
+msgid "The map size for all layers has been successfully set to width =  %1$s %2$s and height = %3$s px"
+msgstr "De kaartgrootte voor alle lagen is met succes ingesteld op breedte =  %1$s %2$s en hoogte = %3$s px"
+
+#: ../leaflet-tools.php:156
+#, php-format
+msgid "Zoom level for all layers has been successfully set to %1$s"
+msgstr "Zoom niveau voor alle lagen is met succes ingesteld op %1$s"
+
+#: ../leaflet-tools.php:162
+msgid "Controlbox status for all layers has been successfully updated"
+msgstr "De controlbox status voor alle lagen is met succes bijgewerkt"
+
+#: ../leaflet-tools.php:168
+msgid "Panel status for all layers has been successfully updated"
+msgstr "De panel status voor alle lagen is met succes bijgewerkt"
+
+#: ../leaflet-tools.php:174
+msgid "The list marker-status for all layers has been successfully updated"
+msgstr "De lijst marker-status voor alle lagen is met succes bijgewerkt"
+
+#: ../leaflet-tools.php:186
+msgid "Move markers to a layer"
+msgstr "Verplaats markers naar een laag"
+
+#: ../leaflet-tools.php:190
+msgid "Source"
+msgstr "Bron"
+
+#: ../leaflet-tools.php:201
+msgid "Target"
+msgstr "Doel"
+
+#: ../leaflet-tools.php:213
+msgid "move markers"
+msgstr "verplaats markers"
+
+#: ../leaflet-tools.php:213
+msgid "Do you really want to move the selected markers?"
+msgstr "Weet u zeker dat u de geselecteerde markers wilt verplaatsen?"
+
+#: ../leaflet-tools.php:225
+msgid "Delete all markers from a layer"
+msgstr "Verwijder alle markers van een laag"
+
+#: ../leaflet-tools.php:241
+msgid "delete all markers from selected layer"
+msgstr "verwijder alle markers van de geselecteerde laag"
+
+#: ../leaflet-tools.php:241
+msgid "Do you really want to delete all markers from the selected layer? (cannot be undone)"
+msgstr "Weet u zeker dat u alle markeringen van de geselecteerde laag wilt verwijderen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:251
+#, php-format
+msgid "Change settings for all %1$s existing marker maps"
+msgstr "Verander instellingen %1$s van bestaande marker kaarten"
+
+#: ../leaflet-tools.php:274
+msgid "change basemap for all markers"
+msgstr "verander basiskaart voor alle markers"
+
+#: ../leaflet-tools.php:274
+msgid "Do you really want to change the basemap for all markers? (cannot be undone)"
+msgstr "Wilt u echt de basiskaart voor alle markers te veranderen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:292
+msgid "change overlay status for all markers"
+msgstr "verander de overlay status voor alle markers"
+
+#: ../leaflet-tools.php:292
+msgid "Do you really want to change the overlay status for all markers? (cannot be undone)"
+msgstr "Wilt u echt de overlay-status wijzigen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:301
+#: ../leaflet-tools.php:553
+msgid "Active WMS layers"
+msgstr "Actieve WMS layers"
+
+#: ../leaflet-tools.php:316
+msgid "change active WMS layers for all markers"
+msgstr "wijzig actieve WMS lagen voor alle markers"
+
+#: ../leaflet-tools.php:316
+msgid "Do you really want to change active WMS layers for all markers? (cannot be undone)"
+msgstr "Wilt u echt alle WMS lagen wijzigen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:337
+msgid "change mapsize for all markers"
+msgstr "verander de kaartgrootte voor alle markers"
+
+#: ../leaflet-tools.php:337
+msgid "Do you really want to change the map size for all markers? (cannot be undone)"
+msgstr "Wilt u echt de kaartgrootte wijzigen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:352
+msgid "change zoom for all markers"
+msgstr "verander het zoom niveau voor alle markers"
+
+#: ../leaflet-tools.php:352
+msgid "Do you really want to change the zoom level for all markers? (cannot be undone)"
+msgstr "Wilt u echt het zoom niveau veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:369
+msgid "change controlbox status for all markers"
+msgstr "verander controlbox status voor alle markers"
+
+#: ../leaflet-tools.php:369
+msgid "Do you really want to change the controlbox status for all markers? (cannot be undone)"
+msgstr "Wilt u echt de controlbox states veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:386
+msgid "change panel status for all markers"
+msgstr "verander panel status voor alle markers"
+
+#: ../leaflet-tools.php:386
+msgid "Do you really want to change the panel status for all markers? (cannot be undone)"
+msgstr "Wilt u echt de panel status veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:417
+msgid "update icon for all markers"
+msgstr "werk het pictogram bij voor alle markers"
+
+#: ../leaflet-tools.php:417
+msgid "Do you really want to change the icon for all markers? (cannot be undone)"
+msgstr "Wilt u echt het pictogram veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:433
+msgid "change popup status for all markers"
+msgstr "verander de popup status voor alle markers"
+
+#: ../leaflet-tools.php:433
+msgid "Do you really want to change the popup status for all markers? (cannot be undone)"
+msgstr "Wilt u echt het de popupstatus veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:493
+msgid "change popup text for all markers"
+msgstr "verander de popup tekst voor alle markers"
+
+#: ../leaflet-tools.php:493
+msgid "Do you really want to change the popup text for all markers? (cannot be undone)"
+msgstr "Wilt u echt de popup tekst veranderen voor alle markers? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:503
+#, php-format
+msgid "Change settings for all %1$s existing layer maps"
+msgstr "Verander de instellingen voor alle %1$s bestaande lagen kaarten"
+
+#: ../leaflet-tools.php:526
+msgid "change basemap for all layers"
+msgstr "verander de basiskaar voor alle lagen"
+
+#: ../leaflet-tools.php:526
+msgid "Do you really want to change the basemap for all layers? (cannot be undone)"
+msgstr "Wilt u echt de basiskaart veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:544
+msgid "change overlay status for all layers"
+msgstr "verander de overlay status voor alle lagen"
+
+#: ../leaflet-tools.php:544
+msgid "Do you really want to change the overlay status for all layers? (cannot be undone)"
+msgstr "Wilt u echt de overlay status veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:568
+msgid "change active WMS layers for all layers"
+msgstr "verander de actieve WMS lagen voor alle lagen"
+
+#: ../leaflet-tools.php:568
+msgid "Do you really want to change active WMS layers for all layers? (cannot be undone)"
+msgstr "Wilt u echt de actieve WMS lagen veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:589
+msgid "change mapsize for all layers"
+msgstr "verander de kaartgrootte voor alle lagen"
+
+#: ../leaflet-tools.php:589
+msgid "Do you really want to change the map size for all layers? (cannot be undone)"
+msgstr "Wilt u echt de kaartgrootte veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:604
+msgid "change zoom for all layers"
+msgstr "verander het zoom niveau voor alle lagen"
+
+#: ../leaflet-tools.php:604
+msgid "Do you really want to change the zoom level for all layers? (cannot be undone)"
+msgstr "Wilt u echt het zoom niveau veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:621
+msgid "change controlbox status for all layers"
+msgstr "verander de controlbox status voor alle lagen"
+
+#: ../leaflet-tools.php:621
+msgid "Do you really want to change the controlbox status for all layers? (cannot be undone)"
+msgstr "Wilt u echt de controlbox status veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:638
+msgid "change panel status for all layers"
+msgstr "verander de panel status voor alle lagen"
+
+#: ../leaflet-tools.php:638
+msgid "Do you really want to change the panel status for all layers? (cannot be undone)"
+msgstr "Wilt u echt de panel status veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:655
+msgid "change list marker-status for all layers"
+msgstr "verander de lijst marker-status voor alle lagen"
+
+#: ../leaflet-tools.php:655
+msgid "Do you really want to change the list marker-status for all layers? (cannot be undone)"
+msgstr "Wilt u echt de lijst marker-status veranderen voor alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-tools.php:668
+#, php-format
+msgid "Delete all %1$s markers from all %2$s layers"
+msgstr "Verwijder alle %1$s markers van alle %2$s lagen"
+
+#: ../leaflet-tools.php:677
+msgid "delete all markers from all layers"
+msgstr "verwijder alle markers van alle lagen"
+
+#: ../leaflet-tools.php:677
+msgid "Do you really want to delete all markers from all layers? (cannot be undone)"
+msgstr "Wilt u echt alle markers verwijderen van alle lagen? (kan niet ongedaan gemaakt worden)"
+
+#: ../leaflet-wikitude.php:109
+#: ../leaflet-wikitude.php:188
+#: ../leaflet-wikitude.php:267
+#: ../leaflet-wikitude.php:337
+msgid "Wikitude API powered by www.mapsmarker.com"
+msgstr "Wikitude API powered by www.mapsmarker.com"
+
+#~ msgid "mass-assign-markers"
+#~ msgstr "Marker verschieben"
+
+#~ msgid "Featured sponsors"
+#~ msgstr "Sponsoren"
+
+#~ msgid "Click here for more information on how to become a featured sponsor"
+#~ msgstr ""
+#~ "Sie m&ouml;chten Sponsor des Plugins werden? Dann klicken Sie bitte hier"
+
+#~ msgid ""
+#~ "Error: Could not construct path to wp-config.php - please check <a href="
+#~ "\"http://mapsmarker.com/path-error\">http://mapsmarker.com/path-error</a> "
+#~ "for more details."
+#~ msgstr ""
+#~ "Fehler: konnte Pfad zur wp-config.php nicht finden - weitere Infos unter "
+#~ "<a href=\"http://mapsmarker.com/path-error\">http://mapsmarker.com/path-"
+#~ "error</a>"
+
+#~ msgid "Overlays"
+#~ msgstr "Overlays"
+
+#~ msgid "WMS"
+#~ msgstr "WMS"
+
+#~ msgid "Marker defaults"
+#~ msgstr "Marker-Einstellungen"
+
+#~ msgid "Layer defaults"
+#~ msgstr "Ebenen-Einstellungen"
+
+#~ msgid "Google Places"
+#~ msgstr "Google Places"
+
+#~ msgid "Augmented-Reality"
+#~ msgstr "Augmented-Reality"
+
+#~ msgid "Misc"
+#~ msgstr "diverses"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Standardeinstellungen wiederherstellen"
+
+#~ msgid "KML"
+#~ msgstr "KML"
+
+#~ msgid "GeoJSON"
+#~ msgstr "GeoJSON"
+
+#~ msgid "Wikitude"
+#~ msgstr "Wikitude"

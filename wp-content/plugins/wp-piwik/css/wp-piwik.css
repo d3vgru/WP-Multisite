@@ -1,0 +1,101 @@
+div.wp-piwik-sortables {
+	margin:0 5px;
+}
+
+span.wp-piwik-details {
+	font-size:0.8em;
+	font-weight:normal;
+}
+
+div.wp-piwik-side div.wp-piwik-graph-wide {
+	display: none;
+}
+
+div.wp-piwik-graph-wide {
+	text-align:center;
+	padding-bottom:5px;
+	overflow:hidden;
+}
+
+#wp-piwik_stats_vistors_graph{margin: 0 0 0 0}
+
+table.wp-piwik-table th.n, td.n {
+	text-align: right;
+}
+
+table.wp-piwik-table tr:hover {
+	background-color:#ccc;
+}
+div.wp-piwik-sidebox {
+	width:220px;
+	float:right;
+}
+
+div.wp-piwik-sidebox div {
+	padding:10px;
+	border:1px solid black;
+	margin-bottom:10px;
+}
+
+div.wp-piwik-donate {background:#ffc}
+div.wp-piwik-support {background:#eef}
+
+div.wp-piwik-sidebox div div {
+	width:190px;
+	text-align:center;
+	border:solid black;
+	border-width:1px 0 0 0 ;
+	padding:5px
+}
+
+div.wp-piwik-settings-container {
+	margin-right:250px;
+	max-width:1024px;
+}
+div.wp-piwik-settings h4 {
+	float:left;
+	font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif !important;
+	font-size:12px !important;
+	font-weight:normal;
+	padding-top:0px !important;
+	text-align:right;
+	width:160px;
+}
+div.wp-piwik-settings h4 label {
+	margin-right:10px;
+	vertical-align:middle;
+}
+div.wp-piwik-settings .input-text-wrap input, 
+div.wp-piwik-settings .input-text-wrap select,
+div.wp-piwik-settings .input-text-wrap textarea {
+	border:0 none;
+	color:#333333;
+	outline:medium none;
+	padding:0;
+	width:99%;
+}
+
+div.wp-piwik-settings .input-wrap {
+	padding-top:0px;
+}
+
+div.wp-piwik-settings .input-wrap input {	
+	border:0 none;
+	color:#333333;
+	padding:0;
+}
+
+div.wp-piwik-settings .input-text-wrap {
+	margin:0 0 1em 160px;
+	border:1px solid #CCCCCC;
+}
+
+div.wp-piwik_desc {
+	font-size:11px;
+	margin:0 0 10px 160px;
+	padding:0;
+}
+
+div.wp-piwik_desc strong {
+	color:#f00;
+}
