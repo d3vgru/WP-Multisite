@@ -3,7 +3,7 @@
 Plugin Name: My Page Order
 Plugin URI: http://www.geekyweekly.com/mypageorder
 Description: My Page Order allows you to set the order of pages through a drag and drop interface. The default method of setting the order page by page is extremely clumsy, especially with a large number of pages.
-Version: 3.0a
+Version: 3.3.2
 Author: Andrew Charlton
 Author URI: http://www.geekyweekly.com
 Author Email: froman118@gmail.com
@@ -52,12 +52,8 @@ elseif (isset($_POST['hdnParentID'])) {
 }
 
 if (isset($_POST['btnReturnParent'])) { 
-	$parentsParent = $wpdb->get_row("SELECT post_parent FROM $wpdb->posts WHERE ID = " . $_POST['hdnParentID'], ARRAY_N);
+	$parentsParent = $wpdb->get_row( $wpdb->prepare("SELECT post_parent FROM $wpdb->posts WHERE ID = %d ", $_POST['hdnParentID'] ), ARRAY_N);
 	$parentID = $parentsParent[0];
-}
-
-if(isset($_GET['hideNote'])) {
-	update_option('mypageorder_hideNote', '1');
 }
 
 $success = "";
@@ -71,16 +67,7 @@ $subPageStr = mypageorder_getSubPages($parentID);
 <div class='wrap'>
 <form name="frmMyPageOrder" method="post" action="">
 	<h2><?php _e('My Page Order', 'mypageorder') ?></h2>
-	<?php 
-	echo $success;
-	if (get_option("mypageorder_hideNote") != "1")
-	{	?>
-		<div class="updated">
-			<strong><p><?php _e('If you like my plugin please consider donating. Every little bit helps me provide support and continue development.','mypageorder'); ?> <a href="http://geekyweekly.com/gifts-and-donations"><?php _e('Donate', 'mypageorder'); ?></a>&nbsp;&nbsp;<small><a href="<?php echo mypageorder_getTarget(); ?>&hideNote=true"><?php _e('No thanks, hide this', 'mypageorder'); ?></a></small></p></strong>
-		</div>
-	<?php
-	}
-	?>
+	<?php echo $success; ?>
 	
 	<p><?php _e('Choose a page from the drop down to order its subpages or order the pages on this level by dragging and dropping them into the desired order.', 'mypageorder') ?></p>
 	
@@ -200,7 +187,7 @@ function mypageorder_updateOrder()
 		for($i = 0; $i < $result; $i++)
 		{
 			$str = str_replace("id_", "", $IDs[$i]);
-			$wpdb->query("UPDATE $wpdb->posts SET menu_order = '$i' WHERE id ='$str'");
+			$wpdb->query($wpdb->prepare("UPDATE $wpdb->posts SET menu_order = %d WHERE id = %d ", $i, $str));
 		}
 
 		return '<div id="message" class="updated fade"><p>'. __('Page order updated successfully.', 'mypageorder').'</p></div>';
@@ -217,7 +204,7 @@ function mypageorder_getSubPages($parentID)
 	$results = mypageorder_pageQuery($parentID);
 	foreach($results as $row)
 	{
-		$postCount=$wpdb->get_row("SELECT count(*) as postsCount FROM $wpdb->posts WHERE post_parent = $row->ID and post_type = 'page' AND post_status != 'trash' AND post_status != 'auto-draft' ", ARRAY_N);
+		$postCount=$wpdb->get_row($wpdb->prepare("SELECT count(*) as postsCount FROM $wpdb->posts WHERE post_parent = %d and post_type = 'page' AND post_status != 'trash' AND post_status != 'auto-draft' ", $row->ID) , ARRAY_N);
 		if($postCount[0] > 0)
 	    	$subPageStr = $subPageStr."<option value='$row->ID'>".__($row->post_title)."</option>";
 	}
@@ -227,7 +214,7 @@ function mypageorder_getSubPages($parentID)
 function mypageorder_pageQuery($parentID)
 {
 	global $wpdb;
-	return $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = $parentID and post_type = 'page' AND post_status != 'trash' AND post_status != 'auto-draft' ORDER BY menu_order ASC");
+	return $wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->posts WHERE post_parent = %d and post_type = 'page' AND post_status != 'trash' AND post_status != 'auto-draft' ORDER BY menu_order ASC", $parentID) );
 }
 
 function mypageorder_getParentLink($parentID)

@@ -215,12 +215,12 @@ jQuery( document ).ready( function( $ ) {
 
 	// Register popup click (for touch devices) or hover (for non-touch devices)
 	// handlers for month/week views
-	$('.ai1ec-month-view .ai1ec-event, .ai1ec-week-view .ai1ec-event')
+	$('.ai1ec-month-view .ai1ec-event, .ai1ec-1day-view .ai1ec-event, .ai1ec-week-view .ai1ec-event')
 		.live( Modernizr.touch ? 'click' : 'mouseenter', show_popup );
 	// Only hide popups on mouseleave for mouse-based devices (doesn't work
 	// properly in touch-based devices for some reason).
 	if( ! Modernizr.touch ) {
-		$('.ai1ec-month-view .ai1ec-event-popup, .ai1ec-week-view .ai1ec-event-popup')
+		$('.ai1ec-month-view .ai1ec-event-popup, .ai1ec-1day-view .ai1ec-event-popup, .ai1ec-week-view .ai1ec-event-popup')
 			.live( 'mouseleave', hide_popup )
 			.live( 'mousemove', function() {
 				// Track whether popup contains mouse cursor
@@ -228,16 +228,16 @@ jQuery( document ).ready( function( $ ) {
 			} );
 	}
 	// Hide any popups that were visible when the window lost focus
-	if( $('.ai1ec-month-view, .ai1ec-week-view').length ) {
+	if( $('.ai1ec-month-view, .ai1ec-1day-view, .ai1ec-week-view').length ) {
 		$(window).blur( function() {
 			$('.ai1ec-event-popup:visible').each( hide_popup );
 		} );
 	}
 
-	// ================================
-	// = Week view hover-raise effect =
-	// ================================
-	$( '.ai1ec-week-view .ai1ec-week a.ai1ec-event-container' )
+	// ======================================
+	// = Week / Day view hover-raise effect =
+	// ======================================
+	$( '.ai1ec-1day-view .ai1ec-1day a.ai1ec-event-container, .ai1ec-week-view .ai1ec-week a.ai1ec-event-container' )
 		.live( 'mouseenter',
 			function() {
 				$(this).delay( 500 ).queue( function() { $(this).css( 'z-index', 5 ) } );
@@ -576,13 +576,14 @@ jQuery( document ).ready( function( $ ) {
 
 		// Make week view table scrollable
 		$( 'table.ai1ec-week-view-original' ).tableScroll( { height: 400, containerClass: 'ai1ec-week-view' } );
+		$( 'table.ai1ec-1day-view-original' ).tableScroll( { height: 400, containerClass: 'ai1ec-1day-view' } );
 
 		// ===========================
 		// = Pop up the active event =
 		// ===========================
 		if( $( '.ai1ec-active-event:first' ).length ) {
 			// Pop up any active event in month/week view views
-			$( '.ai1ec-month-view .ai1ec-active-event:first, .ai1ec-week-view .ai1ec-active-event:first' )
+			$( '.ai1ec-month-view .ai1ec-active-event:first, .ai1ec-1day-view .ai1ec-active-event:first, .ai1ec-week-view .ai1ec-active-event:first' )
 				.each( function() {
 				$(this)
 					.each( show_popup )
@@ -601,15 +602,15 @@ jQuery( document ).ready( function( $ ) {
 				}
 			);
 		}
-		else if( $( '.ai1ec-week-view' ).length ) {
+		else if( $( '.ai1ec-week-view' ).length || $( '.ai1ec-1day-view' ).length ) {
 			// If no active event, then in week view, scroll down to 6am.
-			$( '.ai1ec-week-view .tablescroll_wrapper' ).scrollTo( '.ai1ec-hour-marker:eq(6)' );
+			$( '.ai1ec-1day-view .tablescroll_wrapper, .ai1ec-week-view .tablescroll_wrapper' ).scrollTo( '.ai1ec-hour-marker:eq(6)' );
 		}
 
 		// Apply category/tag filters if any; hide all events by default, then fade
 		// in filtered ones.
 		if( $('.ai1ec-dropdown.ai1ec-selected').length ) {
-			$('.ai1ec-month-view .ai1ec-event-container, .ai1ec-week-view .ai1ec-event-container, .ai1ec-agenda-view .ai1ec-event').hide();
+			$('.ai1ec-month-view .ai1ec-event-container, .ai1ec-1day-view .ai1ec-event-container, .ai1ec-week-view .ai1ec-event-container, .ai1ec-agenda-view .ai1ec-event').hide();
 			apply_filters();
 		} else {
 			// Else do month view trimming

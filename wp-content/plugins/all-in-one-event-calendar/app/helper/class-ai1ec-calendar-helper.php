@@ -294,6 +294,130 @@ class Ai1ec_Calendar_Helper {
 	}
 
 	/**
+	 * get_oneday_cell_array function
+	 *
+	 * Return an associative array of weekdays, indexed by the day's date,
+	 * starting the day given by $timestamp, each element an associative array
+	 * containing three elements:
+	 *   ['today']     => whether the day is today
+	 *   ['allday']    => non-associative ordered array of events that are all-day
+	 *   ['notallday'] => non-associative ordered array of non-all-day events to
+	 *                    display for that day, each element another associative
+	 *                    array like so:
+	 *     ['top']       => how many minutes offset from the start of the day
+	 *     ['height']    => how many minutes this event spans
+	 *     ['indent']    => how much to indent this event to accommodate multiple
+	 *                      events occurring at the same time (0, 1, 2, etc., to
+	 *                      be multiplied by whatever desired px/em amount)
+	 *     ['event']     => event data object
+	 *
+	 * @param int $timestamp    the UNIX timestamp of the first day of the week
+	 * @param array $filter     Array of filters for the events returned:
+	 *                          ['cat_ids']   => non-associatative array of category IDs
+	 *                          ['tag_ids']   => non-associatative array of tag IDs
+	 *                          ['post_ids']  => non-associatative array of post IDs
+	 *
+	 * @return array            array of arrays as per function description
+	 **/
+	function get_oneday_cell_array( $timestamp, $filter = array() )
+	{ 
+		global $ai1ec_events_helper, $ai1ec_settings;
+
+		// Decompose given date and current time into components, used below
+		$bits = $ai1ec_events_helper->gmgetdate( $timestamp );
+		$now  = $ai1ec_events_helper->gmgetdate( $ai1ec_events_helper->gmt_to_local( time() ) );
+		$day_events = $this->get_events_between( $timestamp, gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'] + 1, $bits['year'] ), $filter, true );
+
+		// Split up events on a per-day basis
+		$all_events = array();
+
+		foreach( $day_events as $evt ) {
+			$evt_start = $ai1ec_events_helper->gmt_to_local( $evt->start );
+			$evt_end   = $ai1ec_events_helper->gmt_to_local( $evt->end );
+
+			// generate new event object
+			// based on this one day
+			$day_start = gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'], $bits['year'] );
+			$day_end   = gmmktime( 0, 0, 0, $bits['mon'], $bits['mday']+1, $bits['year'] );
+
+			// If event falls on this day, make a copy.
+			if( $evt_end > $day_start && $evt_start < $day_end ) {
+				$_evt = clone $evt;
+				if( $evt_start < $day_start ) {
+					// If event starts before this day, adjust copy's start time
+					$_evt->start = $ai1ec_events_helper->local_to_gmt( $day_start );
+					$_evt->start_truncated = true;
+				}
+				if( $evt_end > $day_end ) {
+					// If event ends after this day, adjust copy's end time
+					$_evt->end = $ai1ec_events_helper->local_to_gmt( $day_end );
+					$_evt->end_truncated = true;
+				}
+
+				// Place copy of event in appropriate category
+				if( $_evt->allday )
+					$all_events[$day_start]['allday'][] = $_evt;
+				else
+					$all_events[$day_start]['notallday'][] = $_evt;
+			}
+		}
+
+		// This will store the returned array
+		$days = array();
+		$day = $bits['mday'];
+		
+		$day_date = gmmktime( 0, 0, 0, $bits['mon'], $day, $bits['year'] );
+		// Re-fetch date bits, since $bits['mday'] + 1 might be in the next month
+		$day_bits = $ai1ec_events_helper->gmgetdate( $day_date );
+
+		// Initialize empty arrays for this day if no events to minimize warnings
+		if( ! isset( $all_events[$day_date]['allday'] ) ) $all_events[$day_date]['allday'] = array();
+		if( ! isset( $all_events[$day_date]['notallday'] ) ) $all_events[$day_date]['notallday'] = array();
+
+		$notallday = array();
+		$evt_stack = array( 0 ); // Stack to keep track of indentation
+		foreach( $all_events[$day_date]['notallday'] as $evt )
+		{
+			$start_bits = $ai1ec_events_helper->gmgetdate( $ai1ec_events_helper->gmt_to_local( $evt->start ) );
+
+			// Calculate top and bottom edges of current event
+			$top = $start_bits['hours'] * 60 + $start_bits['minutes'];
+			$bottom = min( $top + $evt->getDuration() / 60, 1440 );
+
+			// While there's more than one event in the stack and this event's top
+			// position is beyond the last event's bottom, pop the stack
+			while( count( $evt_stack ) > 1 && $top >= end( $evt_stack ) )
+				array_pop( $evt_stack );
+			// Indentation is number of stacked events minus 1
+			$indent = count( $evt_stack ) - 1;
+			// Push this event onto the top of the stack
+			array_push( $evt_stack, $bottom );
+
+			$notallday[] = array(
+				'top'    => $top,
+				'height' => $bottom - $top,
+				'indent' => $indent,
+				'event'  => $evt,
+			);
+		}
+
+		$days[$day_date] = array(
+			'today'     =>
+				$day_bits['year'] == $now['year'] &&
+				$day_bits['mon']  == $now['mon'] &&
+				$day_bits['mday'] == $now['mday'],
+			'allday'    => $all_events[$day_date]['allday'],
+			'notallday' => $notallday,
+		);
+		
+		// =========================================
+		// = Set one oneday events =
+		// =========================================
+
+		return apply_filters( 'ai1ec_get_oneday_cell_array', $days, $timestamp, $filter );
+	}
+
+	/**
 	 * get_events_between function
 	 *
 	 * Return all events starting after the given start time and before the
@@ -636,6 +760,48 @@ class Ai1ec_Calendar_Helper {
 		}
 		return $weekdays;
 	}
+
+	/**
+	 * get_day_pagination_links function
+	 *
+	 * Returns a non-associative array of four links for the day view of the
+	 * calendar:
+	 * previous day, next day, in that order.
+	 * Each element's key is an associative array containing the link's ID
+	 * ['id'], text ['text'] and value to assign to link's href ['href'].
+	 *
+	 * @param int $cur_offset day offset of current day, needed for hrefs
+	 *
+	 * @return array          array of link information as described above
+	 **/
+    function get_oneday_pagination_links( $cur_offset ) {
+    	global $ai1ec_events_helper;
+
+		$links = array();
+
+		// Base timestamp on offset week
+		$bits = $ai1ec_events_helper->gmgetdate( $ai1ec_events_helper->gmt_to_local( time() ) );
+		$bits['mday'] += $cur_offset;
+
+		/* translators: "%s" represents the week's starting date */
+		$links[] = array(
+			'id' => 'ai1ec-prev-day',
+			'text' =>
+				'‹ ' .
+					date_i18n( __( 'j F Y', AI1EC_PLUGIN_NAME ), gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'] - 1, $bits['year'] )
+				),
+			'href' => '#action=ai1ec_oneday&ai1ec_oneday_offset=' . ( $cur_offset - 1 ),
+		);
+		$links[] = array(
+			'id' => 'ai1ec-prev-day',
+			'text' =>  
+					date_i18n( __( 'j F Y', AI1EC_PLUGIN_NAME ), gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'] + 1, $bits['year'] ))
+                    .' ›',
+			'href' => '#action=ai1ec_oneday&ai1ec_oneday_offset=' . ( $cur_offset + 1 ),
+		);
+
+		return $links;
+     }
 
 	/**
 	 * get_month_pagination_links function

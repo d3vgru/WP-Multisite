@@ -104,34 +104,34 @@ class Ai1ec_Events_Controller {
 			// = JS =
 			// ======
 			// Include timespan helper functions
-			wp_enqueue_script( 'jquery.calendrical', 			AI1EC_JS_URL . '/jquery.calendrical.js', array( 'jquery' ) );
+			wp_enqueue_script( 'jquery.calendrical', 			AI1EC_JS_URL . '/jquery.calendrical.js', array( 'jquery' ), AI1EC_VERSION );
 			// Include timespan plugin
-			wp_enqueue_script( 'jquery.timespan', 				AI1EC_JS_URL . '/jquery.timespan.js', array( 'jquery', 'jquery.calendrical' ) );
+			wp_enqueue_script( 'jquery.timespan', 				AI1EC_JS_URL . '/jquery.timespan.js', array( 'jquery', 'jquery.calendrical' ), AI1EC_VERSION );
 			// Include timespan plugin
-			wp_enqueue_script( 'jquery.inputdate', 				AI1EC_JS_URL . '/jquery.inputdate.js', array( 'jquery', 'jquery.calendrical' ) );
+			wp_enqueue_script( 'jquery.inputdate', 				AI1EC_JS_URL . '/jquery.inputdate.js', array( 'jquery', 'jquery.calendrical' ), AI1EC_VERSION );
 			// Include Google Maps API
 			wp_enqueue_script( 'gmap_api', 								'http://maps.google.com/maps/api/js?sensor=false&language=' . $ai1ec_events_helper->get_lang() );
 			// Include autocomplete_geomod plugin
-			wp_enqueue_script( 'autocomplete_geomod', 		AI1EC_JS_URL . '/jquery.autocomplete_geomod.js', array( 'jquery' ) );
+			wp_enqueue_script( 'autocomplete_geomod', 		AI1EC_JS_URL . '/jquery.autocomplete_geomod.js', array( 'jquery' ), AI1EC_VERSION );
 			// Include geo_autocomplete plugin
-			wp_enqueue_script( 'geo_autocomplete', 				AI1EC_JS_URL . '/geo_autocomplete.js', array( 'jquery', 'autocomplete_geomod' ) );
+			wp_enqueue_script( 'geo_autocomplete', 				AI1EC_JS_URL . '/geo_autocomplete.js', array( 'jquery', 'autocomplete_geomod' ), AI1EC_VERSION );
 			// Include element selector function
-			wp_enqueue_script( 'ai1ec-element-selector', 	AI1EC_JS_URL . '/element-selector.js', array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-element-selector', 	AI1EC_JS_URL . '/element-selector.js', array( 'jquery' ), AI1EC_VERSION );
 			// Include jQuery Tools form elements
-			wp_enqueue_script( 'jquery.tools-form',       AI1EC_JS_URL . '/jquery-tools-1.2.5.min.js', array( 'jquery' ) );
+			wp_enqueue_script( 'jquery.tools-form',       AI1EC_JS_URL . '/jquery-tools-1.2.5.min.js', array( 'jquery' ), AI1EC_VERSION );
 			// Include add new event script
-			wp_enqueue_script( 'ai1ec-blockui', 		      AI1EC_JS_URL . '/jquery.blockUI.js', array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-blockui', 		      AI1EC_JS_URL . '/jquery.blockUI.js', array( 'jquery' ), AI1EC_VERSION );
 			// Include date picker plugin
-			wp_enqueue_script( 'ai1ec-datepicker', 		    AI1EC_JS_URL . '/datepicker.js', array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-datepicker', 		    AI1EC_JS_URL . '/datepicker.js', array( 'jquery' ), AI1EC_VERSION );
 			
 			wp_enqueue_script( 'ai1ec-add_new_event', 		AI1EC_JS_URL . '/add_new_event.js', array( 'jquery', 
 			                                                                                         'jquery.timespan', 
 			                                                                                         'ai1ec-element-selector', 
 			                                                                                         'jquery.tools-form', 
 			                                                                                         'ai1ec-blockui',
-			                                                                                         'ai1ec-datepicker' ) );
+			                                                                                         'ai1ec-datepicker' ), AI1EC_VERSION );
 
-			wp_enqueue_script( 'ai1ec-color-picker', 	    AI1EC_JS_URL . '/colorpicker.js', array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-color-picker', 	    AI1EC_JS_URL . '/colorpicker.js', array( 'jquery' ), AI1EC_VERSION );
 
 			// Supply custom value to JavaScript from PHP
 			wp_localize_script( 'ai1ec-add_new_event', 'ai1ec_add_new_event', array(
@@ -158,13 +158,13 @@ class Ai1ec_Events_Controller {
 			// = CSS =
 			// =======
 			// include autocomplete style
-			wp_enqueue_style( 'autocomplete',         AI1EC_CSS_URL . '/jquery.autocomplete.css' );
+			wp_enqueue_style( 'autocomplete',         AI1EC_CSS_URL . '/jquery.autocomplete.css', array(), AI1EC_VERSION );
 			// include colorpicker style
-			wp_enqueue_style( 'colorpicker',          AI1EC_CSS_URL . '/colorpicker.css' );
+			wp_enqueue_style( 'colorpicker',          AI1EC_CSS_URL . '/colorpicker.css', array(), AI1EC_VERSION );
 			// include add new event style
-			wp_enqueue_style( 'ai1ec_add_new_event',  AI1EC_CSS_URL . '/add_new_event.css' );
+			wp_enqueue_style( 'ai1ec_add_new_event',  AI1EC_CSS_URL . '/add_new_event.css', array(), AI1EC_VERSION );
 			// include datepicker style
-			wp_enqueue_style( 'ai1ec_datepicker',  AI1EC_CSS_URL . '/datepicker.css' );
+			wp_enqueue_style( 'ai1ec_datepicker',  AI1EC_CSS_URL . '/datepicker.css', array(), AI1EC_VERSION );
 		}
 		// Initialize front-end view
 		else
@@ -172,7 +172,7 @@ class Ai1ec_Events_Controller {
 			// ======
 			// = JS =
 			// ======
-			wp_enqueue_script( 'ai1ec-event', AI1EC_JS_URL . '/event.js', array( 'jquery' ), 1 );
+			wp_enqueue_script( 'ai1ec-event', AI1EC_JS_URL . '/event.js', array( 'jquery' ), AI1EC_VERSION );
 			// Supply custom value to JavaScript from PHP
 			wp_localize_script( 'ai1ec-event', 'ai1ec_event', array(
 				// Language for Google Map
@@ -182,8 +182,8 @@ class Ai1ec_Events_Controller {
 			// =======
 			// = CSS =
 			// =======
-			wp_enqueue_style( 'ai1ec-general', AI1EC_CSS_URL . '/general.css', array(), 1 );
-			wp_enqueue_style( 'ai1ec-event', AI1EC_CSS_URL . '/event.css', array(), 1 );
+			wp_enqueue_style( 'ai1ec-general', AI1EC_CSS_URL . '/general.css', array(), AI1EC_VERSION );
+			wp_enqueue_style( 'ai1ec-event', AI1EC_CSS_URL . '/event.css', array(), AI1EC_VERSION );
 		}
 	}
 

@@ -129,14 +129,18 @@ class Ai1ec_Importer_Helper {
 			while( $e = $v->getComponent( 'vevent' ) )
 			{
 				$start = $e->getProperty( 'dtstart', 1, true );
-				$end = $e->getProperty( 'dtend', 1, true );
+				$end   = $e->getProperty( 'dtend', 1, true );
+
+				// If end can't be found, check for duration property
+				if( empty( $end ) ) 
+    				$end = $e->getProperty( 'duration', 1, true, true );
 
 				// Event is all-day if no time components are defined
 				$allday = ! isset( $start['value']['hour'] );
 
 				// convert times to GMT UNIX timestamps
 				$start = $this->time_array_to_timestamp( $start, $timezone );
-				$end = $this->time_array_to_timestamp( $end, $timezone );
+				$end   = $this->time_array_to_timestamp( $end, $timezone );
 
 				// If all-day, and start and end times are equal, then this event has
 				// invalid end time (happens sometimes with poorly implemented iCalendar

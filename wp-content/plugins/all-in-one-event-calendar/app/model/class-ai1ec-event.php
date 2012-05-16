@@ -343,7 +343,7 @@ class Ai1ec_Event {
 			$query = $wpdb->prepare(
 				"SELECT {$select_sql}" .
 				"FROM {$wpdb->prefix}ai1ec_events e " .
-					"LEFT JOIN $wpdb->term_relationships tr ON post_id = tr.object_id " .
+					"LEFT JOIN $wpdb->term_relationships tr ON e.post_id = tr.object_id " .
 					"LEFT JOIN $wpdb->term_taxonomy ttc ON tr.term_taxonomy_id = ttc.term_taxonomy_id AND ttc.taxonomy = 'events_categories' " .
 					"LEFT JOIN $wpdb->term_taxonomy ttt ON tr.term_taxonomy_id = ttt.term_taxonomy_id AND ttt.taxonomy = 'events_tags' " .
 					"{$left_join}" .

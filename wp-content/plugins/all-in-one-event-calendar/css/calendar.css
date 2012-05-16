@@ -13,6 +13,7 @@
 
 /* Active buttons */
 .ai1ec-action-month #ai1ec-view-month,
+.ai1ec-action-oneday #ai1ec-view-oneday,
 .ai1ec-action-week #ai1ec-view-week,
 .ai1ec-action-agenda #ai1ec-view-agenda {
 	color: #000;
@@ -167,7 +168,8 @@ a.ai1ec-pagination {
 .ai1ec-action-month .ai1ec-pagination a {
 	width: 7em;
 }
-.ai1ec-action-week .ai1ec-pagination a {
+.ai1ec-action-week .ai1ec-pagination a,
+.ai1ec-action-1day .ai1ec-pagination a {
 	width: 8em;
 }
 .ai1ec-action-agenda .ai1ec-pagination a {
@@ -287,8 +289,95 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-webkit-text-shadow: 0 1px 0 #fff;
 }
 
-/* Week view now marker */
-.ai1ec-week-view .ai1ec-grid-container {
+/* 1day tables */
+table.ai1ec-1day-view, .ai1ec-1day-view table{
+	border-collapse: collapse;
+	border: 1px solid #ddd !important;
+	margin: 0 !important;
+	background: #fff;
+	table-layout: fixed !important;
+	clear: both;
+	width: 100% !important;
+}
+.ai1ec-1day-view .ai1ec-today {
+	color: #999 !important;
+}
+.ai1ec-1day-view .ai1ec-today th{
+	background: #ffd !important;
+	background: rgba(255,255,128,0.3) !important;
+}
+.ai1ec-1day-view .tablescroll_wrapper {
+	position: relative;
+	border-bottom: 1px solid #ddd;
+}
+table.ai1ec-1day-view-original {
+	visibility: hidden;
+	height: 400px;
+}
+table.ai1ec-1day-view-original.tablescroll_body {
+	visibility: visible;
+	height: auto;
+}
+.ai1ec-1day-view table.tablescroll_head,
+.ai1ec-1day-view table.tablescroll_head th {
+	border-bottom: none !important;
+	padding: 2.48px !important;
+}
+table.ai1ec-1day-view-original.tablescroll_body,
+table.ai1ec-1day-view-original.tablescroll_body tr:first-child td {
+	border-top: none !important;
+}
+.ai1ec-1day-view td {
+	border: 1px solid #ddd !important;
+	vertical-align: top;
+	background: none !important;
+}
+
+.ai1ec-1day-view th {
+	border: none !important;
+	padding: 0.2em !important;
+	background: #ffd !important;
+	background: rgba(255,255,128,0.3) !important;
+}
+.ai1ec-1day-view th,
+.ai1ec-1day-view .ai1ec-hour-marker div,
+.ai1ec-1day-view .ai1ec-allday-label {
+	font: bold 10pt Tahoma, Geneva, sans-serif !important;
+	color: #999 !important;
+	text-shadow: 0 1px 0 #fff;
+	-o-text-shadow: 0 1px 0 #fff;
+	-ms-text-shadow: 0 1px 0 #fff;
+	-moz-text-shadow: 0 1px 0 #fff;
+	-webkit-text-shadow: 0 1px 0 #fff;
+}
+.ai1ec-1day-view th {
+	text-align: center !important;
+}
+
+.ai1ec-1day-view th .ai1ec-weekday-date {
+	font-size: 10.5pt !important;
+	font-weight: normal !important;
+}
+.ai1ec-1day-view th .ai1ec-weekday-day {
+	font-size: 10.5pt !important;
+	font-weight: normal !important;
+}
+
+.ai1ec-1day-view td {
+	padding: 0 !important;
+	text-align: left;
+}
+.ai1ec-1day-view .ai1ec-day,
+.ai1ec-1day-view .ai1ec-allday-events {
+	position: relative;
+}
+.ai1ec-1day-view .ai1ec-day {
+	height: 1440px;
+}
+
+/* Week/Day view now marker */
+.ai1ec-week-view .ai1ec-grid-container,
+.ai1ec-1day-view .ai1ec-grid-container {
 	position: absolute;
 	top: auto;
 	left: 0;
@@ -296,13 +385,17 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 }
 .ai1ec-week-view .ai1ec-now-marker,
 .ai1ec-week-view .ai1ec-hour-marker,
-.ai1ec-week-view .ai1ec-quarter-marker {
+.ai1ec-week-view .ai1ec-quarter-marker,
+.ai1ec-1day-view .ai1ec-now-marker,
+.ai1ec-1day-view .ai1ec-hour-marker,
+.ai1ec-1day-view .ai1ec-quarter-marker  {
 	position: absolute;
 	left: 0;
 	right: 0;
 	padding-right: 8px;
 }
-.ai1ec-week-view .ai1ec-hour-marker {
+.ai1ec-week-view .ai1ec-hour-marker,
+.ai1ec-1day-view .ai1ec-hour-marker {
 	border-top: 1px solid #e8e8e8;
 	border-top: 1px solid rgba(0,0,0,0.08);
 	height: 60px;
@@ -310,7 +403,9 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	background: rgba(0,0,0,0.054) !important;
 }
 .ai1ec-week-view .ai1ec-hour-marker div,
-.ai1ec-week-view .ai1ec-allday-label {
+.ai1ec-week-view .ai1ec-allday-label,
+.ai1ec-1day-view .ai1ec-hour-marker div,
+.ai1ec-1day-view .ai1ec-allday-label  {
 	position: relative;
 	z-index: 2;
 	margin-left: 1px;
@@ -323,25 +418,30 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-moz-border-radius: 0.3em;
 	-webkit-border-radius: 0.3em;
 }
-.ai1ec-week-view .ai1ec-allday-label {
+.ai1ec-week-view .ai1ec-allday-label,
+.ai1ec-1day-view .ai1ec-allday-label {
 	margin-top: 1px;
 }
-.ai1ec-week-view .ai1ec-hour-marker.ai1ec-business-hour {
+.ai1ec-week-view .ai1ec-hour-marker.ai1ec-business-hour,
+.ai1ec-1day-view .ai1ec-hour-marker.ai1ec-business-hour {
 	background: #fff !important;
 	background: transparent !important;
 }
-.ai1ec-week-view .ai1ec-quarter-marker {
+.ai1ec-week-view .ai1ec-quarter-marker,
+.ai1ec-1day-view .ai1ec-quarter-marker {
 	border-top: 1px solid #f4f4f4;
 	border-top: 1px solid rgba(0,0,0,0.05);
 }
-.ai1ec-week-view .ai1ec-now-marker {
+.ai1ec-week-view .ai1ec-now-marker,
+.ai1ec-1day-view .ai1ec-now-marker{
 	border-top: 1px solid #f2c539;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	z-index: 2;
 }
-/* Event summaries in month/week view, including popups */
+/* Event summaries in month/week/day view, including popups */
 .ai1ec-month-view a.ai1ec-event-container,
-.ai1ec-week-view a.ai1ec-event-container {
+.ai1ec-week-view a.ai1ec-event-container,
+.ai1ec-1day-view a.ai1ec-event-container {
 	font: 9pt Tahoma, Geneva, sans-serif !important;
 	text-decoration: none !important;
 	display: block;
@@ -349,10 +449,15 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	color: #568 !important;
 }
 .ai1ec-month-view a.ai1ec-event-container,
-.ai1ec-week-view .ai1ec-allday-events a.ai1ec-event-container {
+.ai1ec-week-view .ai1ec-allday-events a.ai1ec-event-container,
+.ai1ec-1day-view .ai1ec-allday-events a.ai1ec-event-container {
 	position: relative;
 }
-.ai1ec-week-view .ai1ec-week a.ai1ec-event-container {
+.ai1ec-1day-view .ai1ec-allday-events a.ai1ec-event-container {
+	margin: 0 15px 0 50px;
+}
+.ai1ec-week-view .ai1ec-week a.ai1ec-event-container,
+.ai1ec-1day-view .ai1ec-1day a.ai1ec-event-container {
 	position: absolute;
 	box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -374,6 +479,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	background: -webkit-linear-gradient( top, #fff, #ced3dd ) !important;
 }
 .ai1ec-month-view .ai1ec-event,
+.ai1ec-1day-view .ai1ec-event,
 .ai1ec-week-view .ai1ec-event {
 	border-radius: 0.3em;
 	-o-border-radius: 0.3em;
@@ -386,11 +492,13 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	max-height: 100%;
 }
 .ai1ec-month-view .ai1ec-allday .ai1ec-event,
+.ai1ec-1day-view .ai1ec-allday .ai1ec-event,
 .ai1ec-week-view .ai1ec-allday .ai1ec-event {
 	background: #568;
 	color: #fff !important;
 }
 .ai1ec-month-view .ai1ec-category-colors,
+.ai1ec-1day-view .ai1ec-category-colors,
 .ai1ec-week-view .ai1ec-category-colors {
 	float: right;
 	font-size: 1.2em;
@@ -398,6 +506,8 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 }
 .ai1ec-month-view .ai1ec-event-popup,
 .ai1ec-month-view .ai1ec-event-summary,
+.ai1ec-1day-view .ai1ec-event-popup,
+.ai1ec-1day-view .ai1ec-event-summary,
 .ai1ec-week-view .ai1ec-event-popup,
 .ai1ec-week-view .ai1ec-event-summary {
 	border: 2px solid #d4c4b0;
@@ -409,6 +519,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	background: #fff;
 }
 .ai1ec-month-view .ai1ec-event-popup,
+.ai1ec-1day-view .ai1ec-event-popup,
 .ai1ec-week-view .ai1ec-event-popup {
 	position: absolute;
 	z-index: 5;
@@ -423,10 +534,15 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-moz-border-radius: 0 0.3em 0.3em 0;
 	-webkit-border-radius: 0 0.3em 0.3em 0;
 }
+.ai1ec-1day-view .ai1ec-event-popup {
+	top: -3px;
+	min-width: 75%;
+}
 .ai1ec-week-view .ai1ec-week .ai1ec-event-popup {
 	top: -3px;
 }
 .ai1ec-month-view .ai1ec-event-popup.ai1ec-shifted-right,
+.ai1ec-1day-view.ai1ec-event-popup.ai1ec-shifted-right,
 .ai1ec-week-view .ai1ec-event-popup.ai1ec-shifted-right {
 	border-radius: 0.3em 0 0 0.3em;
 	-o-border-radius: 0.3em 0 0 0.3em;
@@ -434,6 +550,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-webkit-border-radius: 0.3em 0 0 0.3em;
 }
 .ai1ec-month-view .ai1ec-event-popup-bg,
+.ai1ec-1day-view .ai1ec-event-popup-bg,
 .ai1ec-week-view .ai1ec-event-popup-bg {
 	position: relative;
 	left: -2px;
@@ -442,21 +559,26 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	background: #fff;
 }
 .ai1ec-month-view .ai1ec-shifted-right .ai1ec-event-popup-bg,
+.ai1ec-1day-view .ai1ec-shifted-right .ai1ec-event-popup-bg,
 .ai1ec-week-view .ai1ec-shifted-right .ai1ec-event-popup-bg {
 	left: 1px;
 	padding: 2px 5px 2px 2px;
 }
 .ai1ec-month-view .ai1ec-event-summary,
 .ai1ec-month-view .ai1ec-event-summary p,
+.ai1ec-1day-view .ai1ec-event-summary,
+.ai1ec-1day-view .ai1ec-event-summary p,
 .ai1ec-week-view .ai1ec-event-summary,
 .ai1ec-week-view .ai1ec-event-summary p {
 	font-size: 0.95em !important;
 }
 .ai1ec-month-view .ai1ec-event-summary p,
+.ai1ec-1day-view .ai1ec-event-summary p,
 .ai1ec-week-view .ai1ec-event-summary p {
 	line-height: 1.4em !important;
 }
 .ai1ec-month-view .ai1ec-event-summary,
+.ai1ec-1day-view .ai1ec-event-summary,
 .ai1ec-week-view .ai1ec-event-summary {
 	position: absolute;
 	overflow: hidden;
@@ -479,6 +601,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	color: #6d5e4a;
 }
 .ai1ec-month-view .ai1ec-shifted-right .ai1ec-event-summary,
+.ai1ec-1day-view .ai1ec-shifted-right .ai1ec-event-summary,
 .ai1ec-week-view .ai1ec-shifted-right .ai1ec-event-summary {
 	left: 100%;
 	border-radius: 0 0.3em 0.3em 0.3em;
@@ -487,21 +610,25 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-webkit-border-radius: 0 0.3em 0.3em 0.3em;
 }
 .ai1ec-month-view .ai1ec-event-summary p,
+.ai1ec-1day-view .ai1ec-event-summary p,
 .ai1ec-week-view .ai1ec-event-summary p {
 	margin: 0 0 0.3em !important;
 	padding: 0 !important;
 }
 .ai1ec-month-view .ai1ec-event-time,
+.ai1ec-1day-view .ai1ec-event-time,
 .ai1ec-week-view .ai1ec-event-time {
 	font-size: 8pt;
 	font-weight: bold;
 }
+.ai1ec-1day-view .ai1ec-1day .ai1ec-event-title,
 .ai1ec-week-view .ai1ec-week .ai1ec-event-title {
 	display: block;
 	white-space: normal;
 	font-size: 8pt !important;
 }
 .ai1ec-month-view .ai1ec-read-more,
+.ai1ec-1day-view .ai1ec-read-more,
 .ai1ec-week-view .ai1ec-read-more {
 	text-align: center;
 	font-size: 8pt;
@@ -554,9 +681,11 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 }
 
 /* Truncated events */
+.ai1ec-1day-view .ai1ec-start-truncated .ai1ec-event-time,
 .ai1ec-week-view .ai1ec-start-truncated .ai1ec-event-time {
 	display: none;
 }
+.ai1ec-1day-view-view .ai1ec-1day a.ai1ec-event-container.ai1ec-start-truncated,
 .ai1ec-week-view .ai1ec-week a.ai1ec-event-container.ai1ec-start-truncated {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
@@ -565,6 +694,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-webkit-border-top-left-radius: 0;
 	-webkit-border-top-right-radius: 0;
 }
+.ai1ec-1day-view .ai1ec-1day .ai1ec-start-truncator,
 .ai1ec-week-view .ai1ec-week .ai1ec-start-truncator {
 	position: absolute;
 	top: -2px;
@@ -572,6 +702,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	line-height: 1em;
 	font-size: 6pt;
 }
+.ai1ec-1day-view .ai1ec-1day a.ai1ec-event-container.ai1ec-end-truncated,
 .ai1ec-week-view .ai1ec-week a.ai1ec-event-container.ai1ec-end-truncated {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
@@ -580,6 +711,7 @@ table.ai1ec-week-view-original.tablescroll_body tr:first-child td {
 	-webkit-border-bottom-left-radius: 0;
 	-webkit-border-bottom-right-radius: 0;
 }
+.ai1ec-1day-view .ai1ec-1day .ai1ec-end-truncator,
 .ai1ec-week-view .ai1ec-week .ai1ec-end-truncator {
 	position: absolute;
 	bottom: -2px;

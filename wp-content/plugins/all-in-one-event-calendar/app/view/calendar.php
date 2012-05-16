@@ -1,4 +1,4 @@
-<!-- START All-in-One Event Calendar Plugin - Version 1.4 -->
+<!-- START All-in-One Event Calendar Plugin - Version 1.5 -->
 <table class="ai1ec-calendar-toolbar">
 	<tbody>
 		<tr>
@@ -10,6 +10,13 @@
 							href="#action=ai1ec_month&amp;ai1ec_post_ids=<?php echo $selected_post_ids ?>">
 							<img src="<?php echo AI1EC_IMAGE_URL ?>/month-view.png" alt="<?php _e( 'Month', AI1EC_PLUGIN_NAME ) ?>" />
 							<?php _e( 'Month', AI1EC_PLUGIN_NAME ) ?>
+						</a>
+					</li>
+					<li>
+						<a id="ai1ec-view-oneday" class="ai1ec-load-view ai1ec-button"
+							href="#action=ai1ec_oneday&amp;ai1ec_post_ids=<?php echo $selected_post_ids ?>">
+							<img src="<?php echo AI1EC_IMAGE_URL ?>/oneday-view.png" alt="<?php _e( 'Day', AI1EC_PLUGIN_NAME ) ?>" />
+							<?php _e( 'Day', AI1EC_PLUGIN_NAME ) ?>
 						</a>
 					</li>
 					<li>

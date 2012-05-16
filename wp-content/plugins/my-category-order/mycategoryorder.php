@@ -3,7 +3,7 @@
 Plugin Name: My Category Order
 Plugin URI: http://www.geekyweekly.com/mycategoryorder
 Description: My Category Order allows you to set the order in which categories will appear in the sidebar. Uses a drag and drop interface for ordering. Adds a widget with additional options for easy installation on widgetized themes.
-Version: 3.0.1
+Version: 3.3.2
 Author: Andrew Charlton
 Author URI: http://www.geekyweekly.com
 Author Email: froman118@gmail.com
@@ -69,13 +69,10 @@ function mycategoryorder()
 	}
 
 	if (isset($_POST['btnReturnParent'])) { 
-		$parentsParent = $wpdb->get_row("SELECT parent FROM $wpdb->term_taxonomy WHERE term_id = " . $_POST['hdnParentID'], ARRAY_N);
+		$parentsParent = $wpdb->get_row($wpdb->prepare("SELECT parent FROM $wpdb->term_taxonomy WHERE term_id = %d ", $_POST['hdnParentID']) , ARRAY_N);
 		$parentID = $parentsParent[0];
 	}
 		
-	if(isset($_GET['hideNote']))
-		update_option('mycategoryorder_hideNote', '1');
-
 	$success = "";
 	if (isset($_POST['btnOrderCats'])) { 
 		$success = mycategoryorder_updateOrder();
@@ -88,16 +85,8 @@ function mycategoryorder()
 <form name="frmMyCatOrder" method="post" action="">
 		<h2><?php _e('My Category Order','mycategoryorder'); ?></h2>
 	<?php 
-	
-	echo $success; 
-	
-	if (get_option("mycategoryorder_hideNote") != "1")
-		{	?>
-			<div class="updated">
-				<strong><p><?php _e('If you like my plugin please consider donating. Every little bit helps me provide support and continue development.','mycategoryorder'); ?> <a href="http://geekyweekly.com/gifts-and-donations"><?php _e('Donate', 'mycategoryorder'); ?></a>&nbsp;&nbsp;<small><a href="<?php echo mycategoryorder_getTarget(); ?>&hideNote=true"><?php _e('No thanks, hide this', 'mycategoryorder'); ?></a></small></p></strong>
-			</div>
-		<?php
-		}?>
+		echo $success; 
+	?>
 
 	<p><?php _e('Choose a category from the drop down to order subcategories in that category or order the categories on this level by dragging and dropping them into the desired order.','mycategoryorder'); ?></p>
 
@@ -200,7 +189,7 @@ function mycategoryorder_getSubCats($parentID)
 	global $wpdb;
 	
 	$subCatStr = "";
-	$results=$wpdb->get_results("SELECT t.term_id, t.name FROM $wpdb->term_taxonomy tt, $wpdb->terms t, $wpdb->term_taxonomy tt2 WHERE tt.parent = $parentID AND tt.taxonomy = 'category' AND t.term_id = tt.term_id AND tt2.parent = tt.term_id GROUP BY t.term_id, t.name HAVING COUNT(*) > 0 ORDER BY t.term_order ASC");
+	$results=$wpdb->get_results($wpdb->prepare("SELECT t.term_id, t.name FROM $wpdb->term_taxonomy tt, $wpdb->terms t, $wpdb->term_taxonomy tt2 WHERE tt.parent = %d AND tt.taxonomy = 'category' AND t.term_id = tt.term_id AND tt2.parent = tt.term_id GROUP BY t.term_id, t.name HAVING COUNT(*) > 0 ORDER BY t.term_order ASC", $parentID));
 	foreach($results as $row)
 	{
 		$subCatStr = $subCatStr."<option value='$row->term_id'>$row->name</option>";
@@ -221,7 +210,7 @@ function mycategoryorder_updateOrder()
 		for($i = 0; $i < $result; $i++)
 		{
 			$str = str_replace("id_", "", $IDs[$i]);
-			$wpdb->query("UPDATE $wpdb->terms SET term_order = '$i' WHERE term_id ='$str'");
+			$wpdb->query($wpdb->prepare("UPDATE $wpdb->terms SET term_order = %d WHERE term_id = %d ", $i, $str));
 		}
 
 		return '<div id="message" class="updated fade"><p>'. __('Categories updated successfully.', 'mycategoryorder').'</p></div>';
@@ -233,7 +222,7 @@ function mycategoryorder_updateOrder()
 function mycategoryorder_catQuery($parentID)
 {
 	global $wpdb;
-	return $wpdb->get_results("SELECT * FROM $wpdb->terms t inner join $wpdb->term_taxonomy tt on t.term_id = tt.term_id WHERE taxonomy = 'category' and parent = $parentID ORDER BY term_order ASC");
+	return $wpdb->get_results($wpdb->prepare("SELECT * FROM $wpdb->terms t inner join $wpdb->term_taxonomy tt on t.term_id = tt.term_id WHERE taxonomy = 'category' and parent = %d ORDER BY term_order ASC", $parentID));
 }
 
 function  mycategoryorder_getParentLink($parentID)

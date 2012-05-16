@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the All-in-One Event Calendar package.
 msgid ""
 msgstr ""
-"Project-Id-Version: All-in-One Event Calendar 1.3\n"
+"Project-Id-Version: All-in-One Event Calendar 1.4\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/all-in-one-event-calendar\n"
-"POT-Creation-Date: 2012-03-01 20:50:01+00:00\n"
+"POT-Creation-Date: 2012-04-02 15:29:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,24 +12,24 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: app/controller/class-ai1ec-app-controller.php:364
-#: app/controller/class-ai1ec-app-controller.php:365
+#: app/controller/class-ai1ec-app-controller.php:407
+#: app/controller/class-ai1ec-app-controller.php:408
 msgid "Settings"
 msgstr ""
 
 #. translators: "%s" represents the week's starting date
-#: app/controller/class-ai1ec-calendar-controller.php:326
-#: app/helper/class-ai1ec-calendar-helper.php:717
-#: app/helper/class-ai1ec-calendar-helper.php:726
+#: app/controller/class-ai1ec-calendar-controller.php:406
+#: app/helper/class-ai1ec-calendar-helper.php:883
+#: app/helper/class-ai1ec-calendar-helper.php:892
 msgid "Week of %s"
 msgstr ""
 
-#: app/controller/class-ai1ec-calendar-controller.php:326
+#: app/controller/class-ai1ec-calendar-controller.php:406
 msgid "F j"
 msgstr ""
 
-#: app/controller/class-ai1ec-calendar-controller.php:383
-#: app/helper/class-ai1ec-settings-helper.php:155 app/view/calendar.php:26
+#: app/controller/class-ai1ec-calendar-controller.php:463
+#: app/helper/class-ai1ec-settings-helper.php:158 app/view/calendar.php:33
 msgid "Agenda"
 msgstr ""
 
@@ -140,30 +140,30 @@ msgid_plural "Flush %s events"
 msgstr[0] ""
 msgstr[1] ""
 
-#: app/controller/class-ai1ec-settings-controller.php:274
+#: app/controller/class-ai1ec-settings-controller.php:291
 msgctxt "meta box"
 msgid "General Settings"
 msgstr ""
 
-#: app/controller/class-ai1ec-settings-controller.php:282
+#: app/controller/class-ai1ec-settings-controller.php:299
 msgctxt "meta box"
 msgid "The Seed Studio Support"
 msgstr ""
 
-#: app/controller/class-ai1ec-settings-controller.php:289
+#: app/controller/class-ai1ec-settings-controller.php:306
 msgctxt "meta box"
 msgid "ICS Import Settings"
 msgstr ""
 
-#: app/controller/class-ai1ec-settings-controller.php:338
+#: app/controller/class-ai1ec-settings-controller.php:355
 msgid "<a href=\"%s\">Settings</a>"
 msgstr ""
 
-#: app/controller/class-ai1ec-settings-controller.php:352
+#: app/controller/class-ai1ec-settings-controller.php:369
 msgid "<a href=\"%s\" target=\"_blank\">Donate</a>"
 msgstr ""
 
-#: app/controller/class-ai1ec-settings-controller.php:353
+#: app/controller/class-ai1ec-settings-controller.php:370
 msgid "<a href=\"%s\" target=\"_blank\">Get Support</a>"
 msgstr ""
 
@@ -273,47 +273,57 @@ msgstr ""
 msgid "Event date/time"
 msgstr ""
 
-#: app/helper/class-ai1ec-app-helper.php:684
+#: app/helper/class-ai1ec-app-helper.php:698
 msgid ""
 "%sTo set up the plugin: %s 1. Select an option in the <strong>Calendar page</"
 "strong> dropdown list. %s 2. Select an option in the <strong>Timezone</"
 "strong> dropdown list. %s 3. Click <strong>Update Settings</strong>. %s"
 msgstr ""
 
-#: app/helper/class-ai1ec-app-helper.php:686
+#: app/helper/class-ai1ec-app-helper.php:700
 msgid ""
 "To set up the plugin: Select an option in the <strong>Calendar page</strong> "
 "dropdown list, the click <strong>Update Settings</strong>."
 msgstr ""
 
-#: app/helper/class-ai1ec-app-helper.php:688
+#: app/helper/class-ai1ec-app-helper.php:702
 msgid ""
 "To set up the plugin: Select an option in the <strong>Timezone</strong> "
 "dropdown list, the click <strong>Update Settings</strong>."
 msgstr ""
 
-#: app/helper/class-ai1ec-app-helper.php:692
+#: app/helper/class-ai1ec-app-helper.php:706
 msgid ""
 "The plugin is installed, but has not been configured. <a href=\"%s\">Click "
-"here to set it up now »</a>"
+"here to set it up now &raquo;</a>"
 msgstr ""
 
-#: app/helper/class-ai1ec-app-helper.php:698
+#: app/helper/class-ai1ec-app-helper.php:712
 msgid ""
 "The plugin is installed, but has not been configured. Please log in as a "
 "WordPress Administrator to set it up."
 msgstr ""
 
-#: app/helper/class-ai1ec-calendar-helper.php:718
-#: app/helper/class-ai1ec-calendar-helper.php:727
+#: app/helper/class-ai1ec-app-helper.php:714
+msgid "All-in-One Event Calendar Notice:"
+msgstr ""
+
+#. translators: "%s" represents the week's starting date
+#: app/helper/class-ai1ec-calendar-helper.php:791
+#: app/helper/class-ai1ec-calendar-helper.php:798
+msgid "j F Y"
+msgstr ""
+
+#: app/helper/class-ai1ec-calendar-helper.php:884
+#: app/helper/class-ai1ec-calendar-helper.php:893
 msgid "M j"
 msgstr ""
 
-#: app/helper/class-ai1ec-calendar-helper.php:759
+#: app/helper/class-ai1ec-calendar-helper.php:925
 msgid "« Previous Events"
 msgstr ""
 
-#: app/helper/class-ai1ec-calendar-helper.php:766
+#: app/helper/class-ai1ec-calendar-helper.php:932
 msgid "Next Events »"
 msgstr ""
 
@@ -410,7 +420,7 @@ msgstr ""
 #: app/helper/class-ai1ec-events-helper.php:607
 #: app/helper/class-ai1ec-events-helper.php:626
 #: app/helper/class-ai1ec-events-helper.php:1676
-#: app/helper/class-ai1ec-settings-helper.php:237 app/view/box_repeat.php:2
+#: app/helper/class-ai1ec-settings-helper.php:240 app/view/box_repeat.php:2
 msgid "Daily"
 msgstr ""
 
@@ -550,50 +560,51 @@ msgstr ""
 msgid "View \"%s\" »"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:149 app/view/calendar.php:11
-#: app/view/calendar.php:12 app/view/calendar.php:25
+#: app/helper/class-ai1ec-settings-helper.php:149 app/view/calendar.php:18
+#: app/view/calendar.php:19
+msgid "Day"
+msgstr ""
+
+#: app/helper/class-ai1ec-settings-helper.php:152 app/view/calendar.php:11
+#: app/view/calendar.php:12 app/view/calendar.php:32
 msgid "Month"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:152 app/view/calendar.php:18
-#: app/view/calendar.php:19
+#: app/helper/class-ai1ec-settings-helper.php:155 app/view/calendar.php:25
+#: app/view/calendar.php:26
 msgid "Week"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:204
+#: app/helper/class-ai1ec-settings-helper.php:207
 msgid "Default (d/m/y)"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:207
+#: app/helper/class-ai1ec-settings-helper.php:210
 msgid "US (m/d/y)"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:210
+#: app/helper/class-ai1ec-settings-helper.php:213
 msgid "ISO 8601 (y-m-d)"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:213
+#: app/helper/class-ai1ec-settings-helper.php:216
 msgid "Dotted (m.d.y)"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:231
+#: app/helper/class-ai1ec-settings-helper.php:234
 msgid "Hourly"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:234
+#: app/helper/class-ai1ec-settings-helper.php:237
 msgid "Twice Daily"
 msgstr ""
 
-#: app/helper/class-ai1ec-settings-helper.php:321
+#: app/helper/class-ai1ec-settings-helper.php:324
 msgid "Calendar"
 msgstr ""
 
 #: app/model/class-ai1ec-event.php:496
 msgid " (all-day)"
-msgstr ""
-
-#: app/view/admin_notices.php:2
-msgid "All-in-One Event Calendar Notice:"
 msgstr ""
 
 #: app/view/agenda-widget-form.php:2
@@ -648,17 +659,17 @@ msgstr ""
 msgid "View Calendar »"
 msgstr ""
 
-#: app/view/agenda-widget.php:67 app/view/calendar.php:110
+#: app/view/agenda-widget.php:67 app/view/calendar.php:117
 msgid ""
 "Subscribe to this calendar using your favourite calendar program (iCal, "
 "Outlook, etc.)"
 msgstr ""
 
-#: app/view/agenda-widget.php:68 app/view/calendar.php:111
+#: app/view/agenda-widget.php:68 app/view/calendar.php:118
 msgid "✔ Subscribe"
 msgstr ""
 
-#: app/view/agenda-widget.php:72 app/view/calendar.php:116
+#: app/view/agenda-widget.php:72 app/view/calendar.php:123
 msgid "Subscribe to this calendar in your Google Calendar"
 msgstr ""
 
@@ -674,7 +685,8 @@ msgstr ""
 msgid "− Collapse All"
 msgstr ""
 
-#: app/view/agenda.php:12 app/view/month.php:4 app/view/week.php:4
+#: app/view/agenda.php:12 app/view/month.php:4 app/view/oneday.php:4
+#: app/view/week.php:4
 msgid "Today"
 msgstr ""
 
@@ -683,7 +695,7 @@ msgid "There are no upcoming events to display at this time."
 msgstr ""
 
 #: app/view/agenda.php:59 app/view/agenda.php:109 app/view/month.php:68
-#: app/view/week.php:69
+#: app/view/oneday.php:64 app/view/week.php:69
 msgid "(all-day)"
 msgstr ""
 
@@ -923,6 +935,14 @@ msgstr ""
 msgid "Display <strong>Publish</strong> at bottom of Edit Event form"
 msgstr ""
 
+#: app/view/box_general_settings.php:89
+msgid "Sharing data"
+msgstr ""
+
+#: app/view/box_general_settings.php:93
+msgid "Allow The Seed to collect statistics"
+msgstr ""
+
 #: app/view/box_ics_import_settings.php:2
 msgid "Auto-refresh"
 msgstr ""
@@ -959,7 +979,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (All-in-One Event Calendar 1.3)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (All-in-One Event Calendar 1.4)  #-#-#-#-#
 #. Author of the plugin/theme
 #: app/view/box_the_seed_studio.php:4
 msgid "The Seed Studio"
@@ -1073,35 +1093,35 @@ msgstr ""
 msgid "Choose specific dates to exclude"
 msgstr ""
 
-#: app/view/calendar.php:35
+#: app/view/calendar.php:42
 msgid "+ Post Your Event"
 msgstr ""
 
-#: app/view/calendar.php:44
+#: app/view/calendar.php:51
 msgid "Clear Filters"
 msgstr ""
 
-#: app/view/calendar.php:44
+#: app/view/calendar.php:51
 msgid "✘"
 msgstr ""
 
-#: app/view/calendar.php:45
+#: app/view/calendar.php:52
 msgid "Filter:"
 msgstr ""
 
-#: app/view/calendar.php:50
+#: app/view/calendar.php:57
 msgid "Categories ▾"
 msgstr ""
 
-#: app/view/calendar.php:72
+#: app/view/calendar.php:79
 msgid "Tags ▾"
 msgstr ""
 
-#: app/view/calendar.php:112
+#: app/view/calendar.php:119
 msgid "to this filtered calendar"
 msgstr ""
 
-#: app/view/calendar.php:118
+#: app/view/calendar.php:125
 msgid "Subscribe in Google Calendar"
 msgstr ""
 
@@ -1208,12 +1228,18 @@ msgstr ""
 msgid "Successfully imported events:"
 msgstr ""
 
-#: app/view/month.php:50 app/view/week.php:55 app/view/week.php:127
+#: app/view/month.php:50 app/view/oneday.php:50 app/view/oneday.php:115
+#: app/view/week.php:55 app/view/week.php:127
 msgid "Summary:"
 msgstr ""
 
-#: app/view/month.php:53 app/view/week.php:58 app/view/week.php:130
+#: app/view/month.php:53 app/view/oneday.php:53 app/view/oneday.php:118
+#: app/view/week.php:58 app/view/week.php:130
 msgid "click anywhere for details"
+msgstr ""
+
+#: app/view/oneday.php:28 app/view/week.php:33
+msgid "All-day"
 msgstr ""
 
 #: app/view/row_daily.php:3 app/view/row_monthly.php:3
@@ -1246,10 +1272,6 @@ msgstr ""
 
 #: app/view/settings.php:16
 msgid "Update Settings"
-msgstr ""
-
-#: app/view/week.php:33
-msgid "All-day"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

@@ -145,6 +145,9 @@ class Ai1ec_Settings_Helper {
 		ob_start();
 		?>
 		<select name="default_calendar_view">
+			<option value="oneday" <?php echo $view == 'oneday' ? 'selected' : '' ?>>
+				<?php _e( 'Day', AI1EC_PLUGIN_NAME ) ?>
+			</option>
 			<option value="month" <?php echo $view == 'month' ? 'selected' : '' ?>>
 				<?php _e( 'Month', AI1EC_PLUGIN_NAME ) ?>
 			</option>
@@ -340,6 +343,7 @@ class Ai1ec_Settings_Helper {
 		$input_24h_time                 = $ai1ec_settings->input_24h_time ? 'checked=checked' : '';
 		$default_calendar_view          = $ai1ec_settings_helper->get_view_dropdown( $ai1ec_settings->default_calendar_view );
 		$timezone_control               = $ai1ec_settings_helper->get_timezone_dropdown( $ai1ec_settings->timezone );
+		$allow_statistics               = $ai1ec_settings->allow_statistics ? 'checked=checked' : '';
 
 		$args = array(
 			'calendar_page'                 => $calendar_page,
@@ -358,7 +362,8 @@ class Ai1ec_Settings_Helper {
 			'input_24h_time'                => $input_24h_time,
 			'show_timezone'                 => ! get_option( 'timezone_string' ),
 			'timezone_control'              => $timezone_control,
-			'geo_region_biasing'            => $geo_region_biasing
+			'geo_region_biasing'            => $geo_region_biasing,
+			'allow_statistics'              => $allow_statistics
 	  );
 	  $ai1ec_view_helper->display( 'box_general_settings.php', $args );
 	}

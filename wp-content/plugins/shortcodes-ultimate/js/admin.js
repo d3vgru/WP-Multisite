@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 		gn_custom_editor.refresh();
 	});
 
-	// AJAX forms
+	// Ajaxify settings form
 	$('#su-form-save-settings').ajaxForm({
 		beforeSubmit: function() {
 			$('#su-form-save-settings .su-spin').show();
@@ -29,6 +29,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// Ajaxify custom CSS form
 	$('#su-form-save-custom-css').ajaxForm({
 		beforeSubmit: function() {
 			$('#su-form-save-custom-css .su-spin').show();
@@ -39,4 +40,16 @@ jQuery(document).ready(function($) {
 			$('#su-form-save-custom-css .su-submit').attr('disabled', false);
 		}
 	});
+
+	// Auto-open tab by link with hash
+	if ( strpos( document.location.hash, '#tab-' ) !== false )
+		$('#su-tabs a:eq(' + document.location.hash.replace('#tab-','') + ')').trigger('click');
+
 });
+
+// ########## Strpos tool ##########
+
+function strpos( haystack, needle, offset) {
+	var i = haystack.indexOf( needle, offset );
+	return i >= 0 ? i : false;
+}

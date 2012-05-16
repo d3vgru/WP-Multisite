@@ -1,0 +1,62 @@
+Plugin Name: WPMU DEV Update Notifications
+Author: Aaron Edwards
+
+Change Log:
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+2.1.3 - 7/16/2011
+----------------------------------------------------------------------
+- Added extra error checks and redundancy in case of API server problems
+
+2.1.2 - 7/04/2011
+----------------------------------------------------------------------
+- WP 3.2 Compatibility
+
+2.1.1 - 6/04/2011
+----------------------------------------------------------------------
+- Ajaxified dismiss links
+
+2.1 - 3/03/2011
+----------------------------------------------------------------------
+- Added support for free WPMU DEV projects hosted on WordPress.org
+
+2.0.2 - 3/03/2011
+----------------------------------------------------------------------
+- Fixed bug with api key saving
+
+2.0.1 - 12/30/2010
+----------------------------------------------------------------------
+- Major rewrite! Required for the latest versions of WPMU DEV plugins.
+- 3.1 compatibility
+- Auto-updates for compatible themes/plugins. Bulk auto-upgrades as well.
+- New release notices
+- Optional special offer notices
+- More admin notice control
+- Transparent integration into the WordPress update system: Counts, plugin/theme pages with sorting
+- Quick links to instructions and support
+- Instant preview of changelogs
+
+1.0.4 - 11/17/2010
+----------------------------------------------------------------------
+Switched to ms-admin.php from wpmu-admin.php
+Updated API to support newer versions
+
+1.0.3 - 03/31/2010
+----------------------------------------------------------------------
+Added ability to update data manually
+Fixed version comparison
+
+1.0.2 - 03/29/2010
+----------------------------------------------------------------------
+Fixed bug that kept all items (plugins/themes) from being discovered
+
+1.0.1 - 02/17/2010
+----------------------------------------------------------------------
+Added option to disable admin notices.
+
+1.0.0 - 12/15/2009
+----------------------------------------------------------------------
+Initial Release.
+
+18246-1334152488

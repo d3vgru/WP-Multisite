@@ -5,8 +5,8 @@
  * Description: An event calendar system with month, week, agenda views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
  * Author: The Seed Studio
  * Author URI: http://theseednetwork.com/
- * Version: 1.4
- */ // NOTE: When updating version number also update first line of app/view/calendar.php
+ * Version: 1.5
+ */ // NOTE: When updating version number also update first line of app/view/calendar.php and AI1EC_VERSION constant listed below
 @set_time_limit( 0 );
 @ini_set( "memory_limit",         "256M" );
 @ini_set( "max_input_time",       "-1" );
@@ -21,6 +21,11 @@ define( 'AI1EC_PLUGIN_NAME',      'all-in-one-event-calendar' );
 // ===================
 define( 'AI1EC_PLUGIN_BASENAME',  plugin_basename( __FILE__ ) );
 
+// ==================
+// = Plugin Version =
+// ==================
+define( 'AI1EC_VERSION', '1.5' );
+
 // ====================
 // = Database Version =
 // ====================
@@ -30,6 +35,8 @@ define( 'AI1EC_DB_VERSION',       107 );
 // = Cron Version =
 // ================
 define( 'AI1EC_CRON_VERSION',     102 );
+define( 'AI1EC_N_CRON_VERSION',   101 );
+define( 'AI1EC_N_CRON_FREQ',      'daily' );
 
 // ===============
 // = Plugin Path =

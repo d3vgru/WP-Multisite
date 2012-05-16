@@ -1,9 +1,14 @@
 <?php
 
+	define( 'MAGPIE_CACHE_ON', 1 ); //2.7 Cache Bug
+	define( 'MAGPIE_CACHE_AGE', 900 );
+	define( 'MAGPIE_INPUT_ENCODING', 'UTF-8' );
+	define( 'MAGPIE_OUTPUT_ENCODING', 'UTF-8' );
+
 	/**
 	 * Tweet relative time (like: 5 seconds ago)
 	 */
-	function su_relative_time( $original, $do_more = 0 ) {
+	function shortcodes_ultimate_relative_time( $original, $do_more = 0 ) {
 		// array of time period chunks
 		$chunks = array(
 			array( 60 * 60 * 24 * 365, __( 'year', 'shortcodes-ultimate' ) ),
@@ -37,11 +42,6 @@
 		}
 		return $return;
 	}
-
-	define( 'MAGPIE_CACHE_ON', 1 ); //2.7 Cache Bug
-	define( 'MAGPIE_CACHE_AGE', 900 );
-	define( 'MAGPIE_INPUT_ENCODING', 'UTF-8' );
-	define( 'MAGPIE_OUTPUT_ENCODING', 'UTF-8' );
 
 	/**
 	 * Add hyperlinks to tweets
@@ -84,7 +84,7 @@
 					$link = $message['link'];
 					$time = $message['pubdate'];
 
-					$relative_time = ( $show_time ) ? '<span class="su-tweet-time">' . su_relative_time( strtotime( $time ) ) . '</span>' : '';
+					$relative_time = ( $show_time ) ? '<span class="su-tweet-time">' . shortcodes_ultimate_relative_time( strtotime( $time ) ) . '</span>' : '';
 
 					$last_tweet_class = ( $i >= ( $limit - 1 ) ) ? ' su-tweet-last' : '';
 

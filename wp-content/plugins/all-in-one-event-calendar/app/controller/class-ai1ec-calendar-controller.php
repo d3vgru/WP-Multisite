@@ -47,11 +47,13 @@ class Ai1ec_Calendar_Controller {
 		if( basename( $_SERVER['SCRIPT_NAME'] ) == 'admin-ajax.php' )
 		{
 			add_action( 'wp_ajax_ai1ec_month', array( &$this, 'ajax_month' ) );
+			add_action( 'wp_ajax_ai1ec_oneday', array( &$this, 'ajax_oneday' ) );
 			add_action( 'wp_ajax_ai1ec_week', array( &$this, 'ajax_week' ) );
 			add_action( 'wp_ajax_ai1ec_agenda', array( &$this, 'ajax_agenda' ) );
 			add_action( 'wp_ajax_ai1ec_term_filter', array( &$this, 'ajax_term_filter' ) );
 
 			add_action( 'wp_ajax_nopriv_ai1ec_month', array( &$this, 'ajax_month' ) );
+			add_action( 'wp_ajax_nopriv_ai1ec_oneday', array( &$this, 'ajax_oneday' ) );
 			add_action( 'wp_ajax_nopriv_ai1ec_week', array( &$this, 'ajax_week' ) );
 			add_action( 'wp_ajax_nopriv_ai1ec_agenda', array( &$this, 'ajax_agenda' ) );
 			add_action( 'wp_ajax_nopriv_ai1ec_term_filter', array( &$this, 'ajax_term_filter' ) );
@@ -75,7 +77,7 @@ class Ai1ec_Calendar_Controller {
 		// object
 		$this->request['action'] = isset( $_REQUEST['action'] ) ? $_REQUEST['action'] : '';
 		if( ! in_array( $this->request['action'],
-			      array( 'ai1ec_month', 'ai1ec_week', 'ai1ec_agenda', 'ai1ec_term_filter' ) ) )
+			      array( 'ai1ec_month', 'ai1ec_oneday', 'ai1ec_week', 'ai1ec_agenda', 'ai1ec_term_filter' ) ) )
 			$this->request['action'] = 'ai1ec_' . $ai1ec_settings->default_calendar_view;
 
 		switch( $this->request['action'] )
@@ -83,6 +85,17 @@ class Ai1ec_Calendar_Controller {
 			case 'ai1ec_month':
 				$this->request['ai1ec_month_offset'] =
 					isset( $_REQUEST['ai1ec_month_offset'] ) ? intval( $_REQUEST['ai1ec_month_offset'] ) : 0;
+				// Parse active event parameter as an integer ID
+				$this->request['ai1ec_active_event'] = isset( $_REQUEST['ai1ec_active_event'] ) ? intval( $_REQUEST['ai1ec_active_event'] ) : null;
+				// Category/tag filter parameters
+				$this->request['ai1ec_cat_ids'] = isset( $_REQUEST['ai1ec_cat_ids'] ) ? $_REQUEST['ai1ec_cat_ids'] : null;
+				$this->request['ai1ec_tag_ids'] = isset( $_REQUEST['ai1ec_tag_ids'] ) ? $_REQUEST['ai1ec_tag_ids'] : null;
+				$this->request['ai1ec_post_ids'] = isset( $_REQUEST['ai1ec_post_ids'] ) ? $_REQUEST['ai1ec_post_ids'] : null;
+				break;
+
+			case 'ai1ec_oneday':
+				$this->request['ai1ec_oneday_offset'] =
+					isset( $_REQUEST['ai1ec_oneday_offset'] ) ? intval( $_REQUEST['ai1ec_oneday_offset'] ) : 0;
 				// Parse active event parameter as an integer ID
 				$this->request['ai1ec_active_event'] = isset( $_REQUEST['ai1ec_active_event'] ) ? intval( $_REQUEST['ai1ec_active_event'] ) : null;
 				// Category/tag filter parameters
@@ -169,6 +182,11 @@ class Ai1ec_Calendar_Controller {
 			case 'ai1ec_month':
 				$args['month_offset'] = $this->request['ai1ec_month_offset'];
 				$view = $this->get_month_view( $args );
+				break;
+
+			case 'ai1ec_oneday':
+				$args['oneday_offset'] = $this->request['ai1ec_oneday_offset'];
+				$view = $this->get_oneday_view( $args );
 				break;
 
 			case 'ai1ec_week':
@@ -268,6 +286,68 @@ class Ai1ec_Calendar_Controller {
 			'post_ids'         => join( ',', $post_ids ),
 		);
 		return apply_filters( 'ai1ec_get_month_view', $ai1ec_view_helper->get_view( 'month.php', $view_args ), $view_args );
+	}
+
+	/**
+	 * get_oneday_view function
+	 *
+	 * Return the embedded dayh view of the calendar, optionally filtered by
+	 * event categories and tags.
+	 *
+	 * @param array $args     associative array with any of these elements:
+	 *   int oneday_offset  => specifies which day to display relative to the
+	 *                        current day
+	 *   int active_event  => specifies which event to make visible when
+	 *                        page is loaded
+	 *   array categories  => restrict events returned to the given set of
+	 *                        event category slugs
+	 *   array tags        => restrict events returned to the given set of
+	 *                        event tag names
+	 *   array post_ids    => restrict events returned to the given set of
+	 *                        post IDs
+	 *
+	 * @return string	        returns string of view output
+	 **/
+	function get_oneday_view( $args )
+ 	{
+		global $ai1ec_view_helper,
+		       $ai1ec_events_helper,
+		       $ai1ec_calendar_helper;
+
+		$defaults = array(  
+			'oneday_offset'  => 0, 
+			'active_event'  => null,
+			'categories'    => array(),
+			'tags'          => array(),
+			'post_ids'      => array(),
+		);
+		$args = wp_parse_args( $args, $defaults );
+
+		extract( $args );
+		// Get components of localized time
+		$bits = $ai1ec_events_helper->gmgetdate( $ai1ec_events_helper->gmt_to_local( time() ) );
+		// Use actually day of the month as reference timestamp, and apply day offset
+		$timestamp = gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'], $bits['year'] );
+		$day_shift = 0;
+		// Then apply one-day offset
+		$day_shift += $args['oneday_offset'];
+		$timestamp = gmmktime( 0, 0, 0, $bits['mon'], $bits['mday'] + $day_shift, $bits['year'] );
+
+		$cell_array = $ai1ec_calendar_helper->get_oneday_cell_array( $timestamp, array( 'cat_ids' => $categories, 'cat_ids' => $tags, 'post_ids' => $post_ids ) );
+		$pagination_links = $ai1ec_calendar_helper->get_oneday_pagination_links( $oneday_offset );
+
+		$view_args = array(
+			'title'            => date_i18n( 'j F Y', $timestamp, true ),
+			'cell_array'       => $cell_array,
+			'now_top'           => $bits['hours'] * 60 + $bits['minutes'],
+			'pagination_links' => $pagination_links,
+			'active_event'     => $active_event,
+			'post_ids'         => join( ',', $post_ids ),
+			'time_format'       => get_option( 'time_format', 'g a' ),
+			'done_allday_label' => false,
+			'done_grid'         => false
+		);
+		return apply_filters( 'ai1ec_get_oneday_view', $ai1ec_view_helper->get_view( 'oneday.php', $view_args ), $view_args );
 	}
 
 	/**
@@ -419,6 +499,33 @@ class Ai1ec_Calendar_Controller {
 	}
 
 	/**
+	 * ajax_oneday function
+	 *
+	 * AJAX request handler for day view.
+	 *
+	 * @return void
+	 */
+	function ajax_oneday() {
+		global $ai1ec_view_helper;
+
+		$this->process_request();
+
+		// View arguments
+		$args = array(
+			'oneday_offset' => $this->request['ai1ec_oneday_offset'],
+			'active_event' => $this->request['ai1ec_active_event'],
+			'post_ids'     => array_filter( explode( ',', $this->request['ai1ec_post_ids'] ), 'is_numeric' ),
+		);
+
+		// Return this data structure to the client
+		$data = array(
+			'body_class' => join( ' ', $this->body_class() ),
+			'html' => $this->get_oneday_view( $args ),
+		);
+		$ai1ec_view_helper->json_response( $data );
+	}
+
+	/**
 	 * ajax_week function
 	 *
 	 * AJAX request handler for week view.
@@ -540,8 +647,8 @@ class Ai1ec_Calendar_Controller {
 	{
 		global $ai1ec_settings;
 
-		wp_enqueue_style( 'ai1ec-general', AI1EC_CSS_URL . '/general.css', array(), 1 );
-		wp_enqueue_style( 'ai1ec-calendar', AI1EC_CSS_URL . '/calendar.css', array(), 1 );
+		wp_enqueue_style( 'ai1ec-general', AI1EC_CSS_URL . '/general.css', array(), AI1EC_VERSION );
+		wp_enqueue_style( 'ai1ec-calendar', AI1EC_CSS_URL . '/calendar.css', array(), AI1EC_VERSION );
 
 		if( $ai1ec_settings->calendar_css_selector )
 			add_action( 'wp_head', array( &$this, 'selector_css' ) );
@@ -574,18 +681,18 @@ class Ai1ec_Calendar_Controller {
  		global $ai1ec_settings;
 
 		// Include dependent scripts (jQuery plugins, modernizr)
-		wp_enqueue_script( 'jquery.scrollTo', AI1EC_JS_URL . '/jquery.scrollTo-min.js', array( 'jquery' ), 1 );
-		wp_enqueue_script( 'jquery.tableScroll', AI1EC_JS_URL . '/jquery.tablescroll.js', array( 'jquery' ), 1 );
-		wp_enqueue_script( 'modernizr.custom.78720', AI1EC_JS_URL . '/modernizr.custom.78720.js', array(), 1 );
+		wp_enqueue_script( 'jquery.scrollTo', AI1EC_JS_URL . '/jquery.scrollTo-min.js', array( 'jquery' ), AI1EC_VERSION );
+		wp_enqueue_script( 'jquery.tableScroll', AI1EC_JS_URL . '/jquery.tablescroll.js', array( 'jquery' ), AI1EC_VERSION );
+		wp_enqueue_script( 'modernizr.custom.78720', AI1EC_JS_URL . '/modernizr.custom.78720.js', array(), AI1EC_VERSION );
 		// Include element selector function
-		wp_enqueue_script( 'ai1ec-element-selector', AI1EC_JS_URL . '/element-selector.js', array( 'jquery', 'jquery.scrollTo' ), 1 );
+		wp_enqueue_script( 'ai1ec-element-selector', AI1EC_JS_URL . '/element-selector.js', array( 'jquery', 'jquery.scrollTo' ), AI1EC_VERSION );
 		// Include custom script
 		wp_enqueue_script( 'ai1ec-calendar', AI1EC_JS_URL . '/calendar.js',
-			array( 'jquery', 'jquery.scrollTo', 'jquery.tableScroll', 'modernizr.custom.78720' ), 1 );
+			array( 'jquery', 'jquery.scrollTo', 'jquery.tableScroll', 'modernizr.custom.78720' ), AI1EC_VERSION );
 
 		$data = array(
-			// Point script to AJAX URL
-			'ajaxurl'       => admin_url( 'admin-ajax.php' ),
+			// Point script to AJAX URL - use relative to plugin URL to fix domain mapping issues
+			'ajaxurl'       => site_url( 'wp-admin/admin-ajax.php' ),
 			// What this view defaults to, in case there is no #hash appended
 			'default_hash'  => '#' . http_build_query( $this->request ),
 			'export_url'    => AI1EC_EXPORT_URL,

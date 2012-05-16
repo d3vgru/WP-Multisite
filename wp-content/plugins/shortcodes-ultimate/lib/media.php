@@ -45,7 +45,7 @@
 			$player_id = uniqid( '_', false );
 
 			if ( is_array( $jwplayer ) ) {
-				foreach( $jwplayer as $jwplayer_option => $jwplayer_value ) {
+				foreach ( $jwplayer as $jwplayer_option => $jwplayer_value ) {
 					$jwplayer_options .= ',' . $jwplayer_option . ':"' . $jwplayer_value . '"';
 				}
 			}

@@ -3,8 +3,8 @@ Contributors: netweblogic
 Donate link: http://netweblogic.com/wordpress/plugins/login-with-ajax/
 Tags: Login, Ajax, Redirect, BuddyPress, MU, WPMU, sidebar, admin, widget
 Requires at least: 2.8
-Tested up to: 3.3.1
-Stable tag: 3.0.4
+Tested up to: 3.3.2
+Stable tag: 3.0.4.1
 
 Add smooth ajax login and registration effects to your blog and choose where users get redirected upon login/logout. Supports SSL, MU, and BuddyPress.
 
@@ -207,3 +207,6 @@ For further questions and answers (or to submit one yourself) go to our [http://
 * added japanese
 * updated iranian
 * added registration attribute to template tags/shortcode
+
+= 3.0.4.1 =
+* fixed xss vulnerability for re-enlistment on wordpress repo, more on the way

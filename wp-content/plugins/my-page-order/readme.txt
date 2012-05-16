@@ -3,8 +3,8 @@ Contributors: froman118
 Donate link: http://geekyweekly.com/gifts-and-donations
 Tags: page, order, sidebar, widget
 Requires at least: 2.8
-Tested up to: 3.0
-Stable tag: 3.0a
+Tested up to: 3.3.2
+Stable tag: 3.3.2
 
 My Page Order allows you to set the order of pages through a drag and drop interface.
 
@@ -17,6 +17,8 @@ My Page Order allows you to set the order of pages through a drag and drop inter
 My Page Order has been out since WP 1.5 (2006) and hasn't really changed since then. As of version 2.8.6 of the plugin I'm breaking backwards compatibility to add new features like a replacement widget. Keep using version [2.8.3](http://downloads.wordpress.org/plugin/my-page-order.2.8.3.zip) if you are not on WP 2.8 yet.
 
 == Change Log ==
+= 3.3.1 =
+* Added Danish translation
 = 3.0a =
 * Filtering out Auto Drafts now
 * Fix for widget to work with Twenty Ten, if "Show Home" is not used, falls back to using wp_list_pages instead of wp_page_menu

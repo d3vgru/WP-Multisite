@@ -85,3 +85,11 @@
 <?php _e( 'Display <strong>Publish</strong> at bottom of Edit Event form', AI1EC_PLUGIN_NAME ) ?>
 </label>
 <br class="clear" />
+
+<h2><?php _e( 'Sharing data', AI1EC_PLUGIN_NAME ) ?></h2>
+
+<label for="allow_statistics"> 
+<input class="checkbox" name="allow_statistics" id="allow_statistics" type="checkbox" value="1" <?php echo $allow_statistics ?> /> 
+<?php _e( 'Allow The Seed to collect statistics', AI1EC_PLUGIN_NAME ) ?> 
+</label> 
+<br class="clear" />

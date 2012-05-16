@@ -68,6 +68,7 @@ class Ai1ec_App_Controller {
 		       $ai1ec_events_controller,
 		       $ai1ec_events_helper,
 		       $ai1ec_importer_controller,
+           $ai1ec_exporter_controller,
 		       $ai1ec_settings_controller,
 		       $ai1ec_settings;
 
@@ -85,6 +86,9 @@ class Ai1ec_App_Controller {
 
 		// Install/update cron as necessary
 		$this->install_cron();
+		
+		// Enable stats collection
+		$this->install_n_cron();
 
 		// ===========
 		// = ACTIONS =
@@ -114,6 +118,8 @@ class Ai1ec_App_Controller {
 		add_action( 'delete_post',                              array( &$ai1ec_events_controller, 'delete_post' ) );
 		// Cron job hook
 		add_action( 'ai1ec_cron',                               array( &$ai1ec_importer_controller, 'cron' ) );
+		// Notification cron job hook
+		add_action( 'ai1ec_n_cron',                             array( &$ai1ec_exporter_controller, 'n_cron' ) );
 		// Category colors
 		add_action( 'events_categories_add_form_fields',        array( &$ai1ec_events_controller, 'events_categories_add_form_fields' ) );
 		add_action( 'events_categories_edit_form_fields',       array( &$ai1ec_events_controller, 'events_categories_edit_form_fields' ) );
@@ -175,6 +181,9 @@ class Ai1ec_App_Controller {
 		// Display Repeat Box
 		add_action( 'wp_ajax_ai1ec_get_repeat_box', array( &$ai1ec_events_helper, 'get_repeat_box' ) );
 		add_action( 'wp_ajax_ai1ec_get_date_picker_box', array( &$ai1ec_events_helper, 'get_date_picker_box' ) );
+		
+		// Disable notification
+		add_action( 'wp_ajax_ai1ec_disable_notification', array( &$ai1ec_settings_controller, 'disable_notification' ) );
 		
 		// ==============
 		// = Shortcodes =
@@ -332,6 +341,40 @@ class Ai1ec_App_Controller {
 			wp_schedule_event( time(), $ai1ec_settings->cron_freq, 'ai1ec_cron' );
 			// update the cron version
 			update_option( 'ai1ec_cron_version', AI1EC_CRON_VERSION );
+		}
+	}
+	
+	/**
+	 * install_notification_cron function
+	 *
+	 * This function sets up the cron job for collecting stats
+	 *
+	 * @return void
+	 **/
+	function install_n_cron() {
+		global $ai1ec_settings;
+		
+		// if stats are disabled, cancel the cron
+		if( $ai1ec_settings->allow_statistics == false ) {
+			// delete our scheduled crons
+			wp_clear_scheduled_hook( 'ai1ec_n_cron_version' );
+			
+			// remove the cron version
+			delete_option( 'ai1ec_n_cron_version' );
+			
+			// prevent the execution of the code below
+			return;
+		}
+		
+		// If existing CRON version is not consistent with current plugin's version,
+		// or does not exist, then create/update cron using
+		if( get_option( 'ai1ec_n_cron_version' ) != AI1EC_N_CRON_VERSION ) {
+			// delete our scheduled crons
+			wp_clear_scheduled_hook( 'ai1ec_n_cron_version' );
+			// set the new cron
+			wp_schedule_event( time(), AI1EC_N_CRON_FREQ, 'ai1ec_n_cron' );
+			// update the cron version
+			update_option( 'ai1ec_n_cron_version', AI1EC_N_CRON_VERSION );
 		}
 	}
 

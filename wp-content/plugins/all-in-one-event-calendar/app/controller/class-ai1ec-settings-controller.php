@@ -257,6 +257,23 @@ class Ai1ec_Settings_Controller {
 
 		$ai1ec_view_helper->json_response( $output );
 	}
+	
+	/**
+	 * disable_notification function
+	 *
+	 * @return void
+	 **/
+	function disable_notification() {
+		global $ai1ec_view_helper, $ai1ec_settings;
+		
+		$ai1ec_settings->update_notification( false );
+		$output = array(
+			'error' 	=> false,
+			'message'	=> 'Request successful.'
+		);
+
+		$ai1ec_view_helper->json_response( $output );
+	}
 
 	/**
 	 * add_meta_boxes function
@@ -306,9 +323,9 @@ class Ai1ec_Settings_Controller {
 
 		if( $hook_suffix == 'widgets.php' ) {
 			// Scripts
-			wp_enqueue_script( 'ai1ec-widget',     AI1EC_JS_URL  . '/widget.js',           array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-widget',     AI1EC_JS_URL  . '/widget.js', array( 'jquery' ), AI1EC_VERSION );
 			// Styles
-			wp_enqueue_style(  'ai1ec-widget', AI1EC_CSS_URL . '/widget.css' );
+			wp_enqueue_style(  'ai1ec-widget', AI1EC_CSS_URL . '/widget.css', array(), AI1EC_VERSION );
 		}
 
 		if( isset( $ai1ec_settings->settings_page ) && $hook_suffix == $ai1ec_settings->settings_page ) {
@@ -317,13 +334,13 @@ class Ai1ec_Settings_Controller {
 			wp_enqueue_script( 'wp-lists' );
 			wp_enqueue_script( 'postbox' );
 			
-			wp_enqueue_script( 'ai1ec-settings', AI1EC_JS_URL . '/settings.js', array( 'jquery' ) );
+			wp_enqueue_script( 'ai1ec-settings', AI1EC_JS_URL . '/settings.js', array( 'jquery' ), AI1EC_VERSION );
 			
 			wp_localize_script( 'ai1ec-settings', 'ai1ec_settings', array(
 					'page' => $ai1ec_settings->settings_page,
 				) );
 			// Styles
-			wp_enqueue_style(  'ai1ec-widget', AI1EC_CSS_URL . '/settings.css' );
+			wp_enqueue_style(  'ai1ec-widget', AI1EC_CSS_URL . '/settings.css', array(), AI1EC_VERSION );
 		}
 	}
 

@@ -56,3 +56,23 @@ function url_get_contents( $url ) {
 
 	return $output;
 }
+
+/**
+ * is_curl_available function
+ *
+ * checks if cURL is enabled on the system
+ *
+ * @return bool
+ **/
+function is_curl_available() { 
+	
+	if( ! function_exists( "curl_init" )   && 
+      ! function_exists( "curl_setopt" ) && 
+      ! function_exists( "curl_exec" )   && 
+      ! function_exists( "curl_close" ) ) {
+			
+			return false; 
+	}
+	
+	return true;
+}

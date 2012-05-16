@@ -2,9 +2,9 @@
 /*
 Plugin Name: Login With Ajax
 Plugin URI: http://netweblogic.com/wordpress/plugins/login-with-ajax/
-Description: Ajax driven login widget. Customisable from within your template folder, and advanced settings from the admin area. 
+Description: Ajax driven login widget. Customisable from within your template folder, and advanced settings from the admin area.
 Author: NetWebLogic
-Version: 3.0.4
+Version: 3.0.4.1
 Author URI: http://netweblogic.com/
 Tags: Login, Ajax, Redirect, BuddyPress, MU, WPMU, sidebar, admin, widget
 
@@ -24,7 +24,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 class LoginWithAjax {
-	
+
 	/**
 	 * If logged in upon instantiation, it is a user object.
 	 * @var WP_User
@@ -49,7 +49,7 @@ class LoginWithAjax {
 	 * Location of footer file if one is found when generating a widget, for use in loading template footers.
 	 * @var string
 	 */
-	var $footer_loc;	
+	var $footer_loc;
 	/**
 	 * URL for the AJAX Login procedure in templates (including callback and template parameters)
 	 * @var string
@@ -65,38 +65,38 @@ class LoginWithAjax {
 	 * @var string
 	 */
 	var $url_register;
-	
-	
-	
+
+
+
 	// Class initialization
 	function LoginWithAjax() {
 		//Set when to run the plugin
 		add_action( 'widgets_init', array(&$this,'init') );
 	}
-	
+
 	// Actions to take upon initial action hook
 	function init(){
 		//Load LWA options
 		$this->data = get_option('lwa_data');
 		//Remember the current user, in case there is a logout
 		$this->current_user = wp_get_current_user();
-			
+
 		//Get Templates from theme and default by checking for folders - we assume a template works if a folder exists!
 		//Note that duplicate template names are overwritten in this order of precedence (highest to lowest) - Child Theme > Parent Theme > Plugin Defaults
 		//First are the defaults in the plugin directory
 		$this->find_templates( path_join( WP_PLUGIN_DIR , basename( dirname( __FILE__ ) ). "/widget/") );
 		//Now, the parent theme (if exists)
 		if( get_stylesheet_directory() != get_template_directory() ){
-			$this->find_templates( get_template_directory().'/plugins/login-with-ajax/' );				
-		}	
+			$this->find_templates( get_template_directory().'/plugins/login-with-ajax/' );
+		}
 		//Finally, the child theme
 		$this->find_templates( get_stylesheet_directory().'/plugins/login-with-ajax/' );
-		
+
 		//Generate URLs for login, remember, and register
 		$this->url_login = $this->template_link(site_url('wp-login.php', 'login_post'));
 		$this->url_register = $this->template_link(site_url('wp-login.php?action=register', 'login_post'));
 		$this->url_remember = $this->template_link(site_url('wp-login.php?action=lostpassword', 'login_post'));
-		
+
 		//Make decision on what to display
 		if ( isset($_REQUEST["login-with-ajax"]) ) { //AJAX Request
 			$this->ajax();
@@ -117,8 +117,8 @@ class LoginWithAjax {
 				}else{ //Default file in plugin folder
 					wp_enqueue_script( "login-with-ajax", $plugin_url."/widget/login-with-ajax.js", array( 'jquery' ) );
 				}
-				
-				//Enqueue stylesheets - Only one style enqueued here.... theme CSS takes priority, then default CSS 
+
+				//Enqueue stylesheets - Only one style enqueued here.... theme CSS takes priority, then default CSS
 				//The concept here is one stylesheet is loaded which will work for multiple templates.
 				if( file_exists(get_stylesheet_directory().'/plugins/login-with-ajax/widget.css') ){ //Child Theme (or just theme)
 					wp_enqueue_style( "login-with-ajax", get_stylesheet_directory_uri().'/plugins/login-with-ajax/widget.css' );
@@ -128,24 +128,24 @@ class LoginWithAjax {
 					wp_enqueue_style( "login-with-ajax", $plugin_url."/widget/widget.css" );
 				}
 			}
-			
+
 			//Register widget
 			register_widget("LoginWithAjaxWidget");
-			
+
 			//Add logout/in redirection
 			add_action('login_form_register', array(&$this, 'register'));
 			add_action('wp_logout', array(&$this, 'logoutRedirect'));
-			add_action('login_redirect', array(&$this, 'loginRedirect'), 1, 3);	
+			add_action('login_redirect', array(&$this, 'loginRedirect'), 1, 3);
 			add_shortcode('login-with-ajax', array(&$this, 'shortcode'));
 			add_shortcode('lwa', array(&$this, 'shortcode'));
-			
+
 		}
 	}
-	
+
 	/*
 	 * LOGIN OPERATIONS
 	 */
-	
+
 	// Decides what action to take from the ajax request
 	function ajax(){
 		switch ( $_REQUEST["login-with-ajax"] ) {
@@ -162,7 +162,7 @@ class LoginWithAjax {
 		echo $return;
 		exit();
 	}
-	
+
 	// Reads ajax login creds via POSt, calls the login script and interprets the result
 	function login(){
 		$return = array(); //What we send back
@@ -185,8 +185,8 @@ class LoginWithAjax {
 					//Is this coming from a template?
 					$query_vars = ($_GET['template'] != '') ? "&template={$_GET['template']}" : '';
 					$query_vars .= ($_REQUEST['lwa_profile_link'] == '1') ? "&lwa_profile_link=1" : '';
-					$return['widget'] = get_bloginfo('wpurl')."?login-with-ajax-widget=1$query_vars";	
-					$return['message'] = __("Login successful, updating...",'login-with-ajax');			
+					$return['widget'] = get_bloginfo('wpurl')."?login-with-ajax-widget=1$query_vars";
+					$return['message'] = __("Login successful, updating...",'login-with-ajax');
 				}
 			} elseif ( strtolower(get_class($loginResult)) == 'wp_error' ) {
 				//User login failed
@@ -205,7 +205,7 @@ class LoginWithAjax {
 		//Return the result array with errors etc.
 		return $return;
 	}
-	
+
 	/**
 	 * Checks post data and registers user
 	 * @return string
@@ -230,12 +230,12 @@ class LoginWithAjax {
 			exit();
 		}
 	}
-	
+
 	// Reads ajax login creds via POSt, calls the login script and interprets the result
 	function remember(){
 		$return = array(); //What we send back
 		$result = retrieve_password();
-		
+
 		if ( $result === true ) {
 			//Password correctly remembered
 			$return['result'] = true;
@@ -253,11 +253,11 @@ class LoginWithAjax {
 		//Return the result array with errors etc.
 		return $return;
 	}
-	
+
 	/*
 	 * Redirect Functions
 	 */
-	
+
 	function logoutRedirect(){
 		$redirect = $this->getLogoutRedirect();
 		if($redirect != ''){
@@ -265,7 +265,7 @@ class LoginWithAjax {
 			exit();
 		}
 	}
-	
+
 	function getLogoutRedirect(){
 		$data = $this->data;
 		if( !empty($data['logout_redirect']) ){
@@ -277,16 +277,16 @@ class LoginWithAjax {
 			$user_role = array_shift($this->current_user->roles); //Checking for role-based redirects
 			if( !empty($data["role_logout"]) && is_array($data["role_logout"]) && isset($data["role_logout"][$user_role]) ){
 				$redirect = $data["role_logout"][$user_role];
-			}			
+			}
 		}
 		$redirect = str_replace("%LASTURL%", $_SERVER['HTTP_REFERER'], $redirect);
 		return $redirect;
 	}
-	
+
 	function loginRedirect( $redirect, $redirect_notsurewhatthisis, $user ){
 		$data = $this->data;
 		if(is_user_logged_in()){
-			$lwa_redirect = $this->getLoginRedirect($user); 
+			$lwa_redirect = $this->getLoginRedirect($user);
 			if( $lwa_redirect != '' ){
 				wp_redirect($lwa_redirect);
 				exit();
@@ -294,9 +294,9 @@ class LoginWithAjax {
 		}
 		return $redirect;
 	}
-	
+
 	function getLoginRedirect($user){
-		$data = $this->data;	
+		$data = $this->data;
 		if($data['login_redirect'] != ''){
 			$redirect = $data["login_redirect"];
 		}
@@ -304,18 +304,18 @@ class LoginWithAjax {
 			$user_role = array_shift($user->roles); //Checking for role-based redirects
 			if( isset($data["role_login"][$user_role]) ){
 				$redirect = $data["role_login"][$user_role];
-			}			
+			}
 		}
-		//Do string replacements	
+		//Do string replacements
 		$redirect = str_replace('%USERNAME%', $user->user_login, $redirect);
 		$redirect = str_replace("%LASTURL%", $_SERVER['HTTP_REFERER'], $redirect);
 		return $redirect;
 	}
-	
+
 	/*
 	 * WIDGET OPERATIONS
 	 */
-	
+
 	function widget($args, $instance = array() ){
 		//Extract widget arguments
 		extract($args);
@@ -342,7 +342,7 @@ class LoginWithAjax {
 			include ( $template_loc != '' ) ? $template_loc : 'widget/default/widget_out.php';
 		}
 	}
-	
+
 	function shortcode($atts){
 		$defaults = array( 'is_widget' => false, 'profile_link' => false, 'registration' => 1 );
 		$atts = shortcode_atts($defaults, $atts);
@@ -350,7 +350,7 @@ class LoginWithAjax {
 		$this->widget(array(), $atts );
 		return ob_get_clean();
 	}
-	
+
 	function new_user_notification($user_login, $plaintext_pass, $user_email, $blogname){
 		//Copied out of /wp-includes/pluggable.php
 		$message = $this->data['notification_message'];
@@ -358,20 +358,20 @@ class LoginWithAjax {
 		$message = str_replace('%PASSWORD%', $plaintext_pass, $message);
 		$message = str_replace('%BLOGNAME%', $blogname, $message);
 		$message = str_replace('%BLOGURL%', get_bloginfo('wpurl'), $message);
-		
+
 		$subject = $this->data['notification_subject'];
 		$subject = str_replace('%BLOGNAME%', $blogname, $subject);
 		$subject = str_replace('%BLOGURL%', get_bloginfo('wpurl'), $subject);
-			
+
 		wp_mail($user_email, $subject, $message);
-	}	
-	
+	}
+
 	/*
 	 * Auxillary Functions
 	 */
-	
+
 	//Checks a directory for folders and populates the template file
-	function find_templates($dir){	
+	function find_templates($dir){
 		if (is_dir($dir)) {
 		    if ($dh = opendir($dir)) {
 		        while (($file = readdir($dh)) !== false) {
@@ -384,7 +384,7 @@ class LoginWithAjax {
 		    }
 		}
 	}
-	
+
 	//Add template link and JSON callback var to the URL
 	function template_link( $content ){
 		if(strstr($content, '?')){
@@ -394,7 +394,7 @@ class LoginWithAjax {
 		}
 		return $content;
 	}
-	
+
 	//PHP4 Safe JSON encoding
 	function json_encode($array){
 		if( !function_exists("json_encode") ){
@@ -402,7 +402,7 @@ class LoginWithAjax {
 		}else{
 			$return = $this->array_to_json($array);
 		}
-		if( isset($_GET['callback']) ){
+		if( isset($_REQUEST['callback']) && preg_match("/^jQuery[_a-zA-Z0-9]+$/", $_REQUEST['callback']) ){
 			$return = $_GET['callback']."($return)";
 		}
 		return $return;
@@ -451,12 +451,12 @@ class LoginWithAjax {
 	        }
 	        // Then we collapse the staging array into the JSON form:
 	        $result = "[ " . implode( ", ", $construct ) . " ]";
-	    }		
+	    }
 	    return $result;
 	}
 }
 //Add translation
-load_plugin_textdomain('login-with-ajax', false, "login-with-ajax/langs");  
+load_plugin_textdomain('login-with-ajax', false, "login-with-ajax/langs");
 
 //Include admin file if needed
 if(is_admin()){
@@ -479,7 +479,7 @@ function login_with_ajax($atts = ''){
 }
 
 // Start plugin
-global $LoginWithAjax; 
+global $LoginWithAjax;
 $LoginWithAjax = new LoginWithAjax();
 
 ?>

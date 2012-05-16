@@ -3,13 +3,13 @@
  * TimThumb by Ben Gillbanks and Mark Maunder
  * Based on work done by Tim McDaniels and Darren Hoyt
  * http://code.google.com/p/timthumb/
- * 
+ *
  * GNU General Public License, version 2
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
  * Examples and documentation available on the project homepage
  * http://www.binarymoon.co.uk/projects/timthumb/
- * 
+ *
  * $Rev$
  */
 
@@ -20,7 +20,7 @@
  * loaded by timthumb. This will save you having to re-edit these variables
  * everytime you download a new version
 */
-define ('VERSION', '2.8.5');																		// Version of this script 
+define ('VERSION', '2.8.10');																		// Version of this script
 //Load a config file if it exists. Otherwise, use the values below
 if( file_exists(dirname(__FILE__) . '/timthumb-config.php'))	require_once('timthumb-config.php');
 if(! defined('DEBUG_ON') )					define ('DEBUG_ON', false);								// Enable debug logging to web server error log (STDERR)
@@ -30,15 +30,15 @@ if(! defined('BLOCK_EXTERNAL_LEECHERS') ) 	define ('BLOCK_EXTERNAL_LEECHERS', fa
 
 //Image fetching and caching
 if(! defined('ALLOW_EXTERNAL') )			define ('ALLOW_EXTERNAL', TRUE);						// Allow image fetching from external websites. Will check against ALLOWED_SITES if ALLOW_ALL_EXTERNAL_SITES is false
-if(! defined('ALLOW_ALL_EXTERNAL_SITES') ) 	define ('ALLOW_ALL_EXTERNAL_SITES', false);				// Less secure. 
+if(! defined('ALLOW_ALL_EXTERNAL_SITES') ) 	define ('ALLOW_ALL_EXTERNAL_SITES', false);				// Less secure.
 if(! defined('FILE_CACHE_ENABLED') ) 		define ('FILE_CACHE_ENABLED', TRUE);					// Should we store resized/modified images on disk to speed things up?
-if(! defined('FILE_CACHE_TIME_BETWEEN_CLEANS'))	define ('FILE_CACHE_TIME_BETWEEN_CLEANS', 86400);	// How often the cache is cleaned 
+if(! defined('FILE_CACHE_TIME_BETWEEN_CLEANS'))	define ('FILE_CACHE_TIME_BETWEEN_CLEANS', 86400);	// How often the cache is cleaned
 
 if(! defined('FILE_CACHE_MAX_FILE_AGE') ) 	define ('FILE_CACHE_MAX_FILE_AGE', 86400);				// How old does a file have to be to be deleted from the cache
 if(! defined('FILE_CACHE_SUFFIX') ) 		define ('FILE_CACHE_SUFFIX', '.timthumb.txt');			// What to put at the end of all files in the cache directory so we can identify them
-if(! defined('FILE_CACHE_PREFIX') ) 		define ('FILE_CACHE_PREFIX', 'timthumb');				// What to put at the end of all files in the cache directory so we can identify them
+if(! defined('FILE_CACHE_PREFIX') ) 		define ('FILE_CACHE_PREFIX', 'timthumb');				// What to put at the beg of all files in the cache directory so we can identify them
 if(! defined('FILE_CACHE_DIRECTORY') ) 		define ('FILE_CACHE_DIRECTORY', './cache');				// Directory where images are cached. Left blank it will use the system temporary directory (which is better for security)
-if(! defined('MAX_FILE_SIZE') )				define ('MAX_FILE_SIZE', 10485760);						// 10 Megs is 10485760. This is the max internal or external file size that we'll process.  
+if(! defined('MAX_FILE_SIZE') )				define ('MAX_FILE_SIZE', 10485760);						// 10 Megs is 10485760. This is the max internal or external file size that we'll process.
 if(! defined('CURL_TIMEOUT') )				define ('CURL_TIMEOUT', 20);							// Timeout duration for Curl. This only applies if you have Curl installed and aren't using PHP's default URL fetching mechanism.
 if(! defined('WAIT_BETWEEN_FETCH_ERRORS') )	define ('WAIT_BETWEEN_FETCH_ERRORS', 3600);				//Time to wait between errors fetching remote file
 
@@ -49,8 +49,9 @@ if(! defined('BROWSER_CACHE_DISABLE') ) 	define ('BROWSER_CACHE_DISABLE', false)
 //Image size and defaults
 if(! defined('MAX_WIDTH') ) 			define ('MAX_WIDTH', 1500);									// Maximum image width
 if(! defined('MAX_HEIGHT') ) 			define ('MAX_HEIGHT', 1500);								// Maximum image height
-if(! defined('NOT_FOUND_IMAGE') )		define ('NOT_FOUND_IMAGE', '');								// Image to serve if any 404 occurs 
-if(! defined('ERROR_IMAGE') )			define ('ERROR_IMAGE', '');									// Image to serve if an error occurs instead of showing error message 
+if(! defined('NOT_FOUND_IMAGE') )		define ('NOT_FOUND_IMAGE', '');								// Image to serve if any 404 occurs
+if(! defined('ERROR_IMAGE') )			define ('ERROR_IMAGE', '');									// Image to serve if an error occurs instead of showing error message
+if(! defined('PNG_IS_TRANSPARENT') ) 	define ('PNG_IS_TRANSPARENT', FALSE);  //42 Define if a png image should have a transparent background color. Use False value if you want to display a custom coloured canvas_colour
 if(! defined('DEFAULT_Q') )				define ('DEFAULT_Q', 90);									// Default image quality. Allows overrid in timthumb-config.php
 if(! defined('DEFAULT_ZC') )			define ('DEFAULT_ZC', 1);									// Default zoom/crop setting. Allows overrid in timthumb-config.php
 if(! defined('DEFAULT_F') )				define ('DEFAULT_F', '');									// Default image filters. Allows overrid in timthumb-config.php
@@ -60,18 +61,18 @@ if(! defined('DEFAULT_CC') )			define ('DEFAULT_CC', 'ffffff');							// Default
 
 //Image compression is enabled if either of these point to valid paths
 
-//These are now disabled by default because the file sizes of PNGs (and GIFs) are much smaller than we used to generate. 
+//These are now disabled by default because the file sizes of PNGs (and GIFs) are much smaller than we used to generate.
 //They only work for PNGs. GIFs and JPEGs are not affected.
-if(! defined('OPTIPNG_ENABLED') ) 		define ('OPTIPNG_ENABLED', false);  
-if(! defined('OPTIPNG_PATH') ) 			define ('OPTIPNG_PATH', '/usr/bin/optipng'); //This will run first because it gives better compression than pngcrush. 
-if(! defined('PNGCRUSH_ENABLED') ) 		define ('PNGCRUSH_ENABLED', false); 
+if(! defined('OPTIPNG_ENABLED') ) 		define ('OPTIPNG_ENABLED', false);
+if(! defined('OPTIPNG_PATH') ) 			define ('OPTIPNG_PATH', '/usr/bin/optipng'); //This will run first because it gives better compression than pngcrush.
+if(! defined('PNGCRUSH_ENABLED') ) 		define ('PNGCRUSH_ENABLED', false);
 if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush'); //This will only run if OPTIPNG_PATH is not set or is not valid
 
 /*
 	-------====Website Screenshots configuration - BETA====-------
-	
-	If you just want image thumbnails and don't want website screenshots, you can safely leave this as is.	
-	
+
+	If you just want image thumbnails and don't want website screenshots, you can safely leave this as is.
+
 	If you would like to get website screenshots set up, you will need root access to your own server.
 
 	Enable ALLOW_ALL_EXTERNAL_SITES so you can fetch any external web page. This is more secure now that we're using a non-web folder for cache.
@@ -90,7 +91,7 @@ if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush');
 	9. If you get a file called test.png with something in it, it probably worked. Now test the script by accessing it as follows:
 	10. http://yoursite.com/path/to/timthumb.php?src=http://markmaunder.com/&webshot=1
 
-	Notes on performance: 
+	Notes on performance:
 	The first time a webshot loads, it will take a few seconds.
 	From then on it uses the regular timthumb caching mechanism with the configurable options above
 	and loading will be very fast.
@@ -98,14 +99,14 @@ if(! defined('PNGCRUSH_PATH') ) 		define ('PNGCRUSH_PATH', '/usr/bin/pngcrush');
 	--ADVANCED USERS ONLY--
 	If you'd like a slight speedup (about 25%) and you know Linux, you can run the following command which will keep Xvfb running in the background.
 	nohup Xvfb :100 -ac -nolisten tcp -screen 0, 1024x768x24 > /dev/null 2>&1 &
-	Then set WEBSHOT_XVFB_RUNNING = true below. This will save your server having to fire off a new Xvfb server and shut it down every time a new shot is generated. 
+	Then set WEBSHOT_XVFB_RUNNING = true below. This will save your server having to fire off a new Xvfb server and shut it down every time a new shot is generated.
 	You will need to take responsibility for keeping Xvfb running in case it crashes. (It seems pretty stable)
-	You will also need to take responsibility for server security if you're running Xvfb as root. 
+	You will also need to take responsibility for server security if you're running Xvfb as root.
 
 
 */
 if(! defined('WEBSHOT_ENABLED') ) 	define ('WEBSHOT_ENABLED', false);			//Beta feature. Adding webshot=1 to your query string will cause the script to return a browser screenshot rather than try to fetch an image.
-if(! defined('WEBSHOT_CUTYCAPT') ) 	define ('WEBSHOT_CUTYCAPT', '/usr/local/bin/CutyCapt'); //The path to CutyCapt. 
+if(! defined('WEBSHOT_CUTYCAPT') ) 	define ('WEBSHOT_CUTYCAPT', '/usr/local/bin/CutyCapt'); //The path to CutyCapt.
 if(! defined('WEBSHOT_XVFB') ) 		define ('WEBSHOT_XVFB', '/usr/bin/xvfb-run');		//The path to the Xvfb server
 if(! defined('WEBSHOT_SCREEN_X') ) 	define ('WEBSHOT_SCREEN_X', '1024');			//1024 works ok
 if(! defined('WEBSHOT_SCREEN_Y') ) 	define ('WEBSHOT_SCREEN_Y', '768');			//768 works ok
@@ -116,11 +117,11 @@ if(! defined('WEBSHOT_USER_AGENT') ) 	define ('WEBSHOT_USER_AGENT', "Mozilla/5.0
 if(! defined('WEBSHOT_JAVASCRIPT_ON') ) define ('WEBSHOT_JAVASCRIPT_ON', true);			//Setting to false might give you a slight speedup and block ads. But it could cause other issues.
 if(! defined('WEBSHOT_JAVA_ON') ) 	define ('WEBSHOT_JAVA_ON', false);			//Have only tested this as fase
 if(! defined('WEBSHOT_PLUGINS_ON') ) 	define ('WEBSHOT_PLUGINS_ON', true);			//Enable flash and other plugins
-if(! defined('WEBSHOT_PROXY') ) 	define ('WEBSHOT_PROXY', '');				//In case you're behind a proxy server. 
+if(! defined('WEBSHOT_PROXY') ) 	define ('WEBSHOT_PROXY', '');				//In case you're behind a proxy server.
 if(! defined('WEBSHOT_XVFB_RUNNING') )	define ('WEBSHOT_XVFB_RUNNING', false);			//ADVANCED: Enable this if you've got Xvfb running in the background.
 
 
-// If ALLOW_EXTERNAL is true and ALLOW_ALL_EXTERNAL_SITES is false, then external images will only be fetched from these domains and their subdomains. 
+// If ALLOW_EXTERNAL is true and ALLOW_ALL_EXTERNAL_SITES is false, then external images will only be fetched from these domains and their subdomains.
 if(! isset($ALLOWED_SITES)){
 	$ALLOWED_SITES = array (
 		'flickr.com',
@@ -197,17 +198,19 @@ class timthumb {
 			}
 			$this->cacheDirectory = FILE_CACHE_DIRECTORY;
 			if (!touch($this->cacheDirectory . '/index.html')) {
-				$this->error("Could note create the index.html file - to fix this create an empty file named index.html file in the cache directory.");
+				$this->error("Could not create the index.html file - to fix this create an empty file named index.html file in the cache directory.");
 			}
 		} else {
 			$this->cacheDirectory = sys_get_temp_dir();
 		}
-		//Clean the cache before we do anything because we don't want the first visitor after FILE_CACHE_TIME_BETWEEN_CLEANS expires to get a stale image. 
+		//Clean the cache before we do anything because we don't want the first visitor after FILE_CACHE_TIME_BETWEEN_CLEANS expires to get a stale image.
 		$this->cleanCache();
-		
+
 		$this->myHost = preg_replace('/^www\./i', '', $_SERVER['HTTP_HOST']);
 		$this->src = $this->param('src');
 		$this->url = parse_url($this->src);
+		$this->src = preg_replace('/https?:\/\/(?:www\.)?' . $this->myHost . '/i', '', $this->src);
+
 		if(strlen($this->src) <= 3){
 			$this->error("No image specified");
 			return false;
@@ -224,9 +227,6 @@ class timthumb {
 			echo $imgData;
 			return false;
 			exit(0);
-		}
-		if(preg_match('/https?:\/\/(?:www\.)?' . $this->myHost . '(?:$|\/)/i', $this->src)){
-			$this->src = preg_replace('/https?:\/\/(?:www\.)?' . $this->myHost . '/i', '', $this->src);
 		}
 		if(preg_match('/^https?:\/\/[^\/]+/i', $this->src)){
 			$this->debug(2, "Is a request for an external URL: " . $this->src);
@@ -311,7 +311,7 @@ class timthumb {
 		return true;
 	}
 	protected function handleErrors(){
-		if($this->haveErrors()){ 
+		if($this->haveErrors()){
 			if(NOT_FOUND_IMAGE && $this->is404()){
 				if($this->serveImg(NOT_FOUND_IMAGE)){
 					exit(0);
@@ -326,9 +326,8 @@ class timthumb {
 					$this->error("Additionally, the error image that is configured could not be found or there was an error serving it.");
 				}
 			}
-				
-			$this->serveErrors(); 
-			exit(0); 
+			$this->serveErrors();
+			exit(0);
 		}
 		return false;
 	}
@@ -386,7 +385,7 @@ class timthumb {
 						$this->debug(3, "Empty cachefile is still fresh so returning message saying we had an error fetching this image from remote host.");
 						$this->set404();
 						$this->error("An error occured fetching image.");
-						return false; 
+						return false;
 					}
 				}
 			} else {
@@ -416,12 +415,12 @@ class timthumb {
 		return false;
 	}
 	protected function serveErrors(){
+		header ($_SERVER['SERVER_PROTOCOL'] . ' 400 Bad Request');
 		$html = '<ul>';
 		foreach($this->errors as $err){
 			$html .= '<li>' . htmlentities($err) . '</li>';
 		}
 		$html .= '</ul>';
-		header ($_SERVER['SERVER_PROTOCOL'] . ' 400 Bad Request');
 		echo '<h1>A TimThumb error has occured</h1>The following error(s) occured:<br />' . $html . '<br />';
 		echo '<br />Query String : ' . htmlentities ($_SERVER['QUERY_STRING']);
 		echo '<br />TimThumb version : ' . VERSION . '</pre>';
@@ -445,7 +444,7 @@ class timthumb {
 		if($this->processImageAndWriteToCache($this->localImage)){
 			$this->serveCacheFile();
 			return true;
-		} else { 
+		} else {
 			return false;
 		}
 	}
@@ -455,12 +454,12 @@ class timthumb {
 		}
 		$this->debug(3, "cleanCache() called");
 		$lastCleanFile = $this->cacheDirectory . '/timthumb_cacheLastCleanTime.touch';
-		
+
 		//If this is a new timthumb installation we need to create the file
 		if(! is_file($lastCleanFile)){
 			$this->debug(1, "File tracking last clean doesn't exist. Creating $lastCleanFile");
 			if (!touch($lastCleanFile)) {
-				$this->error("Could note create cache clean timestamp file.");
+				$this->error("Could not create cache clean timestamp file.");
 			}
 			return;
 		}
@@ -468,14 +467,16 @@ class timthumb {
 			$this->debug(1, "Cache was last cleaned more than " . FILE_CACHE_TIME_BETWEEN_CLEANS . " seconds ago. Cleaning now.");
 			// Very slight race condition here, but worst case we'll have 2 or 3 servers cleaning the cache simultaneously once a day.
 			if (!touch($lastCleanFile)) {
-				$this->error("Could note create cache clean timestamp file.");
+				$this->error("Could not create cache clean timestamp file.");
 			}
 			$files = glob($this->cacheDirectory . '/*' . FILE_CACHE_SUFFIX);
-			$timeAgo = time() - FILE_CACHE_MAX_FILE_AGE;
-			foreach($files as $file){
-				if(@filemtime($file) < $timeAgo){
-					$this->debug(3, "Deleting cache file $file older than max age: " . FILE_CACHE_MAX_FILE_AGE . " seconds");
-					@unlink($file);
+			if ($files) {
+				$timeAgo = time() - FILE_CACHE_MAX_FILE_AGE;
+				foreach($files as $file){
+					if(@filemtime($file) < $timeAgo){
+						$this->debug(3, "Deleting cache file $file older than max age: " . FILE_CACHE_MAX_FILE_AGE . " seconds");
+						@unlink($file);
+					}
 				}
 			}
 			return true;
@@ -514,7 +515,7 @@ class timthumb {
 			);
 		}
 
-		// get standard input properties		
+		// get standard input properties
 		$new_width =  (int) abs ($this->param('w', 0));
 		$new_height = (int) abs ($this->param('h', 0));
 		$zoom_crop = (int) $this->param('zc', DEFAULT_ZC);
@@ -523,6 +524,7 @@ class timthumb {
 		$filters = $this->param('f', DEFAULT_F);
 		$sharpen = (bool) $this->param('s', DEFAULT_S);
 		$canvas_color = $this->param('cc', DEFAULT_CC);
+		$canvas_trans = (bool) $this->param('ct', '1');
 
 		// set default width and height if neither are set already
 		if ($new_width == 0 && $new_height == 0) {
@@ -573,16 +575,25 @@ class timthumb {
 		$canvas = imagecreatetruecolor ($new_width, $new_height);
 		imagealphablending ($canvas, false);
 
-		if (strlen ($canvas_color) < 6) {
-			$canvas_color = 'ffffff';
-		}
+		if (strlen($canvas_color) == 3) { //if is 3-char notation, edit string into 6-char notation
+			$canvas_color =  str_repeat(substr($canvas_color, 0, 1), 2) . str_repeat(substr($canvas_color, 1, 1), 2) . str_repeat(substr($canvas_color, 2, 1), 2);
+		} else if (strlen($canvas_color) != 6) {
+			$canvas_color = DEFAULT_CC; // on error return default canvas color
+ 		}
 
 		$canvas_color_R = hexdec (substr ($canvas_color, 0, 2));
 		$canvas_color_G = hexdec (substr ($canvas_color, 2, 2));
-		$canvas_color_B = hexdec (substr ($canvas_color, 2, 2));
+		$canvas_color_B = hexdec (substr ($canvas_color, 4, 2));
 
 		// Create a new transparent color for image
-		$color = imagecolorallocatealpha ($canvas, $canvas_color_R, $canvas_color_G, $canvas_color_B, 127);
+	    // If is a png and PNG_IS_TRANSPARENT is false then remove the alpha transparency
+		// (and if is set a canvas color show it in the background)
+		if(preg_match('/^image\/png$/i', $mimeType) && !PNG_IS_TRANSPARENT && $canvas_trans){
+			$color = imagecolorallocatealpha ($canvas, $canvas_color_R, $canvas_color_G, $canvas_color_B, 127);
+		}else{
+			$color = imagecolorallocatealpha ($canvas, $canvas_color_R, $canvas_color_G, $canvas_color_B, 0);
+		}
+
 
 		// Completely fill the background of the new image with allocated color.
 		imagefill ($canvas, 0, 0, $color);
@@ -728,10 +739,10 @@ class timthumb {
 
 		$imgType = "";
 		$tempfile = tempnam($this->cacheDirectory, 'timthumb_tmpimg_');
-		if(preg_match('/^image\/(?:jpg|jpeg)$/i', $mimeType)){ 
+		if(preg_match('/^image\/(?:jpg|jpeg)$/i', $mimeType)){
 			$imgType = 'jpg';
-			imagejpeg($canvas, $tempfile, $quality); 
-		} else if(preg_match('/^image\/png$/i', $mimeType)){ 
+			imagejpeg($canvas, $tempfile, $quality);
+		} else if(preg_match('/^image\/png$/i', $mimeType)){
 			$imgType = 'png';
 			imagepng($canvas, $tempfile, floor($quality * 0.09));
 		} else if(preg_match('/^image\/gif$/i', $mimeType)){
@@ -783,7 +794,7 @@ class timthumb {
 		$tempfile4 = tempnam($this->cacheDirectory, 'timthumb_tmpimg_');
 		$context = stream_context_create ();
 		$fp = fopen($tempfile,'r',0,$context);
-		file_put_contents($tempfile4, $this->filePrependSecurityBlock . $imgType . ' ?' . '>'); //6 extra bytes, first 3 being image type 
+		file_put_contents($tempfile4, $this->filePrependSecurityBlock . $imgType . ' ?' . '>'); //6 extra bytes, first 3 being image type
 		file_put_contents($tempfile4, $fp, FILE_APPEND);
 		fclose($fp);
 		@unlink($tempfile);
@@ -813,21 +824,21 @@ class timthumb {
 	protected function calcDocRoot(){
 		$docRoot = @$_SERVER['DOCUMENT_ROOT'];
 		if (defined('LOCAL_FILE_BASE_DIRECTORY')) {
-			$docRoot = LOCAL_FILE_BASE_DIRECTORY;   
+			$docRoot = LOCAL_FILE_BASE_DIRECTORY;
 		}
-		if(!isset($docRoot)){ 
+		if(!isset($docRoot)){
 			$this->debug(3, "DOCUMENT_ROOT is not set. This is probably windows. Starting search 1.");
 			if(isset($_SERVER['SCRIPT_FILENAME'])){
 				$docRoot = str_replace( '\\', '/', substr($_SERVER['SCRIPT_FILENAME'], 0, 0-strlen($_SERVER['PHP_SELF'])));
 				$this->debug(3, "Generated docRoot using SCRIPT_FILENAME and PHP_SELF as: $docRoot");
-			} 
+			}
 		}
-		if(!isset($docRoot)){ 
+		if(!isset($docRoot)){
 			$this->debug(3, "DOCUMENT_ROOT still is not set. Starting search 2.");
 			if(isset($_SERVER['PATH_TRANSLATED'])){
 				$docRoot = str_replace( '\\', '/', substr(str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']), 0, 0-strlen($_SERVER['PHP_SELF'])));
 				$this->debug(3, "Generated docRoot using PATH_TRANSLATED and PHP_SELF as: $docRoot");
-			} 
+			}
 		}
 		if($docRoot && $_SERVER['DOCUMENT_ROOT'] != '/'){ $docRoot = preg_replace('/\/$/', '', $docRoot); }
 		$this->debug(3, "Doc root is: " . $docRoot);
@@ -835,13 +846,13 @@ class timthumb {
 
 	}
 	protected function getLocalImagePath($src){
-		$src = preg_replace('/^\//', '', $src); //strip off the leading '/'
+		$src = ltrim($src, '/'); //strip off the leading '/'
 		if(! $this->docRoot){
 			$this->debug(3, "We have no document root set, so as a last resort, lets check if the image is in the current dir and serve that.");
 			//We don't support serving images outside the current dir if we don't have a doc root for security reasons.
 			$file = preg_replace('/^.*?([^\/\\\\]+)$/', '$1', $src); //strip off any path info and just leave the filename.
 			if(is_file($file)){
-				return realpath($file);
+				return $this->realpath($file);
 			}
 			return $this->error("Could not find your website document root and the file specified doesn't exist in timthumbs directory. We don't support serving files outside timthumb's directory without a document root for security reasons.");
 		} //Do not go past this point without docRoot set
@@ -849,8 +860,8 @@ class timthumb {
 		//Try src under docRoot
 		if(file_exists ($this->docRoot . '/' . $src)) {
 			$this->debug(3, "Found file as " . $this->docRoot . '/' . $src);
-			$real = realpath($this->docRoot . '/' . $src);
-			if(stripos($real, $this->docRoot) == 0){
+			$real = $this->realpath($this->docRoot . '/' . $src);
+			if(stripos($real, $this->docRoot) === 0){
 				return $real;
 			} else {
 				$this->debug(1, "Security block: The file specified occurs outside the document root.");
@@ -858,34 +869,34 @@ class timthumb {
 			}
 		}
 		//Check absolute paths and then verify the real path is under doc root
-		$absolute = realpath('/' . $src);
+		$absolute = $this->realpath('/' . $src);
 		if($absolute && file_exists($absolute)){ //realpath does file_exists check, so can probably skip the exists check here
 			$this->debug(3, "Found absolute path: $absolute");
 			if(! $this->docRoot){ $this->sanityFail("docRoot not set when checking absolute path."); }
-			if(stripos($absolute, $this->docRoot) == 0){
+			if(stripos($absolute, $this->docRoot) === 0){
 				return $absolute;
 			} else {
 				$this->debug(1, "Security block: The file specified occurs outside the document root.");
 				//and continue search
 			}
 		}
-		
+
 		$base = $this->docRoot;
-		
+
 		// account for Windows directory structure
 		if (strstr($_SERVER['SCRIPT_FILENAME'],':')) {
 			$sub_directories = explode('\\', str_replace($this->docRoot, '', $_SERVER['SCRIPT_FILENAME']));
 		} else {
 			$sub_directories = explode('/', str_replace($this->docRoot, '', $_SERVER['SCRIPT_FILENAME']));
 		}
-		
+
 		foreach ($sub_directories as $sub){
 			$base .= $sub . '/';
 			$this->debug(3, "Trying file as: " . $base . $src);
 			if(file_exists($base . $src)){
 				$this->debug(3, "Found file as: " . $base . $src);
-				$real = realpath($base . $src);
-				if(stripos($real, $this->docRoot) == 0){ 
+				$real = $this->realpath($base . $src);
+				if(stripos($real, $this->realpath($this->docRoot)) === 0){
 					return $real;
 				} else {
 					$this->debug(1, "Security block: The file specified occurs outside the document root.");
@@ -894,6 +905,16 @@ class timthumb {
 			}
 		}
 		return false;
+	}
+	protected function realpath($path){
+		//try to remove any relative paths
+		$remove_relatives = '/\w+\/\.\.\//';
+		while(preg_match($remove_relatives,$path)){
+		    $path = preg_replace($remove_relatives, '', $path);
+		}
+		//if any remain use PHP realpath to strip them out, otherwise return $path
+		//if using realpath, any symlinks will also be resolved
+		return preg_match('#^\.\./|/\.\./#', $path) ? realpath($path) : $path;
 	}
 	protected function toDelete($name){
 		$this->debug(3, "Scheduling file $name to delete on destruct.");
@@ -926,8 +947,8 @@ class timthumb {
 			return $this->error("Invalid URL supplied.");
 		}
 		$url = preg_replace('/[^A-Za-z0-9\-\.\_\~:\/\?\#\[\]\@\!\$\&\'\(\)\*\+\,\;\=]+/', '', $url); //RFC 3986
-		//Very important we don't allow injection of shell commands here. URL is between quotes and we are only allowing through chars allowed by a the RFC 
-		// which AFAIKT can't be used for shell injection. 
+		//Very important we don't allow injection of shell commands here. URL is between quotes and we are only allowing through chars allowed by a the RFC
+		// which AFAIKT can't be used for shell injection.
 		if(WEBSHOT_XVFB_RUNNING){
 			putenv('DISPLAY=:100.0');
 			$command = "$cuty $proxy --max-wait=$timeout --user-agent=\"$ua\" --javascript=$jsOn --java=$javaOn --plugins=$pluginsOn --js-can-open-windows=off --url=\"$url\" --out-format=$format --out=$tempfile";
@@ -1071,7 +1092,7 @@ class timthumb {
 			case 'image/gif':
 				$image = imagecreatefromgif ($src);
 				break;
-			
+
 			default:
 				$this->error("Unrecognised mimeType");
 		}
@@ -1082,7 +1103,7 @@ class timthumb {
 		$rem = @$_SERVER["REMOTE_ADDR"];
 		$ff = @$_SERVER["HTTP_X_FORWARDED_FOR"];
 		$ci = @$_SERVER["HTTP_CLIENT_IP"];
-		if(preg_match('/^(?:192\.168|172\.16|10\.|127\.)/', $rem)){ 
+		if(preg_match('/^(?:192\.168|172\.16|10\.|127\.)/', $rem)){
 			if($ff){ return $ff; }
 			if($ci){ return $ci; }
 			return $rem;
@@ -1155,7 +1176,7 @@ class timthumb {
 			curl_setopt ($curl, CURLOPT_WRITEFUNCTION, 'timthumb::curlWrite');
 			@curl_setopt ($curl, CURLOPT_FOLLOWLOCATION, true);
 			@curl_setopt ($curl, CURLOPT_MAXREDIRS, 10);
-			
+
 			$curlResult = curl_exec($curl);
 			fclose(self::$curlFH);
 			$httpStatus = curl_getinfo($curl, CURLINFO_HTTP_CODE);

@@ -163,7 +163,7 @@ class Ai1ec_App_Helper {
 		// ================================
 		// = support for custom post type =
 		// ================================
-		$supports = array( 'title', 'editor', 'comments', 'custom-fields' );
+		$supports = array( 'title', 'editor', 'comments', 'custom-fields', 'thumbnail' );
 
 		// =============================
 		// = args for custom post type =
@@ -670,6 +670,20 @@ class Ai1ec_App_Helper {
            $ai1ec_settings,
            $plugin_page;
 
+		if( $ai1ec_settings->show_data_notification ) {
+			$args = array(
+				'label'  => 'All-in-One Event Calendar Notice<br />',
+				'msg'    => sprintf( 'We collect some basic information about how your calendar works in order to deliver a better ' .
+				           'and faster calendar system and one that will help you promote your events even more.<br />' .
+                   'You can find more detailed information by <a href="%s" target="_blank">clicking here &raquo;</a><br />' .
+                   'You may opt-out from sending data to us by unchecking &quot;Allow The Seed to collect statistics&quot; checkbox located on plugin\'s <a href="%s">Settings page</a>',
+									 'http://theseednetwork.com/all-in-one-event-calendar-privacy-policy/',
+                   admin_url( 'edit.php?post_type=' . AI1EC_POST_TYPE . '&page=' . AI1EC_PLUGIN_NAME . '-settings' ) ),
+				'button' => (object) array( 'class' => 'ai1ec-dismiss-notification', 'value' => 'Dismiss' )
+			);
+			$ai1ec_view_helper->display( 'admin_notices.php', $args );
+		}
+
     // If calendar page ID has not been set, and we're not updating the settings
     // page, the calendar is not properly set up yet
     if( ! $ai1ec_settings->calendar_page_id || ! get_option( 'timezone_string' ) && ! isset( $_REQUEST['ai1ec_save_settings'] ) )
@@ -689,7 +703,7 @@ class Ai1ec_App_Helper {
 				// Else instruct user as to what to do on the settings page
 				} else {
 		      $args['msg'] = sprintf(
-			        __( 'The plugin is installed, but has not been configured. <a href="%s">Click here to set it up now »</a>', AI1EC_PLUGIN_NAME ),
+			        __( 'The plugin is installed, but has not been configured. <a href="%s">Click here to set it up now &raquo;</a>', AI1EC_PLUGIN_NAME ),
 							admin_url( 'edit.php?post_type=' . AI1EC_POST_TYPE . '&page=' . AI1EC_PLUGIN_NAME . '-settings' )
 						);
 				}
@@ -697,9 +711,9 @@ class Ai1ec_App_Helper {
 			} else {
 				$args['msg'] = __( 'The plugin is installed, but has not been configured. Please log in as a WordPress Administrator to set it up.', AI1EC_PLUGIN_NAME );
 			}
-
+			$args['label'] = __( 'All-in-One Event Calendar Notice:', AI1EC_PLUGIN_NAME );
       $ai1ec_view_helper->display( 'admin_notices.php', $args );
     }
-  }
+	}
 }
 // END class

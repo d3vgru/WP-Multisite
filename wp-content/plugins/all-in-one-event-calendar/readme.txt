@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: calendar, event, events, ics, ics calendar, ical-feed, ics feed, wordpress ics importer, wordpress ical importer, upcoming events, todo, notes, journal, freebusy, availability, web calendar, web events, webcal, google calendar, ical, iCalendar, all-in-one, ai1ec, google calendar sync, ical sync, events sync, holiday calendar, calendar 2011, events 2011, widget, events widget, upcoming events widget, calendar widget, agenda widget
 Requires at least: 3.1.3
 Tested up to: 3.3
-Stable tag: 1.4
+Stable tag: 1.5
 
 An event calendar system with month, week, agenda views, upcoming events widget, color-coded categories, recurrence, and import/export of .ics feeds.
 
@@ -83,6 +83,15 @@ http://www.youtube.com/watch?v=zZHpzfyukyU
 * Filter by post ids (separate ids by comma): **[ai1ec post_id="1, 2"]**
 
 == Changelog ==
+= Version 1.5 =
+* Added daily view
+* Various bug fixes
+* Added new translations
+* Added support for featured images
+* Better support for Multisite Ajax
+* Added support for DURATION property in iCalendar specs
+* Resolved FORCE_SSL_ADMIN issue
+
 = Version 1.4 =
 * Export ICS feeds with utf8 header
 * Import/Download ICS feeds with CURL if available, otherwise keep the current method

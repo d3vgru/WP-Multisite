@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "vani";
+  src: url('../fonts/Vani.ttf');
+}	
+#footer { position: relative; top: -50px;} /*this is to fix the bug with the footer*/
+.fu_wrap{
+	width:800px;
+	position: relative;
+}
+
+.fu_section{
+	border:1px solid #ddd;
+	border-bottom:0;
+	background:#f9f9f9;
+	width: 630px;
+}
+.fu_opts label{
+	font-size:12px;
+	font-weight:700;
+	width:200px;
+	display:block;
+	float:left;	
+}
+.fu_input {
+	padding:30px 10px;
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #fff;
+}
+.fu_input:nth-child(even)	{
+	background: #F0F0F0;
+}
+.fu_input label	{
+	display: block;
+	margin-bottom: 10px;	
+}
+.fu_opts small{
+	display:block;
+	float:right;
+	width:200px;
+	color:#999;
+}
+.fu_opts input[type="text"], .fu_opts select{
+	width:280px;
+	font-size:12px;
+	padding:4px;
+	color:#fff;
+	line-height:1em;
+	background:#f3f3f3;
+}
+.fu_input input:focus, .fu_input textarea:focus{
+		background:#fff;
+}
+.fu_input textarea{
+	height:100px;
+	font-size:12px;
+	padding:4px;
+	color:#333;
+	line-height:1.5em;
+	background:#f3f3f3;
+}
+.fu_title h3 {
+	cursor:pointer;
+	font-size:1em;
+	text-transform: uppercase;
+	margin:0;
+	font-weight:bold;
+	color:#232323;
+	float:left;
+	width:80%;
+	padding:14px 4px;
+}
+
+.fu_title{
+	cursor:pointer;
+	border-bottom:1px solid #ddd;
+	background:#eee;
+	padding:0;
+	}
+
+.fu_title h3 img.inactive{
+	margin:-8px 10px 0 2px;
+	width:32px;
+	height:32px;	
+	background:url('images/pointer.png') no-repeat 0 0;
+	float:left;
+	-moz-border-radius:6px;
+}
+
+.fu_title h3 img.active{
+	margin:-8px 10px 0 2px;
+	width:32px;
+	height:32px;	
+	background:url('images/pointer.png') no-repeat  0 -32px;
+	float:left;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+}
+.fu_title h3:hover img{
+	background:url('images/pointer_over.png') no-repeat  0 0;
+}
+.fu_title h3:hover img.active{
+	background:url('images/pointer_over.png') no-repeat  0 -32px;
+}	
+.fu_title span.submit{
+	display:block;
+	float:right;
+	margin:0 20px 0 0;
+	padding:0;
+	top: 0;
+	width:15%;
+	padding:14px 0;
+}
+
+.clearfix{
+	clear:both;
+}
+.clear:after	{
+	display: block;
+	visibility: hidden;
+	content: ".";
+	clear: both;
+}
+
+.fu_table th, .fu_table td{
+	border:1px solid #bbb;
+	padding:10px;
+	text-align:center;
+}
+
+.fu_table th, .fu_table td.feature{
+	border-color:#888;
+	}
+.fu_upload	{
+	background: #1E5EBD;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#33c91c), to(#238a13));
+	background: -moz-linear-gradient(19% 75% 90deg,#0D0D52, #1E5EBD);
+	border-color: #134285;
+	width: 94px;
+	padding: 5px;
+	color: #fff!important;
+	text-align: center;
+	margin: 10px 0;
+	border: 1px solid #ccc!important;
+}
+.fu_upload:hover	{
+	border-color: #c0c0c0;
+	color:#f0f0f0!important;
+	cursor: pointer;
+	background: #238a13;
+}
+.credits	{
+	width: 200px;
+	position: absolute;
+	left: 650px;
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 0 10px 10px 10px;
+}
+.google_font_url, .fu_font_list	{
+	width: 100%;
+}

@@ -4,7 +4,7 @@ Donate link: http://gndev.info/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 3.7.0
+Stable tag: 3.9.2
 
 Provides support for multiple useful shortcodes
 
@@ -18,15 +18,22 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * Handy shortcodes generator
 * Custom CSS editor with syntax highlight
 * Frequently updates
+* Special widget
 * International
 
 = New in this version =
-* Complete support for nested shortcodes. Check the FAQ page.
-* New shortcode [label]
-* New style for buttons [button style="5"]
-* Fixed images ordering for [custom_gallery], [jcarousel] and [nivo_slider]
+* More screencasts
+* Special widget for shortcodes
 
-= Got a bug? =
+= Demo video =
+[youtube http://www.youtube.com/watch?v=Q0jDDIjOKsM]
+
+= More videos =
+* [How to use nivo_slider, jcarousel and custom_gallery](http://www.youtube.com/watch?v=1QK4cceZrks)
+* [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
+* [Creating jcarousel from category posts](http://www.youtube.com/watch?v=jgDsj_adPqM)
+
+= Got a bug or suggestion? =
 * [Support forum](http://wordpress.org/tags/shortcodes-ultimate?forum_id=10)
 * [Plugin page](http://gndev.info/shortcodes-ultimate/)
 * [Twitter](http://twitter.com/gn_themes)
@@ -37,6 +44,8 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * De - [Matthias Wittmann](http://net-graphix.de/)
 * Ru - [Vladimir Anokhin](http://gndev.info/)
 * By - [Alexander Ovsov](http://webhostinggeeks.com/science/)
+* Sk - [Viliam Brozman](http://www.brozman.sk/blog/)
+* Lt - [Vincent G](http://www.host1free.com/)
 
 Have a translation? [Contact me (for translators ONLY)](mailto:ano.vladimir@gmail.com)
 
@@ -75,12 +84,12 @@ This mode adds a prefix to all plugin shortcodes
 * etc.
 
 = Is there WYSIWYG button? =
-Search it near Upload/Insert buttons. See screenshots.
+Search it near Upload/Insert buttons. See [screenshots](http://wordpress.org/extend/plugins/shortcodes-ultimate/screenshots/) or [screecast](http://www.youtube.com/watch?v=Q0jDDIjOKsM)
 
 = How to use: nivo_slider, jcarousel, custom_gallery =
 With these shortcodes you can create different galleries from attached to post images, or from category posts.
 
-Way 1: gallery from attachments
+Way 1: gallery from post attachments
 
 * Create new post
 * Upload images
@@ -93,17 +102,35 @@ XX - ID of the post with uploaded images
 Way 2: gallery from category
 
 * Create some posts in some category
-* Set the thumbnails of posts
+* Set the post thumbnails
 * Use next shortcode on pages, posts or even widgets
 
-`[nivo_slider source="cat=XX" link="image"]`
+`[nivo_slider source="cat=XX" link="post"]`
 
 XX - ID of the category with new posts
+
+And here is the [demo video 1](http://www.youtube.com/watch?v=1QK4cceZrks) and [demo video 2](http://www.youtube.com/watch?v=jgDsj_adPqM)
 
 Also, you can use [jcarousel] and [custom_gallery] according these principles.
 
 
 == Changelog ==
+
+= 3.9 =
+* More screencasts
+* Special widget for shortcodes
+
+= 3.8 (security release) =
+* 2 new translations (Sk, Lt)
+* Donate button in control panel
+* Updated timthumb.php (version 2.8.10)
+* Added 2 useful screencasts
+
+= 3.7 =
+* Complete support for nested shortcodes. Check the FAQ page.
+* New shortcode [label]
+* New style for buttons [button style="5"]
+* Fixed images ordering for [custom_gallery], [jcarousel] and [nivo_slider]
 
 = 3.6 =
 * Descriptions for [custom_gallery]

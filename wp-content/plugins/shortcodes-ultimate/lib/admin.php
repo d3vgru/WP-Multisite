@@ -20,6 +20,17 @@
 
 			<!-- Facebook -->
 			<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $url; ?>&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=21&amp;locale=en_US" style="width:80px;height:21px;" scrolling="no"></iframe>
+
+			<div id="su-donate-button">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="LR3TK37ZCK5XG">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+			<div id="su-donate-label"><?php _e( 'Support project', 'shortcodes-ultimate' ); ?></div>
+
 		</div>
 		<?php
 	}

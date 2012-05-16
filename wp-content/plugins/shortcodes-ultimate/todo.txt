@@ -1,1 +1,2 @@
 Shortcode [pricing] + [plan] (pricing tables)
+Visual styles for editor

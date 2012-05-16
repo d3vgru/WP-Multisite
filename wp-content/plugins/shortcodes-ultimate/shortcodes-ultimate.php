@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.7.0
+	  Version: 3.9.2
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -11,6 +11,17 @@
 	  License: GPL2
 	 */
 
+	// Load libs
+	require_once 'lib/available.php';
+	require_once 'lib/admin.php';
+	require_once 'lib/color.php';
+	require_once 'lib/csv.php';
+	require_once 'lib/media.php';
+	require_once 'lib/twitter.php';
+	require_once 'lib/images.php';
+	require_once 'lib/shortcodes.php';
+	require_once 'lib/widget.php';
+
 	/**
 	 * Plugin initialization
 	 */
@@ -18,16 +29,6 @@
 
 		// Make plugin available for translation
 		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-
-		// Load libs
-		require_once( dirname( __FILE__ ) . '/lib/available.php' );
-		require_once( dirname( __FILE__ ) . '/lib/admin.php' );
-		require_once( dirname( __FILE__ ) . '/lib/color.php' );
-		require_once( dirname( __FILE__ ) . '/lib/csv.php' );
-		require_once( dirname( __FILE__ ) . '/lib/media.php' );
-		require_once( dirname( __FILE__ ) . '/lib/twitter.php' );
-		require_once( dirname( __FILE__ ) . '/lib/images.php' );
-		require_once( dirname( __FILE__ ) . '/lib/shortcodes.php' );
 
 		// Enable shortcodes in text widgets
 		add_filter( 'widget_text', 'do_shortcode' );
@@ -125,13 +126,16 @@
 			global $pagenow;
 
 			// Pages for including
-			$su_generator_includes_pages = array( 'post.php', 'edit.php', 'post-new.php', 'index.php' );
+			$su_generator_includes_pages = array( 'post.php', 'edit.php', 'post-new.php', 'index.php', 'edit-tags.php', 'widgets.php' );
 
 			if ( in_array( $pagenow, $su_generator_includes_pages ) ) {
 				// Enqueue styles
+				wp_enqueue_style( 'thickbox' );
 				wp_enqueue_style( 'shortcodes-ultimate-generator' );
 
 				// Enqueue scripts
+				wp_enqueue_script( 'jquery' );
+				wp_enqueue_script( 'thickbox' );
 				wp_enqueue_script( 'shortcodes-ultimate-generator' );
 			}
 		}
@@ -187,6 +191,7 @@
 	/*
 	 * Custom shortcode function for nested shortcodes support
 	 */
+
 	function su_do_shortcode( $content, $modifier ) {
 		if ( strpos( $content, '[_' ) !== false ) {
 			$content = preg_replace( '@(\[_*)_(' . $modifier . '|/)@', "$1$2", $content );
@@ -278,6 +283,7 @@
 	 */
 	function su_add_settings_link( $links ) {
 		$links[] = '<a href="' . admin_url( 'options-general.php?page=shortcodes-ultimate' ) . '">' . __( 'Settings', 'shortcodes-ultimate' ) . '</a>';
+		$links[] = '<a href="' . admin_url( 'options-general.php?page=shortcodes-ultimate#tab-3' ) . '">' . __( 'Docs', 'shortcodes-ultimate' ) . '</a>';
 		return $links;
 	}
 
@@ -302,8 +308,8 @@
 	/**
 	 * Add generator button to Upload/Insert buttons
 	 */
-	function su_add_generator_button() {
-		echo '<a href="#TB_inline?width=640&height=800&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
+	function su_add_generator_button( $page = null, $target = null ) {
+		echo '<a href="#TB_inline?width=640&height=600&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '" data-page="' . $page . '" data-target="' . $target . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
 	}
 
 	add_action( 'media_buttons', 'su_add_generator_button', 100 );
@@ -319,9 +325,9 @@
 					<div id="su-generator-header">
 						<select id="su-generator-select">
 							<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
-		<?php
-		foreach ( su_shortcodes() as $name => $shortcode ) {
-			?>
+							<?php
+							foreach ( su_shortcodes() as $name => $shortcode ) {
+								?>
 								<option value="<?php echo $name; ?>"><?php echo strtoupper( $name ); ?>:&nbsp;&nbsp;<?php echo $shortcode['desc']; ?></option>
 								<?php
 							}

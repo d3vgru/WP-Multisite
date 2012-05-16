@@ -209,6 +209,20 @@ class Ai1ec_Settings {
 	 * @var bool
 	 **/
 	var $geo_region_biasing;
+	
+	/**
+	 * show_data_notification class variable
+	 *
+	 * @var bool
+	 **/
+	var $show_data_notification;
+	
+	/**
+	 * allow_statistics class variable
+	 *
+	 * @var bool
+	 **/
+	var $allow_statistics;
 
 	/**
 	 * __construct function
@@ -289,7 +303,9 @@ class Ai1ec_Settings {
 			'input_24h_time'                => false,
 			'cron_freq'                     => 'daily',
 			'timezone'                      => get_option( 'timezone_string' ),
-			'geo_region_biasing'            => false
+			'geo_region_biasing'            => false,
+			'show_data_notification'        => true,
+			'allow_statistics'              => true
 		);
 
 		foreach( $defaults as $key => $default ) {
@@ -333,6 +349,12 @@ class Ai1ec_Settings {
 		$this->inject_categories             = ( isset( $params['inject_categories'] ) )             ? true : false;
 		$this->input_24h_time                = ( isset( $params['input_24h_time'] ) )                ? true : false;
 		$this->geo_region_biasing            = ( isset( $params['geo_region_biasing'] ) )            ? true : false;
+		$this->allow_statistics              = ( isset( $params['allow_statistics'] ) )              ? true : false;
+	}
+	
+	function update_notification( $value = false ) {
+		$this->show_data_notification = $value;
+		update_option( 'ai1ec_settings', $this );
 	}
 
 	/**
